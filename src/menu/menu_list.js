@@ -8,14 +8,17 @@ import { LiItem } from '../GlobalStyles';
 
 function MenuList({ location }) {
   return (
-    <ListMenu>
+    <div>
       <ul>
-        <LiItem primary>
-          <Link to="/novena/">novenas</Link>
-        </LiItem>
-        <LiItem >
-          <Link to="/villancicos/">villancicos</Link>
-        </LiItem>
+        <li >
+          <Link to="/novena/">Novenas</Link>
+        </li>
+        <li >
+          <Link to="/villancicos/">Villancicos</Link>
+        </li>
+        <li >
+          <Link to="/recipes/">Recipes</Link>
+        </li>
        {/*  <LiItem fg>
           <Link to="/">home</Link>
         </LiItem>
@@ -23,7 +26,7 @@ function MenuList({ location }) {
           <Link to="/">Descarga tu favorito</Link>
         </LiItem> */}
       </ul>
-    </ListMenu>
+    </div>
   );
 }
 

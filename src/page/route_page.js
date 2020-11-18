@@ -15,23 +15,14 @@ import DayDetail from '../components/novenas/day_detail';
 import Prayers from '../components/prayers/prayers';
 import Christmascarols from '../components/christmascarols/';
 import ChismascarolsDetails from '../components/christmascarols/chismascarols_details';
+import Recipes from '../components/recipes'
+import RecipesDetails from '../components/recipes/recipes_details'
+
 
 
 function RoutePage({ location }) {
   return (
     <Wrapper>
-      <ul>
-        <li >
-          <Link to="/novena">novenas</Link>
-        </li>
-        {/*  <LiItem fg>
-          <Link to="/">home</Link>
-        </LiItem>
-        <LiItem>
-          <Link to="/">Descarga tu favorito</Link>
-        </LiItem> */}
-      </ul>
-      <MenuList />
       <section className="route-section">
         <Switch>
           {/*  <Route
@@ -64,6 +55,14 @@ function RoutePage({ location }) {
           <Route
             exact path="/villancico/:postId"
             render={(props) => <ChismascarolsDetails {...props} />}
+          />
+          <Route
+            exact path="/recipes/"
+            render={(props) => <Recipes {...props} />}
+          />
+          <Route
+            exact path="/recipe/:postId"
+            render={(props) => <RecipesDetails {...props} />}
           />
         </Switch>
       </section>

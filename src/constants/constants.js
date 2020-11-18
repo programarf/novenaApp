@@ -12,6 +12,8 @@ const Constants = {
   APP_CHRISTMAS_CAROLS_POSTS: APP_DOMAIN + '/rest/villancicos/all',
   APP_CHRISTMAS_CAROLS_DETAILS: APP_DOMAIN + '/rest/villancico/',
 
+  APP_CHRISTMAS_RECIPES_POSTS: APP_DOMAIN + '/rest/resetas/all',
+  APP_CHRISTMAS_RECIPES_DETAILS: APP_DOMAIN + '/rest/reseta/',
 
 
   APP_DOMAIN_USER_LOGIN : APP_DOMAIN + '/user/login?_format=json',
