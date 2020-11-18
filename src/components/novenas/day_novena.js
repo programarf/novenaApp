@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactHtmlParser from 'react-html-parser';
+//import ReactHtmlParser from 'react-html-parser';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
@@ -18,7 +18,7 @@ class DayNovena extends React.Component {
       return (
         <div className = "novena-detail">
           <h2>{this.state.post[0].title}</h2>
-          <img src={Constants.APP_DOMAIN + ReactHtmlParser(this.state.post[0].field_imagen_portada) }></img>
+          <img src={Constants.APP_DOMAIN + this.state.post[0].field_imagen_portada}></img>
           <div>
             <Buy url={this.state.post[0].field_link_compra}></Buy>
           </div>

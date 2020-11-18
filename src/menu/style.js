@@ -22,7 +22,7 @@ export const ListMenu = styled.div`
       color: ${props => props.primary ? "white" : "palevioletred"};
     }
 `; */
-const theme = {
+/* const theme = {
   fg: "palevioletred",
   bg: "white"
-};
+}; */

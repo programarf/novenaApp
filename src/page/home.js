@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import RoutePage from './route_page';
-import { MenuContext } from "react-flexible-sliding-menu";
+//import { MenuContext } from "react-flexible-sliding-menu";
 import {AppMain, Title } from './style'
 
 function Home(){

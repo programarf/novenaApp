@@ -10,11 +10,12 @@ class ChristmasNovena extends React.Component {
     super(props);
     this.state = {
       posts: [],
-      userId: props.userId
+      //userId: props.userId
     };
   };
 
   render(){
+    console.log("compo");
     return (
       <div className = "all-christmas-novena">
         <Link to={`/`}>

@@ -19,7 +19,7 @@ class DayHome extends React.Component {
         <ul>
           {this.state.prayers.map(prayer => (
             <li key={prayer.id}>
-              {(prayer.field_orden == 2)?
+              {(prayer.field_orden === 2)?
                 <Link to={{
                     pathname: `/novena/dia/${this.state.postId}`,
                     state: { prayersSend: this.state.prayers

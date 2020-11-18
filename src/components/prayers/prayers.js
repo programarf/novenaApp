@@ -26,7 +26,7 @@ class Prayers extends React.Component {
           </Link> */}
           <h2>{this.state.prayer[0].title}</h2>
           <div>{ReactHtmlParser(this.state.prayer[0].body) }</div>
-          <img src={Constants.APP_DOMAIN + ReactHtmlParser(this.state.prayer[0].field_image) }></img>
+          <img src={Constants.APP_DOMAIN + this.state.prayer[0].field_image}></img>
           <div className="control">
             <Link to={`/oracion/${this.state.prayer[0].field_orden}`}>
               previews

@@ -3,34 +3,38 @@ import {
   Link
 } from "react-router-dom";
 import Constants from '../../constants/constants';
+import Buy from '../../util/buy.js';
+
 
 
 class Christmascarols extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: [],
+      christmascarols: [],
       userId: props.userId
     };
   };
 
   render() {
     return (
-      <div className="all-christmas-novena">
+      <div className="all-christmas-carols">
         <Link to={`/`}>
           X
         </Link>
-        <h2><span>Villa</span>Villa<span>Villa</span></h2>
+        <h2><span>Villa</span>Villaaaaa<span>Villa</span></h2>
         <div className="list-novena">
           <ul>
-            {this.state.posts.map(post => (
-              <li key={post.id}>
-                <Link to={`/novena/${post.id}`}>
-                  <button>{post.title}</button>
+            {this.state.christmascarols.map(christmascarol => (
+              <li key={christmascarol.id}>
+                <Link to={`/villancico/${christmascarol.id}`}>
+                  <button>{christmascarol.title}</button>
                 </Link>
               </li>
             ))}
           </ul>
+          <Buy url="#"></Buy>
+
         </div>
       </div>
     );
@@ -41,7 +45,7 @@ class Christmascarols extends React.Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
-          posts: data.reverse()
+          christmascarols: data.reverse()
         });
       })
   }
