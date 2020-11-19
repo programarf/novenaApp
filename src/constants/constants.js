@@ -15,6 +15,8 @@ const Constants = {
   APP_CHRISTMAS_RECIPES_POSTS: APP_DOMAIN + '/rest/resetas/all',
   APP_CHRISTMAS_RECIPES_DETAILS: APP_DOMAIN + '/rest/reseta/',
 
+  APP_MENU_MAIN: APP_DOMAIN + '/menu-principal',
+
 
   APP_DOMAIN_USER_LOGIN : APP_DOMAIN + '/user/login?_format=json',
   APP_DOMAIN_USER_REGISTER : APP_DOMAIN + '/user/register?_format=json',
