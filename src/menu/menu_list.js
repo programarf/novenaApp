@@ -10,21 +10,15 @@ function MenuList({ location }) {
   return (
     <div>
       <ul>
-        <li >
+        <LiItem>
           <Link to="/novena/">Novenas</Link>
-        </li>
-        <li >
-          <Link to="/villancicos/">Villancicos</Link>
-        </li>
-        <li >
-          <Link to="/recipes/">Recipes</Link>
-        </li>
-       {/*  <LiItem fg>
-          <Link to="/">home</Link>
         </LiItem>
         <LiItem>
-          <Link to="/">Descarga tu favorito</Link>
-        </LiItem> */}
+          <Link to="/villancicos/">Villancicos</Link>
+        </LiItem>
+        <LiItem >
+          <Link to="/recipes/">Resetas</Link>
+        </LiItem>
       </ul>
     </div>
   );

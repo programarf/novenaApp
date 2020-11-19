@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter as
-    Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
-import MenuList from '../menu/menu_list';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { Wrapper } from './style';
 import ChristmasNovena from '../components/novenas/christmas_novena';
 import DayNovena from '../components/novenas/day_novena';
@@ -25,12 +18,8 @@ function RoutePage({ location }) {
     <Wrapper>
       <section className="route-section">
         <Switch>
-          {/*  <Route
-              exact path="/novena"
-            /> */}
-          <Route path="/novena/"
-            render={() => <ChristmasNovena />}>
-
+          <Route path="/novena">
+            <ChristmasNovena />
           </Route>
           <Route
             exact path="/novena/:postId"
@@ -49,17 +38,17 @@ function RoutePage({ location }) {
             render={(props) => <Prayers {...props} />}
           />
           <Route
-            exact path="/villancicos/"
-            render={(props) => <Christmascarols {...props} />}
-          />
+            path="/villancicos/">
+            <Christmascarols />
+          </Route>
           <Route
             exact path="/villancico/:postId"
             render={(props) => <ChismascarolsDetails {...props} />}
           />
           <Route
-            exact path="/recipes/"
-            render={(props) => <Recipes {...props} />}
-          />
+            path="/recipes/">
+            <Recipes />
+          </Route>
           <Route
             exact path="/recipe/:postId"
             render={(props) => <RecipesDetails {...props} />}

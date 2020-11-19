@@ -17,6 +17,9 @@ function MenuMain(){
           <li>
             <Link to="/villancicos">villancicos</Link>
           </li>
+          <li >
+            <Link to="/recipes/">Resetas</Link>
+          </li>
         </ul>
         <button onClick={closeMenu}>
           <svg
