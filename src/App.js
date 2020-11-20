@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
+import React from 'react';
+// import React, { useContext } from 'react';
 import { GlobalStyle } from './GlobalStyles';
 import Home from './page/home'
-import { MenuContext } from "react-flexible-sliding-menu";
+// import { MenuContext } from "react-flexible-sliding-menu";
 
 /* class App extends React.Component {
   constructor(props) {
@@ -13,20 +14,21 @@ import { MenuContext } from "react-flexible-sliding-menu";
         token : null
       }
     };
-  }; */
+  };
+} */
 
 function App() {
-  const { toggleMenu } = useContext(MenuContext);
+  // const { toggleMenu } = useContext(MenuContext);
   return (
     <div className="App">
-      <button onClick={toggleMenu} className="primary-button">
-        Toggle Menu
-      </button>
+      {/* <button onClick={toggleMenu} className="primary-button navbar-toggler">
+        <span className="navbar-toggler-icon"></span>
+      </button> */}
       <GlobalStyle />
       <Home />
     </div>
   )
 };
-//}
+
 
 export default App;

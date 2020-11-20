@@ -1,16 +1,38 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import RoutePage from './route_page';
-//import { MenuContext } from "react-flexible-sliding-menu";
-import {AppMain, Title } from './style'
+import {AppMain, Title } from './style';
 import MenuList from '../menu/menu_list';
+import { MenuContext } from "react-flexible-sliding-menu";
+
+// imagenes
+import logo from "../images/comparte-navidad.png";
+import superRicas from "../images/super-ricas.png";
+import todoRico from "../images/todo-rico.png";
+
 
 function Home(){
+  const { toggleMenu } = useContext(MenuContext);
   return (
     <AppMain>
-      <Title><span>Comparte</span> en navidas con </Title>
-      <div className="image">logos</div>
-      <MenuList/>
-      <RoutePage/>
+      <div className="wrapper">
+        <button onClick={toggleMenu} className="primary-button navbar-toggler">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="picture">
+          <img src={logo} alt="" />
+        </div>
+        {/* <Title><span>Comparte</span> en navidas con </Title> */}
+        <div className="columns">
+          <div className="columns-items">
+            <img src={superRicas} alt="" />
+          </div>
+          <div className="columns-items">
+            <img src={todoRico} alt="" />
+          </div>
+        </div>
+        <MenuList/>
+        <RoutePage/>
+      </div>
     </AppMain>
   )
 };

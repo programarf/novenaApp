@@ -13,7 +13,6 @@ class MenuList extends React.Component {
     };
 
   }
-
   componentDidMount() {
     let obj = new Services();
     let Items = obj.MenuMain();
@@ -26,11 +25,12 @@ class MenuList extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='button-menu'>
         <ul>
            {this.state.items.map(Item => (
           <li key={Item.id_mp}>
-            <Link to={`${Item.url_base }``${Item.id_mp}`}>
+            {/* <Link to={`${Item.url_base }``${Item.id_mp}`}> */}
+            <Link to={`${Item.url_base }`}>
               sss<button>{Item.nombre}</button>
             </Link>
           </li>
