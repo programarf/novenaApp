@@ -18,7 +18,7 @@ function RoutePage({ location }) {
     <Wrapper>
       <section className="route-section">
         <Switch>
-          <Route path="/novena">
+          <Route path="/novenas">
             <ChristmasNovena />
           </Route>
           <Route

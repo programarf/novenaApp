@@ -14,24 +14,35 @@ class MenuList extends React.Component {
 
   }
 
-  componentDidMount() {
+  static otrafuncion =  async () => {
+    //console.log(await nombre('zac3599'))
     let obj = new Services();
-    let Items = obj.MenuMain();
+    let Items = await obj.MenuMain();
     console.log("Items", Items);
-
     this.setState({
       items: Items
     });
-    console.log("this.state", this.state);
+  }
+
+  async componentDidMount () {
+    let obj = new Services();
+    let Items = await obj.MenuMain();
+    console.log("Items", Items);
+    this.setState({
+      items: Items
+    });
+
+
   }
   render() {
+    console.log(this.state.items);
     return (
       <div>
         <ul>
-           {this.state.items.map(Item => (
-          <li key={Item.id_mp}>
-            <Link to={`${Item.url_base }``${Item.id_mp}`}>
-              sss<button>{Item.nombre}</button>
+           {this.state.items.map(item => (
+          <li key={item.id_mp}>
+               <Link to={`${item.url_base}`}>
+              sss<button>{item.nombre}</button>
             </Link>
           </li>
         ))}
@@ -48,8 +59,7 @@ class MenuList extends React.Component {
       </div>
     );
   }
+
 }
-
-
 
 export default MenuList;
