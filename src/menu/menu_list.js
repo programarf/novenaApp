@@ -39,12 +39,12 @@ class MenuList extends React.Component {
     return (
       <div className='button-menu'>
         <ul>
-           {this.state.items.map(item => (
-          <li key={item.id_mp}>
-               <Link to={`${item.url_base}`}>
-              sss<button>{item.nombre}</button>
+          {this.state.items.map(item => (
+          <LiItem key={item.id_mp}>
+            <Link to={`${item.url_base}`}>
+              {item.nombre}
             </Link>
-          </li>
+          </LiItem>
         ))}
           <LiItem>
             <Link to="/novena/">Novenas</Link>
