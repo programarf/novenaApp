@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { MenuContext } from "react-flexible-sliding-menu";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import {Collapse } from './style';
+import Menu from './index';
 
 function MenuMain(){
   const { closeMenu } = useContext(MenuContext);
@@ -14,17 +15,9 @@ function MenuMain(){
         </svg>
       </button>
       <nav>
-        <ul>
-          <li onClick={closeMenu}>
-            <Link to="/novena/">Novenas</Link>
-          </li>
-          <li onClick={closeMenu}>
-            <Link to="/villancicos">villancicos</Link>
-          </li>
-          <li onClick={closeMenu}>
-            <Link to="/recipes/">Resetas</Link>
-          </li>
-        </ul>
+        <Menu
+          type="2" >
+        </Menu>
       </nav>
     </Collapse>
   );
