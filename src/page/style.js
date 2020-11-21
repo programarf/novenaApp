@@ -1,10 +1,89 @@
 import styled from "styled-components";
 
-export const AppMain = styled.div`
-  background-color: yellow;
+import border from '../images/border.png';
+import mascara from '../images/mascara.png';
+import chispas from '../images/chispas.png';
+import topBalls from '../images/top-balls.png';
+import bottomBalls from '../images/bottom-bolas.png';
 
-  .primary-button{
-    background-color: red;
+export const AppContent = styled.div`
+  position: relative;
+  overflow: hidden;
+  // margin: 0 auto;
+  // max-width: 500px;
+`;
+
+export const AppMain = styled.div`
+  background: url("${mascara}") center/cover no-repeat #AE2424;
+  padding: 1em 1.1em;
+  padding: 0 1.1em;
+  position: relative;
+  @media (max-width: 768px){
+    min-height: 100vh
+  }
+  :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: url("${topBalls}") center bottom/cover no-repeat;
+  }
+  :after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 21%;
+    background: url("${bottomBalls}") center top/cover no-repeat;
+  }
+  .wrapper {
+    height: 100%;
+    // max-height: calc(100vh - 2em - 9px);
+    padding: 13% 0;
+    text-align: center;
+    border: 10px solid transparent;
+    border-image:9 round url("${border}");
+    background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: 182%, cover;
+  }
+  .picture img {
+    width: 100%
+  }
+  .columns {
+    display flex;
+    margin: 1.5em auto 0;
+  }
+  .columns-items {
+    flex: 0 0 50%;
+  }
+  .columns-items img {
+    width: 70%;
+  }
+  .button-menu {
+    margin: 5% 0 15%;
+    height: 50%;
+  }
+  .button-menu a {
+    min-width: calc(100% - 3em);
+    display: inline-block;
+    font-size: 1rem;
+    color: #08B761;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: .5em 2.5em;
+    margin-bottom: 7%;
+    background: #fff;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
+  }
+  .button-menu a:hover {
+    background: #EC020B;
+    color: white;
   }
 `;
 

@@ -37,7 +37,7 @@ class MenuList extends React.Component {
   render() {
     console.log(this.state.items);
     return (
-      <div>
+      <div className='button-menu'>
         <ul>
            {this.state.items.map(item => (
           <li key={item.id_mp}>
