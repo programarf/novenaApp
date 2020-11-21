@@ -46,15 +46,6 @@ class MenuList extends React.Component {
             </Link>
           </LiItem>
         ))}
-          <LiItem>
-            <Link to="/novena/">Novenas</Link>
-          </LiItem>
-          <LiItem>
-            <Link to="/villancicos/">Villancicos</Link>
-          </LiItem>
-          <LiItem >
-            <Link to="/recipes/">Resetas</Link>
-          </LiItem>
         </ul>
       </div>
     );
