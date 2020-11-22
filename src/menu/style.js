@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components"
 
 export const ListMenu = styled.div`
   background-color: yellow;
@@ -53,3 +54,22 @@ export const Collapse = styled.div`
   fg: "palevioletred",
   bg: "white"
 }; */
+const rotate = keyframes`
+  from {
+    margin-left: -40%
+  }
+  to {
+    margin-left: 0;
+  }
+`;
+
+
+export const DropDown = styled.div`
+  overflow: hidden;
+  height: 0;
+  &.true{
+    animation: ${rotate} .3s linear;
+    animation-iteration-count:1;
+    height: auto;
+  }
+`;

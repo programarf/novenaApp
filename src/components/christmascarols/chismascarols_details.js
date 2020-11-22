@@ -19,7 +19,6 @@ class ChismascarolsDetails extends React.Component {
   render() {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
-      console.log(this.state.post);
       return (
         <div className="novena-detail">
           <Link to={`/villancicos/`}>

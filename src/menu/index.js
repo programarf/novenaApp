@@ -1,10 +1,13 @@
-import React from 'react';
-import { ListMenu } from './style';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import React, { useContext } from 'react';
+import { MenuContext } from "react-flexible-sliding-menu";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import { LiItem } from '../GlobalStyles';
+import { DropDown } from './style';
+
 import Constants from '../constants/constants';
 import Services from '../util/servicies';
-import MenuDay from './menu_day';
+import SubMenu from './sub_menu';
+
 
 
 class Menu extends React.Component {
@@ -12,28 +15,39 @@ class Menu extends React.Component {
     super(props);
     this.state = {
       items: [],
-      ...props
+      ...props,
+      activeIndex: 0
     };
+    //this.handleClick = this.handleClick.bind(this);
+
   }
 
   async componentDidMount() {
     let url = Constants.APP_MENU_MAIN;
     let obj = new Services();
     let Items = await obj.MenuMain(url);
-    console.log("Items",Items);
+
     this.setState({
       items: Items
     });
   }
+  handleClick = (index, e) => {
+    this.setState({ activeIndex: index });
+  }
+  closeMenu() {
+    //console.log("hello", MenuContext);
+    //useContext(MenuContext);
+
+  }
 
   render() {
-    console.log(this.state);
-    if(this.state.type === "1"){
+    var activeIndex = this.state.activeIndex;
+    if (this.state.type === "1") {
       return (
         <div className='button-menu'>
           <ul>
             {this.state.items.map(item => (
-              <LiItem key={item.id_mp}>
+              <LiItem key={item.id_mp} onClick={this.closeMenu.bind(this)()}>
                 <Link to={`${item.url_base}`}>
                   {item.nombre}
                 </Link>
@@ -42,16 +56,57 @@ class Menu extends React.Component {
           </ul>
         </div>
       );
-    }else{
+    } else {
       return (
         <div className='button-menu'>
-          {this.state.items.map(item => (
-            <LiItem key={item.id_mp}>
-              <Link to={`${item.url_base}`}>
-                {item.nombre}
-              </Link>
+          {this.state.items.map((item, i) => (
+            <LiItem key={item.id_mp}
+              onClick={this.handleClick.bind(this, i)}
+              className={activeIndex === i}>
+
               {(item.id_mp == 4 ?
-                (<MenuDay></MenuDay>)
+                <div>
+                  <Link  >
+                    {item.nombre}
+                  </Link>
+                  <DropDown className={activeIndex === i} active={activeIndex === i}>
+                    <SubMenu
+                      url={Constants.APP_DOMAIN_POSTS}
+                      urlBase="/novena/">
+                    </SubMenu>
+                  </DropDown>
+                </div>
+
+                : ''
+              )}
+
+              {(item.id_mp == 5 ?
+                <div>
+                  <Link  >
+                    {item.nombre}
+                  </Link>
+                  <DropDown className={activeIndex === i} active={activeIndex === i}>
+                    <SubMenu
+                      url={Constants.APP_CHRISTMAS_CAROLS_POSTS}
+                      urlBase="/villancico/">
+                    </SubMenu>
+                  </DropDown>
+                </div>
+
+                : ''
+              )}
+              {(item.id_mp == 6 ?
+                <div>
+                  <Link  >
+                    {item.nombre}
+                  </Link>
+                  <DropDown className={activeIndex === i} active={activeIndex === i}>
+                    <SubMenu
+                      url={Constants.APP_CHRISTMAS_RECIPES_POSTS}
+                      urlBase="/recetas/">
+                    </SubMenu>
+                  </DropDown>
+                </div>
                 : ''
               )}
             </LiItem>
@@ -60,21 +115,6 @@ class Menu extends React.Component {
       );
     }
   }
-/*   render() {
-    return (
-      <div className='button-menu'>
-        <ul>
-          {this.state.items.map(item => (
-            <LiItem key={item.id_mp}>
-              <Link to={`${item.url_base}`}>
-                {item.nombre}
-              </Link>
-            </LiItem>
-          ))}
-        </ul>
-      </div>
-    );
-  } */
 }
 
 export default Menu;

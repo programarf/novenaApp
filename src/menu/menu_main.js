@@ -16,7 +16,8 @@ function MenuMain(){
       </button>
       <nav>
         <Menu
-          type="2" >
+          type="2"
+          onClick={closeMenu}>
         </Menu>
       </nav>
     </Collapse>

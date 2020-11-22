@@ -46,11 +46,11 @@ function RoutePage({ location }) {
             render={(props) => <ChismascarolsDetails {...props} />}
           />
           <Route
-            path="/recipes/">
+            path="/recetas/">
             <Recipes />
           </Route>
           <Route
-            exact path="/recipe/:postId"
+            exact path="/recetas/:postId"
             render={(props) => <RecipesDetails {...props} />}
           />
         </Switch>

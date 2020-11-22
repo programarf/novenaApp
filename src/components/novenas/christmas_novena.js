@@ -15,7 +15,6 @@ class ChristmasNovena extends React.Component {
   };
 
   render(){
-    console.log("compo");
     return (
       <div className = "all-christmas-novena">
         <Link to={`/`}>

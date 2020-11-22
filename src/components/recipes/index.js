@@ -27,7 +27,7 @@ class Recipes extends React.Component {
           <ul>
             {this.state.Recipes.map(Recipe => (
               <li key={Recipe.id}>
-                <Link to={`/recipe/${Recipe.id}`}>
+                <Link to={`/recetas/${Recipe.id}`}>
                   <button>{Recipe.title}</button>
                 </Link>
               </li>
