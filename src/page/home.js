@@ -6,9 +6,9 @@ import Menu from '../menu/index';
 
 
 // imagenes
-import logo from "../images/comparte-navidad.png";
-import superRicas from "../images/super-ricas.png";
-import todoRico from "../images/todo-rico.png";
+import logo from "../assets/img/comparte-navidad.png";
+import superRicas from "../assets/img/super-ricas.png";
+import todoRico from "../assets/img/todo-rico.png";
 
 function Home(){
   const { toggleMenu } = useContext(MenuContext);
