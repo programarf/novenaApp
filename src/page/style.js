@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import border from './../assets/img/border-red.png';
+import border from './../assets/img/border-green.png';
 import mascara from './../assets/img/mascara.png';
 import chispas from './../assets/img/chispas.png';
-import topBalls from './../assets/img/top-balls.png';
-import bottomBalls from './../assets/img/bottom-bolas.png';
+import Ballstop from './../assets/img/balls-top.png';
+import BallsBottom from './../assets/img/balls-bottom.png';
 
 export const AppContent = styled.div`
   position: relative;
@@ -16,10 +16,10 @@ export const AppContent = styled.div`
 export const AppMain = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;
-  padding: 0 1.1em;
   position: relative;
   @media (max-width: 768px){
-    min-height: 100vh
+    min-height: 100vh;
+    max-height: 100vh;
   }
   :before {
     content: '';
@@ -27,20 +27,21 @@ export const AppMain = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 10%;
-    background: url("${topBalls}") center bottom/cover no-repeat;
+    height: 4em;
+    background: url("${Ballstop}") center bottom/100% no-repeat;
   }
   :after {
     content: '';
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 21%;
-    background: url("${bottomBalls}") center top/cover no-repeat;
+    height: 7em;
+    background: url("${BallsBottom}") center top/106% no-repeat;
   }
   .wrapper {
     height: 100%;
+    max-height: calc(100vh - 2em);
     // max-height: calc(100vh - 2em - 9px);
     padding: 13% 0;
     text-align: center;
@@ -50,6 +51,13 @@ export const AppMain = styled.div`
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: 182%, cover;
+  }
+  .overflow {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .picture {
+    margin-top: 2em;
   }
   .picture img {
     width: 100%
@@ -66,10 +74,13 @@ export const AppMain = styled.div`
   }
   .button-menu {
     margin: 5% 0 15%;
-    height: 50%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: calc(100vh - 122vw);
+    padding-top: .5em;
   }
   .button-menu a {
-    min-width: calc(100% - 5em);
+    min-width: 63%;
     display: inline-block;
     font-size: 1rem;
     color: #08B761;
@@ -77,7 +88,7 @@ export const AppMain = styled.div`
     text-decoration: none;
     border-radius: 20px;
     padding: .5em 2.5em;
-    margin-bottom: 7%;
+    margin-bottom: 1em;
     background: #fff;
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }

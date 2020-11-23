@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
-import { PortadaDay } from './novena';
+import { PortadaDay, Tabs } from './novena';
 
 // imagenes
 import PortadaHome from "./../../assets/img/portada-logo.png";
@@ -27,12 +27,10 @@ class DayNovena extends React.Component {
             <div>
               <Buy url={this.state.post[0].field_link_compra}></Buy>
             </div>
-            <div>
-                <Link to={`/novena/dia/${this.state.post[0].id}`}>
-                  <button>comenzar</button>
-                </Link>
-            </div>
           </div>
+          <Tabs>
+            <Link to={`/novena/dia/${this.state.post[0].id}`}>comenzar</Link>
+          </Tabs>
         </PortadaDay>
       );
     }else{
