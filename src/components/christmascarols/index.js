@@ -4,8 +4,7 @@ import {
 } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
-
-
+import { Oracion } from './../novenas/novena';
 
 class Christmascarols extends React.Component {
   constructor(props) {
@@ -18,25 +17,26 @@ class Christmascarols extends React.Component {
 
   render() {
     return (
-      <div className="all-christmas-carols">
-        <Link to={`/`}>
-          X
-        </Link>
-        <h2><span>Villa</span>Villaaaaa<span>Villa</span></h2>
-        <div className="list-novena">
-          <ul>
-            {this.state.christmascarols.map(christmascarol => (
-              <li key={christmascarol.id}>
-                <Link to={`/villancico/${christmascarol.id}`}>
-                  <button>{christmascarol.title}</button>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Buy url="#"></Buy>
-
+      <Oracion>
+        <div className="all-christmas-carols">
+          <Link to={`/villancicos`}>
+            X
+          </Link>
+          <h2><span>Villa</span>Villaaaaa<span>Villa</span></h2>
+          <div className="list-novena">
+            <ul>
+              {this.state.christmascarols.map(christmascarol => (
+                <li key={christmascarol.id}>
+                  <Link to={`/villancico/${christmascarol.id}`}>
+                    <button>{christmascarol.title}</button>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Buy url="#"></Buy>
+          </div>
         </div>
-      </div>
+      </Oracion>
     );
   }
   componentDidMount() {

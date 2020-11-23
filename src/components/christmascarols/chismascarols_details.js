@@ -3,8 +3,9 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import ReactHtmlParser from 'react-html-parser';
-import ReactAudioPlayer from 'react-audio-player';
 import AudioPlayer from 'react-custom-audio-player';
+import { AudioPlayerStyle, NovenaDetail } from './styles';
+import { Oracion } from './../novenas/novena';
 
 import Buy from '../../util/buy.js';
 
@@ -20,18 +21,31 @@ class ChismascarolsDetails extends React.Component {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
       return (
-        <div className="novena-detail">
-          <Link to={`/villancicos/`}>
-            Ver villancicos
-          </Link>
-          {this.state.post[0].title}
-          {this.state.post[0].field_cancion}
-          <div>{ReactHtmlParser(this.state.post[0].body)}</div>
-          <AudioPlayer
-            src={Constants.APP_URL_AUDIOS + this.state.post[0].field_cancion}
-            showRunningTimer
-          />
-        </div>
+        <Oracion>
+
+          <div className="novena-detail">
+            <div className="menu-oracion">
+              <Link to={`/villancicos/`}>
+                Ver villancicos
+              </Link>
+            </div>
+            {this.state.post[0].title}
+            {this.state.post[0].field_cancion}
+            <div className="conte-text ">
+              <NovenaDetail>{ReactHtmlParser(this.state.post[0].body)}</NovenaDetail>
+            </div>
+            <AudioPlayerStyle>
+              <AudioPlayer
+                src={Constants.APP_URL_AUDIOS + this.state.post[0].field_cancion}
+                showRunningTimer
+              />
+              <div className="flex-row">
+                <div className="prev"></div>
+                <div className="next"></div>
+              </div>
+            </AudioPlayerStyle>
+          </div>
+        </Oracion>
       );
     } else {
       return (
