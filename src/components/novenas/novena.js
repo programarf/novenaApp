@@ -9,6 +9,8 @@ import novenaTop from './../../assets/img/novena-top2.png';
 import novenaBottom from './../../assets/img/novena-bottom.svg';
 import dayTop from './../../assets/img/day-top.png';
 import dayBottom from './../../assets/img/day-bottom.png';
+import oracionbottom from './../../assets/img/oracion-bottom.png';
+import point from './../../assets/img/point.png';
 
 export const StyleNovena = styled.div`
   background: #027334;
@@ -200,7 +202,7 @@ export const Oracion = styled.div`
     min-height: 100vh
   }
   .novena-detail {
-    height: calc(100vh - 2em);
+    height: calc(100vh - 4em);
     padding: 13% 0;
     text-align: center;
     border-style: solid;
@@ -211,22 +213,62 @@ export const Oracion = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .menu-oracion a {
+    color: #AE2424;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+    padding: 1em 0;
+  }
+  .menu-oracion a:after {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 18px;
+    background: url("${point}") center left/100% no-repeat;
+    margin-left: 10px;
+  }
+  .img-oraci img{
+    width: 90%;
+    margin-bottom: 1em
+  }
+  .conte-text {
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+  }
+  .conte-text:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background-image: linear-gradient(0deg,#f3f2e6d1 3%,#F3F2E6,#0000);
+  }
+  .conte-text p {
+    color: #545454;
+    text-align: left;
+    line-height: 1.5;
+    padding: 0 1em;
+  }
   .novena-detail:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 6.5em;
-    background: url("${novenaTop}") center bottom/100% no-repeat;
+    height: 4em;
+    background: url("${novenaTop}") center 88%/96% no-repeat;
   }
   .novena-detail:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 4.4em;
     left: 0;
     width: 100%;
     height: 7.4em;
-    background: url("${novenaBottom}") center top/100% no-repeat;
+    background: url("${oracionbottom}") center top/115% no-repeat;
   }
 `;
