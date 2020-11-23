@@ -3,9 +3,13 @@ import styled, { createGlobalStyle } from 'styled-components';
 export const LiItem = styled.li`
   //background-color:  ${props => props.theme.fg};;
   border-radius: 20px;
+  list-style: none;
   //color:  ${props => props.theme.c};
   a{
     color: ${props => props.primary ? "red" : "palevioletred"};
+  }
+  .button-menu {
+    padding: 2em 0;
   }
 `;
 

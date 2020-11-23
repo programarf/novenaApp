@@ -5,7 +5,7 @@ import borderRed from './../../assets/img/border-red.png';
 import borderYellow from './../../assets/img/border-yellow.png';
 import chispas from './../../assets/img/chispas.png';
 import mascara from './../../assets/img/mascara.png';
-import novenaTop from './../../assets/img/novena-top.svg';
+import novenaTop from './../../assets/img/novena-top2.png';
 import novenaBottom from './../../assets/img/novena-bottom.svg';
 import dayTop from './../../assets/img/day-top.png';
 import dayBottom from './../../assets/img/day-bottom.png';
@@ -19,10 +19,25 @@ export const StyleNovena = styled.div`
     min-height: 100vh
   }
   .close {
-    color: white;
-    text-decoration: none;
-    margin-bottom: 1.5em;
     display: inline-block;
+    float: right;
+    text-decoration: none;
+    margin: .5em;
+  }
+  .flex {
+    margin-bottom: 1em;
+    clear: both;
+    display: block;
+    overflow: hidden;
+  }
+  .img-comparte img {
+    width: 80%;
+  }
+  .list-novena {
+    height: 100%;
+    max-height: calc(100vh - 109vw);
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
   .day-home-wrap {
     height: calc(100vh - 2em);
@@ -52,8 +67,9 @@ export const StyleNovena = styled.div`
     left: 0;
     width: 100%;
     height: 4.4em;
-    background: url("${dayBottom}") center top/100% no-repeat;
+    background: url("${dayBottom}") center top/119% no-repeat;
   }
+  .comparte a,
   .list-novena a {
     min-width: calc(100% - 8em);
     display: inline-block;
@@ -67,6 +83,33 @@ export const StyleNovena = styled.div`
     background: #fff;
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }
+  .comparte p {
+    color: white;
+    margin-bottom: 1em;
+  }
+  .arrow {
+    position: absolute;
+    bottom: 1.8em;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-radius: 3px;
+  }
+  .arrow:before {
+    content:'' ;
+    position absolute;
+    top: -5px;
+    left: -5px;
+    width: 14px;
+    height: 14px;
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+    border-radius: 3px;
+  }
+
 `;
 
 export const PortadaDay = styled.div`
@@ -78,8 +121,8 @@ export const PortadaDay = styled.div`
     min-height: 100vh
   }
   .portada-day {
-    height: calc(100vh - 2em);
-    padding: 13% 0;
+    height: calc(100vh - 2em - 0.5em - 1.5em);
+    padding: 22% 0;
     text-align: center;
     border-style: solid;
     border-width: 10px 10px 10px 10px;
@@ -95,13 +138,14 @@ export const PortadaDay = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 6.5em;
-    background: url("${novenaTop}") center bottom/100% no-repeat;
+    height: 4em;
+    // background: url("${novenaTop}") center bottom/100% no-repeat;
+    background: url("${novenaTop}") center 88%/96% no-repeat;
   }
   .portada-day:after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: calc(2.5em + 1.9em);
     left: 0;
     width: 100%;
     height: 7.4em;
@@ -129,7 +173,24 @@ export const PortadaDay = styled.div`
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }
 `;
-
+export const Tabs = styled.div`
+  background: #AE2424;
+  padding: 0.5em;
+  margin: 0 -1.1em;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 0 0 5px #AE2424;
+  a {
+    flex: 0 0 50%;
+    text-decoration: none;
+    display: block;
+    padding: .5em 1em;
+    color: #fff;
+  }
+  a:last-child {
+    border-left: 1px solid #D66C6C;
+  }
+`;
 export const Oracion = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;

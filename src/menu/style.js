@@ -29,6 +29,9 @@ export const Collapse = styled.div`
   button:focus {
     outline: transparent;
   }
+  .button-menu {
+    clear: both;
+  }
   ul {
     padding: 1em 0;
   }
@@ -40,6 +43,22 @@ export const Collapse = styled.div`
     text-decoration: none;
     text-transform: capitalize;
     margin-bottom: 1.5em;
+    position: relative;
+  }
+  .true > div > a: before {
+    content: '';
+    border: 0;
+    height: 11px;
+    width: 11px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: 2;
+    cursor: pointer;
   }
 `;
 /* export const LiItem = styled.li`

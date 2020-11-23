@@ -15,25 +15,27 @@ function Home(){
   return (
     <AppMain>
       <div className="wrapper">
-        <BtnMain onClick={toggleMenu} className="primary-button navbar-toggler btn-main">
-          <span className="navbar-toggler-icon"></span>
-        </BtnMain>
-        <div className="picture">
-          <img src={logo} alt="" />
-        </div>
-        {/* <Title><span>Comparte</span> en navidas con </Title> */}
-        <div className="columns">
-          <div className="columns-items">
-            <img src={superRicas} alt="" />
+        <div className="overflow">
+          <BtnMain onClick={toggleMenu} className="primary-button navbar-toggler btn-main">
+            <span className="navbar-toggler-icon"></span>
+          </BtnMain>
+          <div className="picture">
+            <img src={logo} alt="" />
           </div>
-          <div className="columns-items">
-            <img src={todoRico} alt="" />
+          {/* <Title><span>Comparte</span> en navidas con </Title> */}
+          <div className="columns">
+            <div className="columns-items">
+              <img src={superRicas} alt="" />
+            </div>
+            <div className="columns-items">
+              <img src={todoRico} alt="" />
+            </div>
           </div>
+          <Menu
+            type="1">
+          </Menu>
+          <RoutePage/>
         </div>
-        <Menu
-          type="1">
-        </Menu>
-        <RoutePage/>
       </div>
     </AppMain>
   )
