@@ -13,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <AppContent className="app-content">
-        <MenuProvider MenuComponent={MenuMain} animation="push" >
+        <MenuProvider MenuComponent={MenuMain} animation="push"  className="ffffff">
           <App />
         </MenuProvider>
       </AppContent>

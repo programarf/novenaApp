@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-import border from '../images/border.png';
-import mascara from '../images/mascara.png';
-import chispas from '../images/chispas.png';
-import topBalls from '../images/top-balls.png';
-import bottomBalls from '../images/bottom-bolas.png';
+import border from './../assets/img/border-red.png';
+import mascara from './../assets/img/mascara.png';
+import chispas from './../assets/img/chispas.png';
+import topBalls from './../assets/img/top-balls.png';
+import bottomBalls from './../assets/img/bottom-bolas.png';
 
 export const AppContent = styled.div`
   position: relative;
@@ -69,7 +69,7 @@ export const AppMain = styled.div`
     height: 50%;
   }
   .button-menu a {
-    min-width: calc(100% - 3em);
+    min-width: calc(100% - 5em);
     display: inline-block;
     font-size: 1rem;
     color: #08B761;
@@ -80,6 +80,17 @@ export const AppMain = styled.div`
     margin-bottom: 7%;
     background: #fff;
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
+  }
+  .button-menu a[href^="/descarga-farolito"] {
+    background: transparent;
+    color: white;
+    border-radius: none;
+    box-shadow: none;
+    text-decoration: underline;
+  }
+  .button-menu a[href^="/descarga-farolito"]:hover {
+    background: transparent;
+    color: white;
   }
   .button-menu a:hover {
     background: #EC020B;
@@ -121,4 +132,10 @@ export const Wrapper = styled.div`
     top: 0;
     left: 0;
   }
+`;
+
+export const BtnMain = styled.button`
+  z-index: 3;
+  display: block;
+  position: absolute;
 `;

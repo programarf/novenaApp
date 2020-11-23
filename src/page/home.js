@@ -1,23 +1,23 @@
 import React, { useContext } from 'react';
 import RoutePage from './route_page';
-import {AppMain, Title } from './style';
+import { AppMain, BtnMain, Title } from './style';
 import { MenuContext } from "react-flexible-sliding-menu";
 import Menu from '../menu/index';
 
 
 // imagenes
-import logo from "../images/comparte-navidad.png";
-import superRicas from "../images/super-ricas.png";
-import todoRico from "../images/todo-rico.png";
+import logo from "../assets/img/comparte-navidad.png";
+import superRicas from "../assets/img/super-ricas.png";
+import todoRico from "../assets/img/todo-rico.png";
 
 function Home(){
   const { toggleMenu } = useContext(MenuContext);
   return (
     <AppMain>
       <div className="wrapper">
-        <button onClick={toggleMenu} className="primary-button navbar-toggler">
+        <BtnMain onClick={toggleMenu} className="primary-button navbar-toggler btn-main">
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </BtnMain>
         <div className="picture">
           <img src={logo} alt="" />
         </div>

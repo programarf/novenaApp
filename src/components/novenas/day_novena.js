@@ -3,7 +3,10 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
+import { PortadaDay } from './novena';
 
+// imagenes
+import PortadaHome from "./../../assets/img/portada-logo.png";
 class DayNovena extends React.Component {
   constructor(props) {
     super(props);
@@ -16,18 +19,21 @@ class DayNovena extends React.Component {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined){
       return (
-        <div className = "novena-detail">
-          <h2>{this.state.post[0].title}</h2>
-          <img src={Constants.APP_DOMAIN + this.state.post[0].field_imagen_portada}></img>
-          <div>
-            <Buy url={this.state.post[0].field_link_compra}></Buy>
+        <PortadaDay>
+          <div className="portada-day">
+            <img src={PortadaHome} alt="" />
+            <h2>{this.state.post[0].title}</h2>
+            <img src={Constants.APP_DOMAIN + this.state.post[0].field_imagen_portada}></img>
+            <div>
+              <Buy url={this.state.post[0].field_link_compra}></Buy>
+            </div>
+            <div>
+                <Link to={`/novena/dia/${this.state.post[0].id}`}>
+                  <button>comenzar</button>
+                </Link>
+            </div>
           </div>
-          <div>
-              <Link to={`/novena/dia/${this.state.post[0].id}`}>
-                <button>comenzar</button>
-              </Link>
-          </div>
-        </div>
+        </PortadaDay>
       );
     }else{
       return (

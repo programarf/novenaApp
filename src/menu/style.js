@@ -62,6 +62,13 @@ const rotate = keyframes`
     margin-left: 0;
   }
 `;
+export const BtnMain = styled.button`
+  z-index: 3;
+display: block;
+position: absolute;
+
+
+`;
 
 
 export const DropDown = styled.div`
