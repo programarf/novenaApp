@@ -34,11 +34,7 @@ class Menu extends React.Component {
   handleClick = (index, e) => {
     this.setState({ activeIndex: index });
   }
-  closeMenu() {
-    //console.log("hello", MenuContext);
-    //useContext(MenuContext);
 
-  }
 
   render() {
     var activeIndex = this.state.activeIndex;
@@ -47,7 +43,7 @@ class Menu extends React.Component {
         <div className='button-menu'>
           <ul>
             {this.state.items.map(item => (
-              <LiItem key={item.id_mp} onClick={this.closeMenu.bind(this)()}>
+              <LiItem key={item.id_mp} >
                 <Link to={`${item.url_base}`}>
                   {item.nombre}
                 </Link>
@@ -63,7 +59,6 @@ class Menu extends React.Component {
             <LiItem key={item.id_mp}
               onClick={this.handleClick.bind(this, i)}
               className={activeIndex === i}>
-
               {(item.id_mp == 4 ?
                 <div>
                   <Link  >
@@ -76,10 +71,8 @@ class Menu extends React.Component {
                     </SubMenu>
                   </DropDown>
                 </div>
-
                 : ''
               )}
-
               {(item.id_mp == 5 ?
                 <div>
                   <Link  >
@@ -92,7 +85,6 @@ class Menu extends React.Component {
                     </SubMenu>
                   </DropDown>
                 </div>
-
                 : ''
               )}
               {(item.id_mp == 6 ?
@@ -109,6 +101,12 @@ class Menu extends React.Component {
                 </div>
                 : ''
               )}
+              {(item.id_mp == 7 || item.id_mp == 8 ?
+                <Link to={`${item.url_base}`}>
+                  {item.nombre}
+                </Link>
+               : ''
+               )}
             </LiItem>
           ))}
         </div>

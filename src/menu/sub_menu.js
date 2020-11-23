@@ -21,13 +21,16 @@ class SubMenu extends React.Component {
       item: Items
     })
   }
+  closeMenu() {
+    document.querySelector(".tclodes").click();
+  }
 
   render() {
     return (
       <ul >
         {this.state.item.map(item => (
-          <LiItem key={item.id}>
-            <Link to={`${this.state.urlBase + item.id}`}>
+          <LiItem key={item.id} >
+            <Link to={`${this.state.urlBase + item.id}`} >
               {item.title}
             </Link>
           </LiItem>
