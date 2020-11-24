@@ -1,10 +1,11 @@
 import React from 'react';
-import {
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
+import { HomeRecipes } from './styles';
 import Buy from '../../util/buy.js';
 
+// imagenes
+import cantaVillancicos from "./../../assets/img/receta.png";
 
 
 class Recipes extends React.Component {
@@ -18,24 +19,38 @@ class Recipes extends React.Component {
 
   render() {
     return (
-      <div className="all-christmas-carols">
-        <Link to={`/`}>
-          X
-        </Link>
-        <h2><span>Villa</span>RESETAS<span>Villa</span></h2>
-        <div className="list-novena">
-          <ul>
-            {this.state.Recipes.map(Recipe => (
-              <li key={Recipe.id}>
-                <Link to={`/recetas/${Recipe.id}`}>
-                  <button>{Recipe.title}</button>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <Buy url="#"></Buy>
+      <HomeRecipes>
+        <div className="recipes-home-wrap">
+          <div className="flex">
+            <Link to={`/`} className="close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15.795" height="16.618" viewBox="0 0 15.795 16.618">
+                <g transform="translate(1496.152 -2409.058)">
+                  <rect width="19.806" height="3.127" rx="1.564" transform="translate(-1493.865 2409.058) rotate(47)" fill="#fff"/>
+                  <rect width="19.806" height="3.127" rx="1.564" transform="translate(-1480.358 2411.191) rotate(133)" fill="#fff"/>
+                </g>
+              </svg>
+            </Link>
+          </div>
+          <div className="img-comparte">
+            <img src={cantaVillancicos} alt="" />
+          </div>
+          {/* <h2><span>Villa</span>RESETAS<span>Villa</span></h2> */}
+          <div className="list-novena">
+            <ul>
+              {this.state.Recipes.map(Recipe => (
+                <li key={Recipe.id}>
+                  <Link to={`/recetas/${Recipe.id}`}> {Recipe.title} </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="comparte">
+            <p>Compra aquí todos los productos <br/>Super Ricas y Todo Rico</p>
+            <Buy url="#"></Buy>
+          </div>
+          <div className="arrow"></div>
         </div>
-      </div>
+      </HomeRecipes>
     );
   }
   componentDidMount() {

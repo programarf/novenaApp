@@ -38,16 +38,19 @@ class Menu extends React.Component {
 
   render() {
     var activeIndex = this.state.activeIndex;
+    // const { closeMenu } = useContext(MenuContext);
     if (this.state.type === "1") {
       return (
         <div className='button-menu'>
           <ul>
             {this.state.items.map(item => (
-              <LiItem key={item.id_mp} >
-                <Link to={`${item.url_base}`}>
-                  {item.nombre}
-                </Link>
-              </LiItem>
+              // <button onClick={toggleMenu} >
+                <LiItem key={item.id_mp} >
+                  <Link to={`${item.url_base}`}>
+                    {item.nombre}
+                  </Link>
+                </LiItem>
+              // </button>
             ))}
           </ul>
         </div>
@@ -81,9 +84,11 @@ class Menu extends React.Component {
                 : ''
               )}
               {(item.id_mp == 7 || item.id_mp == 8 || item.id_mp == 5 || item.id_mp == 6 ?
-                <Link to={`${item.url_base}`} className={(item.id_mp == 8)? "btn" :"item" }>
-                  {item.nombre}
-                </Link>
+                <div>
+                  <Link to={`${item.url_base}`} className={(item.id_mp == 8)? "btn" :"item" }>
+                    {item.nombre}
+                  </Link>
+                </div>
               : ''
               )}
             </LiItem>

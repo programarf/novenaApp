@@ -23,7 +23,7 @@ class Christmascarols extends React.Component {
       <StyleNovena>
         <div className="day-home-wrap">
           <div className="flex">
-            <Link to={`/villancicos`} className="close">
+            <Link to={`/`} className="close">
               <svg xmlns="http://www.w3.org/2000/svg" width="15.795" height="16.618" viewBox="0 0 15.795 16.618">
                 <g transform="translate(1496.152 -2409.058)">
                   <rect width="19.806" height="3.127" rx="1.564" transform="translate(-1493.865 2409.058) rotate(47)" fill="#fff"/>
