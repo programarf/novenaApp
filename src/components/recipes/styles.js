@@ -95,7 +95,7 @@ export const HomeRecipes = styled.div`
   }
   .arrow:before {
     content:'' ;
-    position absolute;
+    position: absolute;
     top: -5px;
     left: -5px;
     width: 14px;
@@ -105,3 +105,8 @@ export const HomeRecipes = styled.div`
     border-radius: 3px;
   }
 `;
+export const Modal = styled.div`
+  background-color: red;
+`;
+
+

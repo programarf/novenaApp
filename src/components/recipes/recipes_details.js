@@ -5,35 +5,39 @@ import Constants from '../../constants/constants';
 import ReactHtmlParser from 'react-html-parser';
 import ReactPlayer from 'react-player';
 import Buy from '../../util/buy.js';
+import { HomeRecipes, Modal } from './styles';
 
 class RecipesDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       postId: props.match.params.postId,
-      post: []
     };
   };
 
   render() {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
+      console.log("ddddd", this.state.post);
+
       return (
-        <div className="novena-detail">
+        <HomeRecipes>
+          <div className="novena-detail">
           <Link
             to={`/recetas/`}>
             Ver resetas
           </Link>
-        {/*   {this.state.post[0].title}
+git           {this.state.post[0].title}
           {this.state.post[0].field_cancion}
           <div>{ReactHtmlParser(this.state.post[0].body)}</div>
-          <div>
+          <Modal>
             <ReactPlayer
               url={this.state.post[0].field_link_video}
               width="300"
             />
-          </div> */}
+          </Modal>
         </div>
+        </HomeRecipes>
       );
     } else {
       return (
@@ -52,12 +56,12 @@ class RecipesDetails extends React.Component {
       .then(res => res.json())
       .then(
         (result) => {
+          console.log("result", result);
           this.setState({
             post: result
           });
         }
       )
-      console.log("ddddd", this.state.post);
 
   }
 }

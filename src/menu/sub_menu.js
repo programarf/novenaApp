@@ -10,7 +10,7 @@ class SubMenu extends React.Component {
       item: [],
       ...props
     };
-
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
   async componentDidMount() {
@@ -30,7 +30,9 @@ class SubMenu extends React.Component {
       <ul >
         {this.state.item.map(item => (
           <LiItem key={item.id} >
-            <Link to={`${this.state.urlBase + item.id}`} >
+            <Link
+              to={`${this.state.urlBase + item.id}`}
+              onClick={this.closeMenu}>
               {item.title}
             </Link>
           </LiItem>
