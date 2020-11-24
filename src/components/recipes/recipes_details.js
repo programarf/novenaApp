@@ -11,6 +11,7 @@ class RecipesDetails extends React.Component {
     super(props);
     this.state = {
       postId: props.match.params.postId,
+      post: []
     };
   };
 
@@ -19,10 +20,11 @@ class RecipesDetails extends React.Component {
     if (this.state.post !== undefined) {
       return (
         <div className="novena-detail">
-          <Link to={`/recipes/`}>
+          <Link
+            to={`/recetas/`}>
             Ver resetas
           </Link>
-          {this.state.post[0].title}
+        {/*   {this.state.post[0].title}
           {this.state.post[0].field_cancion}
           <div>{ReactHtmlParser(this.state.post[0].body)}</div>
           <div>
@@ -30,7 +32,7 @@ class RecipesDetails extends React.Component {
               url={this.state.post[0].field_link_video}
               width="300"
             />
-          </div>
+          </div> */}
         </div>
       );
     } else {
@@ -45,6 +47,7 @@ class RecipesDetails extends React.Component {
   componentDidMount() {
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_CHRISTMAS_RECIPES_DETAILS + this.state.postId;
+    console.log(url);
     fetch(proxyUrl+url)
       .then(res => res.json())
       .then(
@@ -54,6 +57,8 @@ class RecipesDetails extends React.Component {
           });
         }
       )
+      console.log("ddddd", this.state.post);
+
   }
 }
 

@@ -18,7 +18,8 @@ function RoutePage({ location }) {
     <Wrapper>
       <section className="route-section">
         <Switch>
-          <Route path="/novenas">
+          <Route
+            path="/novenas">
             <ChristmasNovena />
           </Route>
           <Route
@@ -46,13 +47,13 @@ function RoutePage({ location }) {
             render={(props) => <ChismascarolsDetails {...props} />}
           />
           <Route
-            path="/recetas/">
+             exact path="/recetas/">
             <Recipes />
           </Route>
           <Route
-            exact path="/recetas/:postId"
-            render={(props) => <RecipesDetails {...props} />}
-          />
+            path="/recetas/:postId"
+            render={(props) => <RecipesDetails {...props} />}>
+          </Route>
         </Switch>
       </section>
     </Wrapper>

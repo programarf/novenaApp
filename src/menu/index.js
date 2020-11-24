@@ -19,6 +19,9 @@ class Menu extends React.Component {
       activeIndex: 0
     };
     //this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
+
 
   }
 
@@ -31,10 +34,14 @@ class Menu extends React.Component {
       items: Items
     });
   }
-  handleClick = (index, e) => {
-    this.setState({ activeIndex: index });
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
   }
-
+  closeMenu() {
+    document.querySelector(".tclodes").click();
+  }
 
   render() {
     var activeIndex = this.state.activeIndex;
@@ -64,14 +71,14 @@ class Menu extends React.Component {
           </LiItem>
           {this.state.items.map((item, i) => (
             <LiItem key={item.id_mp}
-              onClick={this.handleClick.bind(this, i)}
-              className={activeIndex === i}>
+             >
               {(item.id_mp == 4 ?
                 <div>
-                  <Link to="#">
+                  <Link to="#"
+                    onClick={this.handleClick}>
                     {item.nombre}
                   </Link>
-                  <DropDown className={activeIndex === i} active={activeIndex === i}>
+                  <DropDown className={this.state.isToggleOn ? 'true' : ''}>
                     <SubMenu
                       url={Constants.APP_DOMAIN_POSTS}
                       urlBase="/novena/">
@@ -81,7 +88,10 @@ class Menu extends React.Component {
                 : ''
               )}
               {(item.id_mp == 7 || item.id_mp == 8 || item.id_mp == 5 || item.id_mp == 6 ?
-                <Link to={`${item.url_base}`} className={(item.id_mp == 8)? "btn" :"item" }>
+                <Link
+                  to={`${item.url_base}`}
+                  className={(item.id_mp == 7)? "btn-download" :"item" }
+                  onClick={this.closeMenu}>
                   {item.nombre}
                 </Link>
               : ''
