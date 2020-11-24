@@ -45,16 +45,19 @@ class Menu extends React.Component {
 
   render() {
     var activeIndex = this.state.activeIndex;
+    // const { closeMenu } = useContext(MenuContext);
     if (this.state.type === "1") {
       return (
         <div className='button-menu'>
           <ul>
             {this.state.items.map(item => (
-              <LiItem key={item.id_mp} >
-                <Link to={`${item.url_base}`}>
-                  {item.nombre}
-                </Link>
-              </LiItem>
+              // <button onClick={toggleMenu} >
+                <LiItem key={item.id_mp} >
+                  <Link to={`${item.url_base}`}>
+                    {item.nombre}
+                  </Link>
+                </LiItem>
+              // </button>
             ))}
           </ul>
         </div>
