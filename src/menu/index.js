@@ -56,9 +56,11 @@ class Menu extends React.Component {
       return (
         <div className='button-menu'>
           <LiItem>
-            <Link to="/">
-              Home
-            </Link>
+            <div>
+              <Link to="/">
+                Home
+              </Link>
+            </div>
           </LiItem>
           {this.state.items.map((item, i) => (
             <LiItem key={item.id_mp}
@@ -82,8 +84,8 @@ class Menu extends React.Component {
                 <Link to={`${item.url_base}`}>
                   {item.nombre}
                 </Link>
-               : ''
-               )}
+              : ''
+              )}
             </LiItem>
           ))}
         </div>
