@@ -78,35 +78,7 @@ class Menu extends React.Component {
                 </div>
                 : ''
               )}
-              {(item.id_mp == 5 ?
-                <div>
-                  <Link to="#" >
-                    {item.nombre}
-                  </Link>
-                  <DropDown className={activeIndex === i} active={activeIndex === i}>
-                    <SubMenu
-                      url={Constants.APP_CHRISTMAS_CAROLS_POSTS}
-                      urlBase="/villancico/">
-                    </SubMenu>
-                  </DropDown>
-                </div>
-                : ''
-              )}
-              {(item.id_mp == 6 ?
-                <div>
-                  <Link to="#" >
-                    {item.nombre}
-                  </Link>
-                  <DropDown className={activeIndex === i} active={activeIndex === i}>
-                    <SubMenu
-                      url={Constants.APP_CHRISTMAS_RECIPES_POSTS}
-                      urlBase="/recetas/">
-                    </SubMenu>
-                  </DropDown>
-                </div>
-                : ''
-              )}
-              {(item.id_mp == 7 || item.id_mp == 8 ?
+              {(item.id_mp == 7 || item.id_mp == 8 || item.id_mp == 5 || item.id_mp == 6 ?
                 <Link to={`${item.url_base}`}>
                   {item.nombre}
                 </Link>

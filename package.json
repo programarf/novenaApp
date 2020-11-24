@@ -19,7 +19,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-transition-group": "^4.4.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "http-proxy-middleware": "^1.0.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,7 +44,6 @@
     ]
   },
   "devDependencies": {
-    "http-proxy-middleware": "^1.0.6",
     "react-player": "^2.7.0"
   }
 }
