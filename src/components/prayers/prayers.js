@@ -22,9 +22,11 @@ class Prayers extends React.Component {
       return (
         <Oracion>
           <div className = "novena-detail">
-          {/*  <Link to={`/novena/home-dia/${this.state.prayer[0].id}`}>
-              <button>Ver oraciones del día</button>
-            </Link> */}
+            <div className="menu-oracion">
+              <Link to={`/novena/home-dia/${this.state.postId}`}>
+                Ver oraciones del día
+              </Link>
+            </div>
             <h2>{this.state.prayer[0].title}</h2>
             <div className="conte-text">{ReactHtmlParser(this.state.prayer[0].body) }</div>
             <img src={Constants.APP_DOMAIN + this.state.prayer[0].field_image}></img>
