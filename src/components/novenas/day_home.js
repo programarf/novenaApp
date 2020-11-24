@@ -68,8 +68,9 @@ class DayHome extends React.Component {
   }
 
   componentDidMount() {
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_PRAYERS_POSTS;
-    fetch(url)
+    fetch(proxyUrl+url)
     .then(res => res.json())
     .then(
       (result) => {

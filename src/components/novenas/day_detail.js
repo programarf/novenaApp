@@ -44,8 +44,9 @@ class DayDetail extends React.Component {
   }
 
   componentDidMount() {
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_DOMAIN_POST_DETAIL  + this.state.postId + '/dia';
-    fetch(url)
+    fetch(proxyUrl+url)
     .then(res => res.json())
     .then(
       (result) => {
