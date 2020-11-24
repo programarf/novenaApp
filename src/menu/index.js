@@ -61,7 +61,7 @@ class Menu extends React.Component {
               className={activeIndex === i}>
               {(item.id_mp == 4 ?
                 <div>
-                  <Link  >
+                  <Link to="#">
                     {item.nombre}
                   </Link>
                   <DropDown className={activeIndex === i} active={activeIndex === i}>
@@ -75,7 +75,7 @@ class Menu extends React.Component {
               )}
               {(item.id_mp == 5 ?
                 <div>
-                  <Link  >
+                  <Link to="#" >
                     {item.nombre}
                   </Link>
                   <DropDown className={activeIndex === i} active={activeIndex === i}>
@@ -89,7 +89,7 @@ class Menu extends React.Component {
               )}
               {(item.id_mp == 6 ?
                 <div>
-                  <Link  >
+                  <Link to="#" >
                     {item.nombre}
                   </Link>
                   <DropDown className={activeIndex === i} active={activeIndex === i}>

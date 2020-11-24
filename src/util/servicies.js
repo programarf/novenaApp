@@ -3,8 +3,8 @@ class Services {
   MenuMain = async(url) => {
     const myHeaders = {
       "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Origin": "https://dev-navidad.pantheonsite.io",
-      "Access-Control-Allow-Methods": "OPTIONS,POST,GET"
+      "Access-Control-Allow-Origin": "*" ,
+      "Access-Control-Allow-Methods": "OPTIONS,POST,GET",
     };
     const myInit = {
       method: 'GET',
