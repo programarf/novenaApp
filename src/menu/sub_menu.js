@@ -18,7 +18,7 @@ class SubMenu extends React.Component {
     let obj = new Services();
     let Items = await obj.MenuMain(url);
     this.setState({
-      item: Items
+      item: Items.reverse()
     })
   }
   closeMenu() {

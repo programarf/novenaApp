@@ -20,6 +20,8 @@ class ChismascarolsDetails extends React.Component {
   render() {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
+      console.log(this.state.post);
+
       return (
         <Villancicos>
           <div className="novena-detail">
@@ -28,8 +30,7 @@ class ChismascarolsDetails extends React.Component {
                 Ver villancicos
               </Link>
             </div>
-            {this.state.post[0].title}
-            {this.state.post[0].field_cancion}
+            <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title} />
             <div className="conte-text ">
               {ReactHtmlParser(this.state.post[0].body)}
             </div>

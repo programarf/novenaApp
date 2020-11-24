@@ -43,7 +43,7 @@ function RoutePage({ location }) {
             <Christmascarols />
           </Route>
           <Route
-            exact path="/villancico/:postId"
+            path="/villancico/:postId"
             render={(props) => <ChismascarolsDetails {...props} />}
           />
           <Route

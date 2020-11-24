@@ -21,8 +21,6 @@ class Menu extends React.Component {
     //this.handleClick = this.handleClick.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
-
-
   }
 
   async componentDidMount() {
@@ -67,7 +65,9 @@ class Menu extends React.Component {
         <div className='button-menu'>
           <LiItem>
             <div>
-              <Link to="/">
+              <Link
+                to="/"
+                onClick={this.closeMenu}>
                 Home
               </Link>
             </div>
