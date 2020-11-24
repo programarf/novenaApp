@@ -22,6 +22,9 @@ export const ListMenu = styled.div`
 
   }
 `;
+export const Icon = styled.div`
+  background-color: red;
+`;
 
 export const Collapse = styled.div`
   background: #781C1C;

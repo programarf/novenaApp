@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { MenuContext } from "react-flexible-sliding-menu";
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import { LiItem } from '../GlobalStyles';
-import { DropDown } from './style';
+import { DropDown, Icon } from './style';
 
 import Constants from '../constants/constants';
 import Services from '../util/servicies';
@@ -77,10 +77,13 @@ class Menu extends React.Component {
              >
               {(item.id_mp == 4 ?
                 <div>
-                  <Link to="#"
-                    onClick={this.handleClick}>
+                  <Link to={`${item.url_base}`}>
                     {item.nombre}
                   </Link>
+                  <Icon
+                    onClick={this.handleClick}>
+                    i
+                  </Icon>
                   <DropDown className={this.state.isToggleOn ? 'true' : ''}>
                     <SubMenu
                       url={Constants.APP_DOMAIN_POSTS}
