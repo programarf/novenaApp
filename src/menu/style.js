@@ -105,6 +105,16 @@ export const Collapse = styled.div`
         background-image: url("${shoppingCart}");
       }
     }
+    .btn-download {
+      position: absolute;
+      bottom: 0;
+      font-size: 0.9rem;
+      color: #FF1A1A;
+      text-align: center;
+      border-radius: 20px;
+      background: #fff;
+      padding: .5em 1.2em;
+    }
   }
 `;
 /* export const LiItem = styled.li`
