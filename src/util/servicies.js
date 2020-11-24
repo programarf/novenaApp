@@ -13,7 +13,8 @@ class Services {
       headers: myHeaders,
       cache: 'default'
     };
-    const response = await fetch(url, myInit) ;
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    const response = await fetch(proxyUrl + url, myInit) ;
     const posts = await response.json();
     return posts;
   }
