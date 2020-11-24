@@ -43,7 +43,9 @@ class Prayers extends React.Component {
       );
     }else{
       return (
-        <p>Cargando...</p>
+        <div className="loading">
+          <p>Cargando...</p>
+        </div>
       )
     }
   }

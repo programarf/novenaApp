@@ -7,15 +7,10 @@ import novenaTop from './../../assets/img/novena-top2.png';
 export const AudioPlayerStyle = styled.div`
   background-color: #027334;
   width: 90%;
+  position: relative;
   margin: 1em auto;
   padding: 16px 20px;
   border-radius: 13px;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  // left: 0;
-  // right: 0;
-  // bottom: 10%;
   #audio_player{
     display: flex;
     flex-direction: column;
@@ -73,32 +68,26 @@ export const AudioPlayerStyle = styled.div`
     #audio_progress_container{
       order: 1;
       background-color: white;
-      #audio_progress{
+      #audio_progress {
         height: 4px;
         background-color: #AE2424 !important;
       }
-      .audio_info{
+      .audio_info {
         display: none;
       }
     }
-    .btn{
+    .btn {
       display: none;
     }
   }
   .flex-row{
-    // display: flex;
-    // justify-content:center;
-    //position: absolute;
-    // width: 100%;
-    // left: 0;
-    //bottom: 27px;
-    >div{
+    > div {
       width: 20px;
       color: white;
       cursor: pointer;
       height: 30px;
       display: inline-block;
-      &.prev{
+      &.prev {
         background-image: url(${next});
         background-repeat: no-repeat;
         background-position: center;
@@ -108,7 +97,7 @@ export const AudioPlayerStyle = styled.div`
         bottom: 25%;
         left: 20%;
       }
-      &.next{
+      &.next {
         background-image: url(${next});
         background-repeat: no-repeat;
         background-position: center;
@@ -130,7 +119,7 @@ export const Villancicos = styled.div`
   }
   .novena-detail {
     height: calc(100vh - 2em);
-    padding: 13% 0;
+    padding: 13% 0 0;
     text-align: center;
     border-style: solid;
     border-width: 10px 10px 10px 10px;
@@ -167,12 +156,12 @@ export const Villancicos = styled.div`
     position: relative;
   }
   .conte-text p {
-
     color: #FFFFFF;
     text-align: center;
     line-height: 1.5;
     padding: 0 1em;
     strong{
+      display: block;
       font-family: 'Museo Slab';
       font-weight: 700;
       color: #FFE100;

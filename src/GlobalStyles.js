@@ -128,4 +128,16 @@ export const GlobalStyle = createGlobalStyle`
     transform: rotate(-45deg);
     bottom: 0;
   }
+  .loading {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+  }
 `;
