@@ -78,7 +78,7 @@ export const AppMain = styled.div`
       height: calc(100vh - 122vw);
     }
     a {
-      min-width: 63%;
+      min-width: 70%;
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
@@ -92,20 +92,14 @@ export const AppMain = styled.div`
     }
   }
   .button-menu a[href^="/descarga-farolito"] {
-    background: transparent;
-    color: white;
-    border-radius: none;
-    box-shadow: none;
-    text-decoration: underline;
-    padding: 0;
-    &:hover {
-      background: transparent;
-      color: white;
-    }
-  }
-  .button-menu a:hover {
     background: #EC020B;
     color: white;
+    font-size: 0.8rem;
+    padding: .7em 2.5em;
+  }
+  .button-menu a:hover {
+    background: white;
+    color: #EC020B;
   }
 `;
 

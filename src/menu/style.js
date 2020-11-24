@@ -114,6 +114,9 @@ export const Collapse = styled.div`
       border-radius: 20px;
       background: #fff;
       padding: .5em 1.2em;
+      &:before {
+        conten: none;
+      }
     }
   }
 `;
