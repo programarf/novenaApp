@@ -41,8 +41,9 @@ class RecipesDetails extends React.Component {
   }
 
   componentDidMount() {
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_CHRISTMAS_RECIPES_DETAILS + this.state.postId;
-    fetch(url)
+    fetch(proxyUrl+url)
       .then(res => res.json())
       .then(
         (result) => {

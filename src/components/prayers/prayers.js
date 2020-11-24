@@ -49,8 +49,9 @@ class Prayers extends React.Component {
   }
   componentDidMount() {
     console.log("prop", this.state );
+    var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_PRAYER_POSTS + this.state.postId;
-    fetch(url)
+    fetch(proxyUrl+url)
     .then(res => res.json())
     .then(
       (result) => {
