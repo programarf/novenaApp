@@ -15,6 +15,7 @@ export const LiItem = styled.li`
 
 
 export const GlobalStyle = createGlobalStyle`
+  @import url('./assets/css/style-fonts.css');
   html {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -40,12 +41,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #fefefe;
+    width: 100%;
     height: 100vh;
+    background: #fefefe;
     margin: 0 auto;
     max-width: 500px;
     overscroll-behavior: none;
-    width: 100%;
+    font-family: 'Museo Slab', sans-serif;
+    font-weight: 300;
   }
 
   #app {

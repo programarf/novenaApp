@@ -247,6 +247,8 @@ export const Oracion = styled.div`
     background-image: linear-gradient(0deg,#f3f2e6d1 3%,#F3F2E6,#0000);
   }
   .conte-text p {
+    font-family: 'Museo Slab';
+    font-weight: 300;
     color: #545454;
     text-align: left;
     line-height: 1.5;
