@@ -40,6 +40,9 @@ export const Collapse = styled.div`
   .button-menu {
     clear: both;
     padding: 1em 0;
+    max-height: calc(100vh - 7em);
+    height: 100vh;
+    overflow: auto;
     a {
       display: block;
       color: white;

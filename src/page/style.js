@@ -44,12 +44,13 @@ export const AppMain = styled.div`
     max-height: calc(100vh - 2em);
     padding: 13% 0;
     text-align: center;
-    border: 10px solid transparent;
-    border-image:9 round url("${border}");
+    border-style: solid;
+    border-width: 10px 10px 10px 10px;
+    border-image: url("${border}") 9 9 9 9 repeat repeat;
     background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, cover;
+    background-size: 182%, 101%;
   }
   .picture {
     margin-top: 2em;

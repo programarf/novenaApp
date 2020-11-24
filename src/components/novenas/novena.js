@@ -51,7 +51,7 @@ export const StyleNovena = styled.div`
     background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, cover;
+    background-size: 182%, 101%;
   }
   .day-home-wrap:before {
     content: '';
@@ -130,7 +130,7 @@ export const PortadaDay = styled.div`
     background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, cover;
+    background-size: 182%, 101%;
   }
   .portada-day:before {
     content: '';
@@ -209,7 +209,7 @@ export const Oracion = styled.div`
     background: radial-gradient(#F3F2E6, #F3F2E6);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 101%;
   }
   .menu-oracion a {
     color: #AE2424;
@@ -304,25 +304,25 @@ export const MenuOraciones = styled.div`
     background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, cover;
-  }
-  .grip-oracio:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4em;
-    background: url("${dayTop}") center bottom/100% no-repeat;
-  }
-  .grip-oracio:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4.4em;
-    background: url("${dayBottom}") center top/119% no-repeat;
+    background-size: 182%, 101%;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4em;
+      background: url("${dayTop}") center bottom/100% no-repeat;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4.4em;
+      background: url("${dayBottom}") center top/119% no-repeat;
+    }
   }
   .comparte a,
   .menu-oracion a {
