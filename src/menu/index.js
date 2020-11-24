@@ -82,7 +82,7 @@ class Menu extends React.Component {
                   </Link>
                   <Icon
                     onClick={this.handleClick}>
-                    i
+                      i
                   </Icon>
                   <DropDown className={this.state.isToggleOn ? 'true' : ''}>
                     <SubMenu
@@ -94,12 +94,14 @@ class Menu extends React.Component {
                 : ''
               )}
               {(item.id_mp == 7 || item.id_mp == 8 || item.id_mp == 5 || item.id_mp == 6 ?
-                <Link
-                  to={`${item.url_base}`}
-                  className={(item.id_mp == 7)? "btn-download" :"item" }
-                  onClick={this.closeMenu}>
-                  {item.nombre}
-                </Link>
+                <div>
+                  <Link
+                    to={`${item.url_base}`}
+                    className={(item.id_mp == 7)? "btn-download" :"item" }
+                    onClick={this.closeMenu}>
+                    {item.nombre}
+                  </Link>
+                </div>
               : ''
               )}
             </LiItem>
