@@ -55,6 +55,11 @@ class Menu extends React.Component {
     } else {
       return (
         <div className='button-menu'>
+          <LiItem>
+            <Link to="/">
+              Home
+            </Link>
+          </LiItem>
           {this.state.items.map((item, i) => (
             <LiItem key={item.id_mp}
               onClick={this.handleClick.bind(this, i)}
