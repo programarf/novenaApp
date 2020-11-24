@@ -81,7 +81,7 @@ class Menu extends React.Component {
                 : ''
               )}
               {(item.id_mp == 7 || item.id_mp == 8 || item.id_mp == 5 || item.id_mp == 6 ?
-                <Link to={`${item.url_base}`}>
+                <Link to={`${item.url_base}`} className={(item.id_mp == 8)? "btn" :"item" }>
                   {item.nombre}
                 </Link>
               : ''
