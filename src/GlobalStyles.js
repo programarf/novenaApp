@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     max-width: 500px;
     overscroll-behavior: none;
-    font-family: 'Museo Slab', sans-serif;
+    font-family: 'Museo Sans', sans-serif;
     font-weight: 300;
   }
 

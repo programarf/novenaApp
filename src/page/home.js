@@ -15,7 +15,7 @@ function Home(){
   return (
     <AppMain>
       <div className="wrapper">
-        <div className="overflow">
+        {/* <div className="overflow"> */}
           <BtnMain onClick={toggleMenu} className="primary-button navbar-toggler btn-main">
             <span className="navbar-toggler-icon"></span>
           </BtnMain>
@@ -35,7 +35,7 @@ function Home(){
             type="1">
           </Menu>
           <RoutePage/>
-        </div>
+        {/* </div> */}
       </div>
     </AppMain>
   )

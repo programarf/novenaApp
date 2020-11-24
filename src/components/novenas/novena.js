@@ -224,7 +224,7 @@ export const Oracion = styled.div`
     display: block;
     width: 17px;
     height: 18px;
-    background: url("${point}") top left/100% no-repeat;
+    background: url("${point}") center left/100% no-repeat;
     margin-left: 10px;
   }
   .img-oraci img{
@@ -247,8 +247,6 @@ export const Oracion = styled.div`
     background-image: linear-gradient(0deg,#f3f2e6d1 3%,#F3F2E6,#0000);
   }
   .conte-text p {
-    font-family: 'Museo Slab';
-    font-weight: 300;
     color: #545454;
     text-align: left;
     line-height: 1.5;
