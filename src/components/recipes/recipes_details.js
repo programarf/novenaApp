@@ -11,15 +11,12 @@ class RecipesDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postId: props.match.params.postId,
+      postId: this.props.location.state.IdPost,
     };
   };
 
   render() {
-    //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
-      console.log("ddddd", this.state.post);
-
       return (
         <HomeRecipes>
           <div className="novena-detail">
@@ -27,7 +24,7 @@ class RecipesDetails extends React.Component {
             to={`/recetas/`}>
             Ver resetas
           </Link>
-git           {this.state.post[0].title}
+          {this.state.post[0].title}
           {this.state.post[0].field_cancion}
           <div>{ReactHtmlParser(this.state.post[0].body)}</div>
           <Modal>

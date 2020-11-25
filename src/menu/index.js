@@ -27,7 +27,6 @@ class Menu extends React.Component {
     let url = Constants.APP_MENU_MAIN;
     let obj = new Services();
     let Items = await obj.MenuMain(url);
-
     this.setState({
       items: Items
     });
@@ -75,10 +74,9 @@ class Menu extends React.Component {
           {this.state.items.map((item, i) => (
             <LiItem
               key={item.id_mp}
-              className={(this.state.isToggleOn && item.id_mp == 4) ? 'active' : 'no-active'}
-
+              className={(this.state.isToggleOn && item.submenu) ? 'active' : 'no-active'}
              >
-              {(item.id_mp == 4 ?
+              {(item.submenu ?
                 <div>
                   <Link
                     to={`${item.url_base}`}
@@ -99,7 +97,7 @@ class Menu extends React.Component {
                 </div>
                 : <Link
                   to={`${item.url_base}`}
-                  className={(item.id_mp == 7) ? "btn-download" : "item"}
+                  className={(item.destacado) ? "btn-download" : "item"}
                   onClick={this.closeMenu}>
                   {item.nombre}
                 </Link>

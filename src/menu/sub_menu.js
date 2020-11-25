@@ -31,8 +31,9 @@ class SubMenu extends React.Component {
         {this.state.item.map(item => (
           <LiItem key={item.id} >
             <Link
-              to={`${this.state.urlBase + item.id}`}
-              onClick={this.closeMenu}>
+              to={`${this.state.urlBase + item.title}`}
+              onClick={this.closeMenu}
+              id={this.state.id}>
               {item.title}
             </Link>
           </LiItem>

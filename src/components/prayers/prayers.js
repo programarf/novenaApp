@@ -4,14 +4,15 @@ import {
   Link
 } from "react-router-dom";
 import Constants from '../../constants/constants';
-import { Oracion } from './../novenas/novena';
+import { Oracion } from './../novenas/style';
 
 class Prayers extends React.Component {
   constructor(props) {
-    console.log(props);
+    console.log(props.location.state.IdPost,"id");
     super(props);
     this.state = {
-      postId : props.match.params.postId,
+      postId: props.location.state.IdPost,
+      day: props.location.state.day,
     };
   };
 
@@ -21,14 +22,14 @@ class Prayers extends React.Component {
 
       return (
         <Oracion>
-          <div className = "novena-detail">
+          <div className="novena-detail">
             <div className="menu-oracion">
-              <Link to={`/novena/home-dia/${this.state.postId}`}>
+              <Link to={`/novena/oraciones/${this.state.postId}`}>
                 Ver oraciones del día
               </Link>
             </div>
             <h2>{this.state.prayer[0].title}</h2>
-            <div className="conte-text">{ReactHtmlParser(this.state.prayer[0].body) }</div>
+            <div className="conte-text">{ReactHtmlParser(this.state.prayer[0].body)}</div>
             <img src={Constants.APP_DOMAIN + this.state.prayer[0].field_image}></img>
             <div className="control">
               <Link to={`/oracion/${this.state.prayer[0].field_orden}`}>
@@ -57,6 +58,7 @@ class Prayers extends React.Component {
     .then(res => res.json())
     .then(
       (result) => {
+        console.log(result,"result");
         this.setState({
           prayer: result
         });

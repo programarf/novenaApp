@@ -2,7 +2,7 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants.js';
-import { Oracion,Tabs } from './novena';
+import { Oracion, Tabs } from './style';
 
 // imagenes
 import PortadaHome from "./../../assets/img/oracion-title.png";
@@ -10,17 +10,27 @@ class DayDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postId : props.match.params.postId,
+      postId: this.props.location.state.IdPost,
+      weight: this.props.location.state.weight,
+      day: this.props.location.state.day
     };
   };
 
   render() {
-    if (this.state.post !== undefined){
+    if (this.state.post !== undefined) {
+      { console.log("this details·", this.state) }
       return (
         <Oracion>
-          <div className = "novena-detail">
+          <div className="novena-detail">
             <div className="menu-oracion">
-              <Link to={`/novena/home-dia/${this.state.post[0].id}`}>
+              {console.log(this.state.post[0])}
+              <Link
+                to={{
+                  pathname: `/novena/oraciones/${this.state.post[0].title}`,
+                  state: {
+                    IdPost: this.state.postId
+                  }
+                }}>
                 Ver oraciones del día
               </Link>
             </div>
@@ -28,15 +38,18 @@ class DayDetail extends React.Component {
             <div className="img-oraci">
               <img src={PortadaHome} alt="" />
             </div>
-            <div className="conte-text">{ReactHtmlParser(this.state.post[0].body) }</div>
+            <div className="conte-text">{ReactHtmlParser(this.state.post[0].body)}</div>
           </div>
           <Tabs>
-            <Link to={`/`}> previews </Link>
-            <Link to={`/`}> Next </Link>
+            <Link to={`/`}
+              className={(this.state.weight == 1 ? 'hidden' : '')}
+            > previews </Link>
+            <Link
+              to={`/`}> Next </Link>
           </Tabs>
         </Oracion>
       );
-    }else{
+    } else {
       return (
         <div className="loading">
           <p>Cargando...</p>
@@ -47,16 +60,23 @@ class DayDetail extends React.Component {
 
   componentDidMount() {
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-    let url = Constants.APP_DOMAIN_POST_DETAIL  + this.state.postId + '/dia';
-    fetch(proxyUrl+url)
-    .then(res => res.json())
-    .then(
-      (result) => {
-        this.setState({
-          post: result
-        });
-      }
-    )
+    let weight = this.state.weight;
+    let day = this.state.weight;
+    let postId = this.state.postId;
+    let url
+    (weight != null) ? url = Constants.APP_PRAYER_POSTS + weight :
+      url = Constants.APP_PRAYER_POSTS + postId;
+
+    // let url = Constants.APP_DOMAIN_POST_DETAIL + this.state.postId + '/dia';
+    fetch(proxyUrl + url)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            post: result
+          });
+        }
+      )
   }
 }
 

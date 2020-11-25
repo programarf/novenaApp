@@ -13,29 +13,29 @@ import RecipesDetails from '../components/recipes/recipes_details'
 
 
 
-function RoutePage({ location }) {
+function RoutePage({ props }) {
   return (
     <Wrapper>
       <section className="route-section">
         <Switch>
           <Route
-            path="/novenas">
-            <ChristmasNovena />
-          </Route>
+            exact path="/novenas"
+            render={(props) =><ChristmasNovena />}
+          />
           <Route
-            exact path="/novena/:postId"
+            exact path="/novenas/:Name"
             render={(props) => <DayNovena {...props} />}
           />
           <Route
-            exact path="/novena/home-dia/:postId"
-            render={(props) => <DayHome {...props} />}
-          />
-          <Route
-            exact path="/novena/dia/:postId"
+            path="/novenas/:dia/:Name"
             render={(props) => <DayDetail {...props} />}
           />
           <Route
-            exact path="/oracion/:postId"
+            exact path="/novena/oraciones/:Name"
+            render={(props) => <DayHome {...props} />}
+          />
+          <Route
+            exact path="/novena/oracion/:Name"
             render={(props) => <Prayers {...props} />}
           />
           <Route
@@ -43,11 +43,11 @@ function RoutePage({ location }) {
             <Christmascarols />
           </Route>
           <Route
-            path="/villancico/:postId"
+            path="/villancico/:Name"
             render={(props) => <ChismascarolsDetails {...props} />}
           />
           <Route
-             exact path="/recetas/">
+            exact path="/recetas/">
             <Recipes />
           </Route>
           <Route

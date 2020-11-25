@@ -140,4 +140,10 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 1.5rem;
     }
   }
+  .hidden{
+    display: none !important;
+  }
+  .show{
+    display: block !important;
+  }
 `;

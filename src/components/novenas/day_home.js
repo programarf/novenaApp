@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
-import { MenuOraciones } from './novena';
+import { MenuOraciones } from './style';
 
 // imagenes
 import OraDay from "./../../assets/img/oracion-day.png";
@@ -11,6 +11,7 @@ class DayHome extends React.Component {
     this.state = {
       prayers: [],
       postId : props.match.params.postId,
+      day: this.props.location.state.IdPost,
       prayersSend: []
     };
   };
@@ -21,7 +22,15 @@ class DayHome extends React.Component {
         <MenuOraciones>
           <div className="grip-oracio">
             <div className="navbar">
-              <Link to={`/novena/dia/${this.state.postId}`} className="close">
+              <Link
+                className="close"
+                to={{
+                  pathname: `/novenas/`,
+                  state: {
+                    day: this.state.day
+                  }
+                }}
+                >
                 <svg xmlns="http://www.w3.org/2000/svg" width="15.795" height="16.618" viewBox="0 0 15.795 16.618">
                   <g transform="translate(1496.152 -2409.058)">
                     <rect width="19.806" height="3.127" rx="1.564" transform="translate(-1493.865 2409.058) rotate(47)" fill="#fff"/>
@@ -36,16 +45,28 @@ class DayHome extends React.Component {
             <ul className="menu-oracion">
               {this.state.prayers.map(prayer => (
                 <li key={prayer.id}>
-                  {(prayer.field_orden === 2)?
+
+                  {(prayer.field_orden == 2)?
                     <Link to={{
-                        pathname: `/novena/dia/${this.state.postId}`,
-                        state: { prayersSend: this.state.prayers
-                      }}
+                      pathname: `/novena/comenzar/${this.state.day}`,
+                        state: {
+                          prayersSend: this.state.prayers,
+                          IdPost: this.state.day
+                        }
+                      }
                     }>
                       Consideración
+
                     </Link>
                   :
-                    <Link to={`/oracion/${prayer.field_orden}`}>
+                    <Link
+                      to={{
+                        pathname: `${prayer.enlace}`,
+                        state: {
+                          IdPost: prayer.field_orden,
+                          day: this.state.day
+                        }
+                      }}>
                       {prayer.title}
                     </Link>}
                 </li>

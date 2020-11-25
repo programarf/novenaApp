@@ -34,12 +34,19 @@ class Recipes extends React.Component {
           <div className="img-comparte">
             <img src={cantaVillancicos} alt="" />
           </div>
-          {/* <h2><span>Villa</span>RESETAS<span>Villa</span></h2> */}
           <div className="list-novena">
             <ul>
               {this.state.Recipes.map(Recipe => (
                 <li key={Recipe.id}>
-                  <Link to={`/recetas/${Recipe.id}`}> {Recipe.title} </Link>
+                  <Link
+                    to={{
+                      pathname: `/recetas/${Recipe.title}`,
+                      state: {
+                        IdPost: Recipe.id
+                      }
+                    }}>
+                    {Recipe.title}
+                  </Link>
                 </li>
               ))}
             </ul>

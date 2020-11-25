@@ -13,7 +13,7 @@ class ChismascarolsDetails extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postId: props.match.params.postId,
+      postId: this.props.location.state.IdPost,
     };
   };
 

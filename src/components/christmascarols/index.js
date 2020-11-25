@@ -4,7 +4,7 @@ import {
 } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
-import { StyleNovena } from './../novenas/novena';
+import { StyleNovena } from './../novenas/style';
 
 // imagenes
 import cantaVillancicos from "./../../assets/img/canta villancicos.png";
@@ -40,7 +40,15 @@ class Christmascarols extends React.Component {
             <ul>
               {this.state.christmascarols.map(christmascarol => (
                 <li key={christmascarol.id}>
-                  <Link to={`/villancico/${christmascarol.id}`}> {christmascarol.title} </Link>
+                  <Link
+                    to={{
+                      pathname: `/villancico/${christmascarol.title}`,
+                      state: {
+                        IdPost: christmascarol.id
+                      }
+                    }}>
+                    {christmascarol.title}
+                  </Link>
                 </li>
               ))}
             </ul>

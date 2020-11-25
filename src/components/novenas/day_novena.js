@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
-import { PortadaDay, Tabs } from './novena';
+import { PortadaDay, Tabs } from './style';
 
 // imagenes
 import PortadaHome from "./../../assets/img/portada-logo.png";
@@ -11,13 +11,16 @@ class DayNovena extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      postId : props.match.params.postId,
+      name: props.match.params.name,
+      postId: this.props.location.state.IdPost,
+      day: this.props.location.state.day,
     };
   };
 
   render() {
     //let userId = this.state.user.uid;
-    if (this.state.post !== undefined){
+    if (this.state.post !== undefined) {
+      console.log(this.state.post);
       return (
         <PortadaDay>
           <div className="portada-day">
@@ -29,11 +32,21 @@ class DayNovena extends React.Component {
             </div>
           </div>
           <Tabs>
-            <Link to={`/novena/dia/${this.state.post[0].id}`}>comenzar</Link>
+            <Link
+              to={{
+                pathname: `${this.state.day}/${this.state.post[0].title}`,
+                state: {
+                  IdPost: this.state.post[0].id,
+                  day: this.state.day,
+                  weight: 1
+                }
+              }}>
+              comenzar
+              </Link>
           </Tabs>
         </PortadaDay>
       );
-    }else{
+    } else {
       return (
         <div className="loading">
           <p>Cargando...</p>
@@ -44,16 +57,16 @@ class DayNovena extends React.Component {
 
   componentDidMount() {
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-    let url = Constants.APP_DOMAIN_POST_DETAIL  + this.state.postId + '/dia';
-    fetch(proxyUrl+url)
-    .then(res => res.json())
-    .then(
-      (result) => {
-        this.setState({
-          post: result
-        });
-      }
-    )
+    let url = Constants.APP_DOMAIN_POST_DETAIL + this.state.postId + '/dia';
+    fetch(proxyUrl + url)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            post: result
+          });
+        }
+      )
   }
 }
 
