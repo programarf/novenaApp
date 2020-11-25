@@ -39,11 +39,11 @@ function RoutePage({ props }) {
             render={(props) => <Prayers {...props} />}
           />
           <Route
-            path="/villancicos/">
+            exact path="/villancicos/">
             <Christmascarols />
           </Route>
           <Route
-            path="/villancico/:Name"
+            path="/villancicos/:Name"
             render={(props) => <ChismascarolsDetails {...props} />}
           />
           <Route

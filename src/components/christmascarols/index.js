@@ -38,11 +38,12 @@ class Christmascarols extends React.Component {
           {/* <h2><span>Villa</span>Villaaaaa<span>Villa</span></h2> */}
           <div className="list-novena">
             <ul>
+
               {this.state.christmascarols.map(christmascarol => (
                 <li key={christmascarol.id}>
                   <Link
                     to={{
-                      pathname: `/villancico/${christmascarol.title}`,
+                      pathname: `${christmascarol.enlace}`,
                       state: {
                         IdPost: christmascarol.id
                       }
