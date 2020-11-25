@@ -14,7 +14,7 @@ export const LiItem = styled.li`
 `;
 
 
-document.querySelector(':root').style.setProperty('--vh', window.outerHeight/100 + 'px');
+document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
 // document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
 export const GlobalStyle = createGlobalStyle`
   @import url('./assets/css/style-fonts.css');
