@@ -73,16 +73,22 @@ class Menu extends React.Component {
             </div>
           </LiItem>
           {this.state.items.map((item, i) => (
-            <LiItem key={item.id_mp}
+            <LiItem
+              key={item.id_mp}
+              className={(this.state.isToggleOn && item.id_mp == 4) ? 'active' : 'no-active'}
+
              >
               {(item.id_mp == 4 ?
                 <div>
-                  <Link to={`${item.url_base}`}>
+                  <Link
+                    to={`${item.url_base}`}
+                    onClick={this.closeMenu}>
                     {item.nombre}
                   </Link>
                   <Icon
-                    onClick={this.handleClick}>
-                      i
+                    onClick={this.handleClick}
+                    className="icono"
+                    >
                   </Icon>
                   <DropDown className={this.state.isToggleOn ? 'true' : ''}>
                     <SubMenu
@@ -91,18 +97,12 @@ class Menu extends React.Component {
                     </SubMenu>
                   </DropDown>
                 </div>
-                : ''
-              )}
-              {(item.id_mp == 7 || item.id_mp == 8 || item.id_mp == 5 || item.id_mp == 6 ?
-                <div>
-                  <Link
-                    to={`${item.url_base}`}
-                    className={(item.id_mp == 7)? "btn-download" :"item" }
-                    onClick={this.closeMenu}>
-                    {item.nombre}
-                  </Link>
-                </div>
-              : ''
+                : <Link
+                  to={`${item.url_base}`}
+                  className={(item.id_mp == 7) ? "btn-download" : "item"}
+                  onClick={this.closeMenu}>
+                  {item.nombre}
+                </Link>
               )}
             </LiItem>
           ))}

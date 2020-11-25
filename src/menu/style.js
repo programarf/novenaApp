@@ -23,7 +23,12 @@ export const ListMenu = styled.div`
   }
 `;
 export const Icon = styled.div`
-  background-color: red;
+  position: absolute;
+  top: 38%;
+  right: 0;
+  width: 15px;
+  right: 5%;
+  height: 15px
 `;
 
 export const Collapse = styled.div`
@@ -57,24 +62,28 @@ export const Collapse = styled.div`
       margin-bottom: 1.5em;
       position: relative;
     }
-    .true > div {
-      & > a:after {
-        content: '';
+    .active {
+      .icono {/* reviews */
         border: 0;
-        height: 11px;
-        width: 11px;
+        top: 14%;
         border-bottom: 3px solid white;
         border-right: 3px solid white;
         border-radius: 3px;
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(223deg);
         z-index: 2;
         cursor: pointer;
       }
-      .true a {
-        text-align: center;
+    }
+
+    .no-active {
+      .icono {/* reviews */
+        border: 0;
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+        border-radius: 3px;
+        transform: translateY(-50%) rotate(45deg);
+        z-index: 2;
+        cursor: pointer;
       }
     }
     li {
@@ -92,8 +101,11 @@ export const Collapse = styled.div`
       &:nth-child(1) > div > a:before{
         background-image: url("${home}");
       }
-      &:nth-child(2) > div > a:before{
-        background-image: url("${openBook}");
+      &:nth-child(2) > div {
+        position: relative;
+      > a:before{
+          background-image: url("${openBook}");
+        }
       }
       &:nth-child(3) > div > a:before{
         background-image: url("${musicalNotes}");
