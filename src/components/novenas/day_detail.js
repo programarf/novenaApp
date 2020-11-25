@@ -37,14 +37,6 @@ class DayDetail extends React.Component {
       next_title = this.state.list[next-1];
       prev_title = this.state.list[0];
     }
-    { console.log("list",this.state.list)}
-    { console.log("current", this.state.weight) }
-    { console.log("current_data", render) }
-    { console.log("prev", prev) }
-    { console.log("prev_data", prev_title)}
-    {console.log("next",next)}
-    { console.log("nex_data", next_title) }
-
       return (
         <Oracion>
           <div className="novena-detail">
@@ -80,7 +72,6 @@ class DayDetail extends React.Component {
             >
               {(next == 3) ? "Consideración" : prev_title.title}
             </Link>
-            {console.log("state",this.state.list.length)}
             <Link
               to={{
                 pathname: `${(next == null) ? this.state.day + "/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace : "#")}`,

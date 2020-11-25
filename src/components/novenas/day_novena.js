@@ -32,7 +32,6 @@ class DayNovena extends React.Component {
             </div>
           </div>
           <Tabs>
-            {console.log(this.state.list[0].enlace)}
             <Link
               to={{
                 pathname: `${this.state.day+this.state.list[0].enlace}`,
