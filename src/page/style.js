@@ -17,10 +17,6 @@ export const AppMain = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;
   position: relative;
-  // @media (max-width: 768px){
-  //   min-height: 100vh;
-  //   max-height: 100vh;
-  // }
   :before {
     content: '';
     position: absolute;
@@ -40,6 +36,7 @@ export const AppMain = styled.div`
     background: url("${BallsBottom}") center top/106% no-repeat;
   }
   .wrapper {
+    height: calc(100 * var(--vh) - 2em);
     padding: 13% 0;
     text-align: center;
     border-style: solid;
@@ -49,6 +46,7 @@ export const AppMain = styled.div`
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: 182%, 101%;
+
   }
   .picture {
     margin-top: 2em;
@@ -70,7 +68,7 @@ export const AppMain = styled.div`
     padding-top: .5em;
     overflow: hidden;
     ul {
-      height: calc(30 * var(--vh));
+      height: calc(20 * var(--vh));
       overflow-x: hidden;
       overflow-y: scroll;
       a {

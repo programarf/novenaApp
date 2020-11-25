@@ -17,32 +17,8 @@ export const StyleNovena = styled.div`
   padding: 1em 1.1em;
   z-index: 2;
   position: relative;
-  @media (max-width: 768px){
-    min-height: 100vh
-  }
-  .close {
-    display: inline-block;
-    float: right;
-    text-decoration: none;
-    margin: .5em;
-  }
-  .flex {
-    margin-bottom: 1em;
-    clear: both;
-    display: block;
-    overflow: hidden;
-  }
-  .img-comparte img {
-    width: 80%;
-  }
-  .list-novena {
-    height: 100%;
-    max-height: calc(100vh - 109vw);
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
   .day-home-wrap {
-    height: calc(100vh - 2em);
+    height: calc(100 * var(--vh) - 2em);
     padding: 13% 0;
     text-align: center;
     border-style: solid;
@@ -52,24 +28,45 @@ export const StyleNovena = styled.div`
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: 182%, 101%;
-  }
-  .day-home-wrap:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4em;
-    background: url("${dayTop}") center bottom/100% no-repeat;
-  }
-  .day-home-wrap:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4.4em;
-    background: url("${dayBottom}") center top/119% no-repeat;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4em;
+      background: url("${dayTop}") center bottom/100% no-repeat;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4.4em;
+      background: url("${dayBottom}") center top/119% no-repeat;
+    }
+    .flex {
+      margin-bottom: 1em;
+      clear: both;
+      display: block;
+      overflow: hidden;
+      .close {
+        display: inline-block;
+        float: right;
+        text-decoration: none;
+        margin: .5em;
+      }
+    }
+    .img-comparte img {
+      width: 80%;
+    }
+    .list-novena {
+      height: 100%;
+      max-height: calc(34 * var(--vh));
+      overflow-x: hidden;
+      overflow-y: scroll;
+    }
   }
   .comparte a,
   .list-novena a {
@@ -99,17 +96,17 @@ export const StyleNovena = styled.div`
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
     border-radius: 3px;
-  }
-  .arrow:before {
-    content:'' ;
-    position absolute;
-    top: -5px;
-    left: -5px;
-    width: 14px;
-    height: 14px;
-    border-bottom: 2px solid #fff;
-    border-right: 2px solid #fff;
-    border-radius: 3px;
+    &:before {
+      content:'' ;
+      position absolute;
+      top: -5px;
+      left: -5px;
+      width: 14px;
+      height: 14px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      border-radius: 3px;
+    }
   }
 `;
 export const PortadaDay = styled.div`

@@ -96,6 +96,7 @@ export const AudioPlayerStyle = styled.div`
         position: absolute;
         bottom: 25%;
         left: 20%;
+        z-index: 4;
       }
       &.next {
         background-image: url(${next});
@@ -105,6 +106,7 @@ export const AudioPlayerStyle = styled.div`
         position: absolute;
         bottom: 25%;
         right: 20%;
+        z-index: 4;
       }
     }
   }

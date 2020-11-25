@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import { StyleNovena } from './style';
+import Buy from './../../util/buy.js';
 
 // imagenes
 import diasHome from "./../../assets/img/dias-home.png";
@@ -31,7 +32,7 @@ class ChristmasNovena extends React.Component {
             </Link>
           </div>
           <div className="img-comparte">
-            <img src={diasHome} alt="" />
+            <img src={diasHome} alt="Comparte en familia las novenas navideñas" title="Comparte en familia las novenas navideñas" />
           </div>
           {/* <h2><span>comparte en familia</span>las novenas<span>navideñas</span></h2> */}
           <div className="list-novena">
@@ -55,7 +56,7 @@ class ChristmasNovena extends React.Component {
           </div>
           <div className="comparte">
             <p>Compra aquí todos los productos <br />Super Ricas y Todo Rico</p>
-            <a href="https://www.superricas.com/recetariosuperricas">Comprar</a>
+            <Buy url="#"></Buy>
           </div>
           <div className="arrow"></div>
         </div>

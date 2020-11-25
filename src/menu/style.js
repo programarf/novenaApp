@@ -32,7 +32,7 @@ export const Icon = styled.div`
 
 export const Collapse = styled.div`
   background: #781C1C;
-  height: 100Vh;
+  height: calc(100 * var(--vh));
   padding: 1em;
   position: relative;
   button.tclodes {
