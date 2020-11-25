@@ -14,7 +14,7 @@ export const LiItem = styled.li`
 `;
 
 
-document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
+document.querySelector(':root').style.setProperty('--vh', window.outerHeight/100 + 'px');
 // document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
 export const GlobalStyle = createGlobalStyle`
   @import url('./assets/css/style-fonts.css');
@@ -54,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     overscroll-behavior: none;
   }
-  #root {
+  .App > div {
     height: calc(100 * var(--vh));
     display: block;
     position: relative;

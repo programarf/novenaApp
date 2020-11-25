@@ -38,11 +38,8 @@ export const AppMain = styled.div`
     width: 100%;
     height: 7em;
     background: url("${BallsBottom}") center top/106% no-repeat;
-    // box-shadow: 0 0 0 2px red inset;
   }
   .wrapper {
-    // height: 100vh;
-    // max-height: calc(100vh - 2em);
     padding: 13% 0;
     text-align: center;
     border-style: solid;
@@ -72,12 +69,10 @@ export const AppMain = styled.div`
   .button-menu {
     padding-top: .5em;
     overflow: hidden;
-    // height: auto;
     ul {
-      height: 46px;
+      height: calc(30 * var(--vh));
       overflow-x: hidden;
       overflow-y: scroll;
-      // height: calc(100vh - 122vw);
       a {
         min-width: 70%;
         display: inline-block;
