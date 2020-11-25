@@ -25,71 +25,76 @@ class DayDetail extends React.Component {
     let prev;
     let prev_title;
     if (this.state.weight !== null) {
-      render = this.state.list[this.state.weight-1];
-      next = (this.state.weight <= 1) ? null:this.state.weight+1;
-      next_title = (next == null) ? this.state.consideration : this.state.list[next-1];
+      render = this.state.list[this.state.weight - 1];
+      next = (this.state.weight <= 1) ? null : this.state.weight + 1;
+      next_title = (next == null) ? this.state.consideration : this.state.list[next - 1];
       prev = (this.state.weight == null) ? 1 : ((this.state.weight == 2) ? null : this.state.weight - 1);
-      prev_title = (next == null) ? this.state.list[this.state.weight-1] : ((next == 2) ? this.state.consideration : this.state.list[this.state.weight-2]);
+      prev_title = (next == null) ? this.state.list[this.state.weight - 1] : ((next == 2) ? this.state.consideration : this.state.list[this.state.weight - 2]);
     } else {
       render = this.state.consideration;
       prev = 1;
       next = 2;
-      next_title = this.state.list[next-1];
+      next_title = this.state.list[next - 1];
       prev_title = this.state.list[0];
     }
-      return (
-        <Oracion>
-          <div className="novena-detail">
-            <div className="menu-oracion">
-              <Link
-                to={{
-                  pathname: `/novena/oraciones/${render}`,
-                  state: {
-                    IdPost: this.state.postId
-                  }
-                }}>
-                Ver oraciones del día
-              </Link>
-            </div>
-            {/* <h2>Consideración</h2> */}
-            <div className="img-oraci">
-              <img src={PortadaHome} alt="" />
-            </div>
-            <div className="conte-text">{ReactHtmlParser(render.body)}</div>
-          </div>
-          <Tabs>
-            <Link to={{
-                pathname: `${(next == 3) ? this.state.day + "/consideracion" : this.state.day + prev_title.enlace}`,
-                state: {
-                  IdPost: this.state.postId,
-                  day: this.state.day,
-                  weight: prev,
-                  list:this.state.list,
-                  consideration: this.state.consideration,
-                },
-              }}
-              className={(this.state.weight == 1 ? 'hidden' : '')}
-            >
-              {(next == 3) ? "Consideración" : prev_title.title}
-            </Link>
+    return (
+      <Oracion>
+        <div className="novena-detail">
+          <div className="menu-oracion">
             <Link
               to={{
-                pathname: `${(next == null) ? this.state.day + "/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace : "#")}`,
+                pathname: `${this.state.day}/oraciones`,
                 state: {
                   IdPost: this.state.postId,
                   day: this.state.day,
                   weight: next,
-                  list:this.state.list,
+                  list: this.state.list,
                   consideration: this.state.consideration
-                },
-              }}
-              className={(next > this.state.list.length ? 'hidden' : '')}
-              >
-              {(next == null) ? "Consideración" : ((next <= this.state.list.length) ? next_title.title : "#")}
-            </Link>
-          </Tabs>
-        </Oracion>
-      );
+                }
+              }}>
+              Ver oraciones del día
+              </Link>
+          </div>
+          {/* <h2>Consideración</h2> */}
+          <div className="img-oraci">
+            {console.log(render)}
+            <img src={render.field_image_title} alt="" />
+          </div>
+          <div className="conte-text">{ReactHtmlParser(render.body)}</div>
+        </div>
+        <Tabs>
+          <Link to={{
+            pathname: `${(next == 3) ? this.state.day + "/oraciones/consideracion" : this.state.day + prev_title.enlace}`,
+            state: {
+              IdPost: this.state.postId,
+              day: this.state.day,
+              weight: prev,
+              list: this.state.list,
+              consideration: this.state.consideration,
+            },
+          }}
+            className={(this.state.weight == 1 ? 'hidden' : '')}
+          >
+            {(next == 3) ? "Consideración" : prev_title.title}
+          </Link>
+          <Link
+            to={{
+              pathname: `${(next == null) ? this.state.day + "/oraciones/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace : "#")}`,
+              state: {
+                IdPost: this.state.postId,
+                day: this.state.day,
+                weight: next,
+                list: this.state.list,
+                consideration: this.state.consideration
+              },
+            }}
+            className={(next > this.state.list.length ? 'hidden' : '')}
+          >
+            {(next == null) ? "Consideración" : ((next <= this.state.list.length) ? next_title.title : "#")}
+          </Link>
+        </Tabs>
+      </Oracion>
+    );
 
   }
 
