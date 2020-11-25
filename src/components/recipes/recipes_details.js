@@ -5,7 +5,10 @@ import Constants from '../../constants/constants';
 import ReactHtmlParser from 'react-html-parser';
 import ReactPlayer from 'react-player';
 import Buy from '../../util/buy.js';
-import { HomeRecipes, Modal } from './styles';
+import { DetailsRecipes, Modal } from './styles';
+
+// imagenes
+import IngredientesTitle from "./../../assets/img/ingredientes-title.png";
 
 class RecipesDetails extends React.Component {
   constructor(props) {
@@ -17,24 +20,34 @@ class RecipesDetails extends React.Component {
 
   render() {
     if (this.state.post !== undefined) {
+      console.log(this.state.post);
       return (
-        <HomeRecipes>
-          <div className="novena-detail">
-          <Link
-            to={`/recetas/`}>
-            Ver resetas
-          </Link>
-          {this.state.post[0].title}
-          {this.state.post[0].field_cancion}
-          <div>{ReactHtmlParser(this.state.post[0].body)}</div>
-          <Modal>
-            <ReactPlayer
-              url={this.state.post[0].field_link_video}
-              width="300"
-            />
-          </Modal>
-        </div>
-        </HomeRecipes>
+        <DetailsRecipes>
+          <div className="detail-recipes">
+            <div className="menu-lateral">
+              <Link to={`/recetas/`}> Ver resetas </Link>
+            </div>
+            <div className="overflow">
+              <div className="img-title">
+                <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title}/>
+              </div>
+              <div className="video">
+                <Modal>
+                  <ReactPlayer
+                    url={this.state.post[0].field_link_video}
+                    width="300"
+                  />
+                </Modal>
+              </div>
+              <div className="img-ingredien">
+                <img src={IngredientesTitle} alt=""/>
+              </div>
+              <div className="content-body">
+                {ReactHtmlParser(this.state.post[0].body)}
+              </div>
+            </div>
+          </div>
+        </DetailsRecipes>
       );
     } else {
       return (

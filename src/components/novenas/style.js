@@ -194,7 +194,7 @@ export const Tabs = styled.div`
 export const Oracion = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;
-  z-index: 2;
+  z-index: 3;
   position: relative;
   @media (max-width: 768px){
     min-height: 100vh

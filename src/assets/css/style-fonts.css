@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url('https://use.typekit.net/dml0esq.css'),
+  src: url("https://use.typekit.net/dml0esq.css"),
   url('./../fonts/Museo-sans/MuseoSans-300.otf') format("opentype"),
   url('./../fonts/Museo-sans/MuseoSans-300.woff') format('woff'),
   url('./../fonts/Museo-sans/MuseoSans-300.woff2') format('woff2');
@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('https://use.typekit.net/dml0esq.css'),
+  src: url("https://use.typekit.net/dml0esq.css"),
   url('./../fonts/Museo-sans/MuseoSans-500.otf') format("opentype"),
   url('./../fonts/Museo-sans/MuseoSans-500.woff') format('woff'),
   url('./../fonts/Museo-sans/MuseoSans-500.woff2') format('woff2');

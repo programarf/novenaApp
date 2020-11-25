@@ -23,12 +23,11 @@ export const ListMenu = styled.div`
   }
 `;
 export const Icon = styled.div`
+  width: 12px;
+  height: 12px;
   position: absolute;
   top: 38%;
-  right: 0;
-  width: 15px;
   right: 5%;
-  height: 15px
 `;
 
 export const Collapse = styled.div`
@@ -74,7 +73,6 @@ export const Collapse = styled.div`
         cursor: pointer;
       }
     }
-
     .no-active {
       .icono {/* reviews */
         border: 0;
@@ -120,14 +118,17 @@ export const Collapse = styled.div`
     .btn-download {
       position: absolute;
       bottom: 0;
+      left: 50%;
       font-size: 0.9rem;
       color: #FF1A1A;
       text-align: center;
+      white-space: nowrap;
       border-radius: 20px;
       background: #fff;
       padding: .5em 1.2em;
+      transform: translateX(-50%);
       &:before {
-        conten: none;
+        content: none;
       }
     }
   }
@@ -160,5 +161,8 @@ export const DropDown = styled.div`
     animation: ${rotate} .3s linear;
     animation-iteration-count:1;
     height: auto;
+    a {
+      text-align: center;
+    }
   }
 `;

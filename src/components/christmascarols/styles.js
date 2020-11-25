@@ -2,7 +2,7 @@ import styled from "styled-components";
 import next from './../../assets/img/next.svg';
 import borderRed from './../../assets/img/border-red.png';
 import point from './../../assets/img/point-white.png';
-import novenaTop from './../../assets/img/novena-top2.png';
+import novenaTop from './../../assets/img/day-top.png';
 
 export const AudioPlayerStyle = styled.div`
   background-color: #027334;
@@ -128,6 +128,15 @@ export const Villancicos = styled.div`
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: 101%;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4em;
+      background: url("${novenaTop}") center bottom/100% no-repeat;
+    }
   }
   .menu-oracion a {
     color: #FFFFFF;
@@ -167,13 +176,5 @@ export const Villancicos = styled.div`
       color: #FFE100;
     }
   }
-  .novena-detail:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4em;
-    background: url("${novenaTop}") center 88%/96% no-repeat;
-  }
+
 `;

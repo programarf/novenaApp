@@ -7,8 +7,8 @@ import Ballstop from './../assets/img/balls-top.png';
 import BallsBottom from './../assets/img/balls-bottom.png';
 
 export const AppContent = styled.div`
-  position: relative;
-  overflow: hidden;
+  // position: relative;
+  // overflow: hidden;
   // margin: 0 auto;
   // max-width: 500px;
 `;
@@ -17,10 +17,10 @@ export const AppMain = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;
   position: relative;
-  @media (max-width: 768px){
-    min-height: 100vh;
-    max-height: 100vh;
-  }
+  // @media (max-width: 768px){
+  //   min-height: 100vh;
+  //   max-height: 100vh;
+  // }
   :before {
     content: '';
     position: absolute;
@@ -38,10 +38,11 @@ export const AppMain = styled.div`
     width: 100%;
     height: 7em;
     background: url("${BallsBottom}") center top/106% no-repeat;
+    // box-shadow: 0 0 0 2px red inset;
   }
   .wrapper {
-    height: 100vh;
-    max-height: calc(100vh - 2em);
+    // height: 100vh;
+    // max-height: calc(100vh - 2em);
     padding: 13% 0;
     text-align: center;
     border-style: solid;
@@ -70,36 +71,37 @@ export const AppMain = styled.div`
   }
   .button-menu {
     padding-top: .5em;
-    height: auto;
     overflow: hidden;
+    // height: auto;
     ul {
+      height: 46px;
       overflow-x: hidden;
       overflow-y: scroll;
-      height: calc(100vh - 122vw);
+      // height: calc(100vh - 122vw);
+      a {
+        min-width: 70%;
+        display: inline-block;
+        font-size: 1rem;
+        color: #08B761;
+        text-transform: capitalize;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: .5em 2.5em;
+        margin-bottom: 1em;
+        background: #fff;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
+        &[href^="/descarga-farolito"] {
+          background: #EC020B;
+          color: white;
+          font-size: 0.8rem;
+          padding: .7em 2.5em;
+          &:hover {
+            background: white;
+            color: #EC020B;
+          }
+        }
+      }
     }
-    a {
-      min-width: 70%;
-      display: inline-block;
-      font-size: 1rem;
-      color: #08B761;
-      text-transform: capitalize;
-      text-decoration: none;
-      border-radius: 20px;
-      padding: .5em 2.5em;
-      margin-bottom: 1em;
-      background: #fff;
-      box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
-    }
-  }
-  .button-menu a[href^="/descarga-farolito"] {
-    background: #EC020B;
-    color: white;
-    font-size: 0.8rem;
-    padding: .7em 2.5em;
-  }
-  .button-menu a:hover {
-    background: white;
-    color: #EC020B;
   }
 `;
 

@@ -14,6 +14,8 @@ export const LiItem = styled.li`
 `;
 
 
+document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
+// document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
 export const GlobalStyle = createGlobalStyle`
   @import url('./assets/css/style-fonts.css');
   html {
@@ -33,6 +35,9 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+  li {
+    list-style: none;
+  }
 
   button: {
     background: transparent;
@@ -42,21 +47,29 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     width: 100%;
-    height: 100vh;
-    background: #fefefe;
-    margin: 0 auto;
     max-width: 500px;
-    overscroll-behavior: none;
     font-family: 'Museo Sans', sans-serif;
     font-weight: 300;
+    background: #fefefe;
+    margin: 0 auto;
+    overscroll-behavior: none;
   }
-
-  #app {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-    overflow-x: hidden;
-    min-height: 100vh;
-    padding-bottom: 10px;
+  #root {
+    height: calc(100 * var(--vh));
+    display: block;
+    position: relative;
+    overflow: hidden;
+    // div {
+    //   height: 100%;
+    //   display: block;
+    // }
   }
+  // #app {
+  //   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  //   overflow-x: hidden;
+  //   // min-height: 100vh;
+  //   padding-bottom: 10px;
+  // }
 
   li${LiItem}{
   }
@@ -130,7 +143,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   .loading {
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    // height: 100vh;
     background: white;
     display: flex;
     align-items: center;

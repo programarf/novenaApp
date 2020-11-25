@@ -95,12 +95,12 @@ class Menu extends React.Component {
                     </SubMenu>
                   </DropDown>
                 </div>
-                : <Link
+                : <div><Link
                   to={`${item.url_base}`}
                   className={(item.destacado) ? "btn-download" : "item"}
                   onClick={this.closeMenu}>
                   {item.nombre}
-                </Link>
+                </Link></div>
               )}
             </LiItem>
           ))}
