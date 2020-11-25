@@ -32,16 +32,19 @@ class DayNovena extends React.Component {
             </div>
           </div>
           <Tabs>
+            {console.log(this.state.list[0].enlace)}
             <Link
               to={{
-                pathname: `${this.state.day}/${this.state.post[0].title}`,
+                pathname: `${this.state.day+this.state.list[0].enlace}`,
                 state: {
                   IdPost: this.state.post[0].id,
                   day: this.state.day,
-                  weight: 1
+                  weight: 1,
+                  list:this.state.list,
+                  consideration: this.state.post[0]
                 }
               }}>
-              comenzar
+              Comenzar
               </Link>
           </Tabs>
         </PortadaDay>
@@ -64,6 +67,17 @@ class DayNovena extends React.Component {
         (result) => {
           this.setState({
             post: result
+          });
+        }
+      )
+
+    url = Constants.APP_PRAYERS_POSTS;
+    fetch(proxyUrl + url)
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            list: result
           });
         }
       )
