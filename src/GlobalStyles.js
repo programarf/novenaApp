@@ -105,6 +105,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     overscroll-behavior: none;
   }
+  #root {
+    overflow: hidden;
+    max-width: 100vw;
+  }
   .App > div {
     height: calc(100 * var(--vh));
     display: block;
