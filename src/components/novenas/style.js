@@ -224,7 +224,8 @@ export const Tabs = styled.div`
   a {
     flex: 0 0 50%;
     min-height: 4.1em;
-    display: block;
+    display: flex;
+    align-items: center;
     position relative;
     font-size: .9rem;
     color: #fff;
