@@ -12,7 +12,8 @@ class DayHome extends React.Component {
       prayers: [],
       postId: props.match.params.postId,
       day: this.props.location.state.IdPost,
-      prayersSend: []
+      prayersSend: [],
+      dayUrl: this.props.location.state.day
     };
   };
 
@@ -45,26 +46,43 @@ class DayHome extends React.Component {
             <ul className="menu-oracion">
               {this.state.prayers.map(prayer => (
                 <li key={prayer.id}>
-                  {console.log(prayer)}
                   {(prayer.field_orden == 2) ?
+                  <div className="secondary">
                     <Link to={{
-                      pathname: `/novena/comenzar/${this.state.day}`,
+                        pathname: `${this.state.dayUrl}/oraciones/consideracion`,
                       state: {
-                        prayersSend: this.state.prayers,
-                        IdPost: this.state.day
+                        IdPost: this.state.post[0].id,
+                        day: this.state.day,
+                        weight: null,
+                        list: this.state.prayers,
+                        consideration: this.state.post[0]
                       }
-                    }
-                    }>
+                    }}>
                       Consideración
-
                     </Link>
+                    <Link to={{
+                      pathname: `${this.state.dayUrl+prayer.enlace}`,
+                      state: {
+                        IdPost: this.state.post[0].id,
+                        day: this.state.dayUrl,
+                        weight: prayer.field_orden,
+                        list: this.state.prayers,
+                        consideration: this.state.post[0]
+                      }
+                    }}>
+                        {prayer.title}
+                    </Link>
+                    </div>
                     :
                     <Link
                       to={{
-                        pathname: `/novenas/${this.state.day}/${prayer.enlace}`,
+                        pathname: `${this.state.dayUrl+prayer.enlace}`,
                         state: {
-                          IdPost: prayer.field_orden,
-                          day: this.state.day
+                          IdPost: this.state.post[0].id,
+                          day: this.state.dayUrl,
+                          weight: prayer.field_orden,
+                          list: this.state.prayers,
+                          consideration: this.state.post[0]
                         }
                       }}>
                       {prayer.title}
@@ -93,15 +111,16 @@ class DayHome extends React.Component {
   componentDidMount() {
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_PRAYERS_POSTS;
-    fetch(proxyUrl + url)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            prayers: result
-          });
-        }
-      )
+    let urlb = Constants.APP_DOMAIN_POST_DETAIL + this.state.day + '/dia';
+    Promise.all([
+      fetch(proxyUrl +url),
+      fetch(proxyUrl + urlb)
+    ])
+    .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+    .then(([data1, data2]) => this.setState({
+        prayers: data1,
+      post: data2
+    }));
   }
 }
 

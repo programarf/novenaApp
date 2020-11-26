@@ -24,12 +24,14 @@ class DayDetail extends React.Component {
     let next_title;
     let prev;
     let prev_title;
+    { console.log(this.state.weight)}
+
     if (this.state.weight !== null) {
-      render = this.state.list[this.state.weight - 1];
-      next = (this.state.weight <= 1) ? null : this.state.weight + 1;
+      render = this.state.list[parseInt(this.state.weight) - 1];
+      next = (parseInt(this.state.weight) <= 1) ? null : parseInt(this.state.weight) + 1;
       next_title = (next == null) ? this.state.consideration : this.state.list[next - 1];
-      prev = (this.state.weight == null) ? 1 : ((this.state.weight == 2) ? null : this.state.weight - 1);
-      prev_title = (next == null) ? this.state.list[this.state.weight - 1] : ((next == 2) ? this.state.consideration : this.state.list[this.state.weight - 2]);
+      prev = (parseInt(this.state.weight) == null) ? 1 : ((parseInt(this.state.weight) == 2) ? null : parseInt(this.state.weight) - 1);
+      prev_title = (next == null) ? this.state.list[parseInt(this.state.weight) - 1] : ((next == 2) ? this.state.consideration : this.state.list[parseInt(this.state.weight) - 2]);
     } else {
       render = this.state.consideration;
       prev = 1;
@@ -41,6 +43,8 @@ class DayDetail extends React.Component {
       <Oracion>
         <div className="novena-detail">
           <div className="menu-oracion">
+          {console.log(next)}
+            {console.log(prev)}
             <Link
               to={{
                 pathname: `${this.state.day}/oraciones`,
@@ -49,7 +53,7 @@ class DayDetail extends React.Component {
                   day: this.state.day,
                   weight: next,
                   list: this.state.list,
-                  consideration: this.state.consideration
+                  consideration: this.state.consideration,
                 }
               }}>
               Ver oraciones del día

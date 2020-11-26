@@ -60,26 +60,35 @@ class DayNovena extends React.Component {
   componentDidMount() {
     var proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let url = Constants.APP_DOMAIN_POST_DETAIL + this.state.postId + '/dia';
-    fetch(proxyUrl + url)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            post: result
-          });
-        }
-      )
-
-    url = Constants.APP_PRAYERS_POSTS;
-    fetch(proxyUrl + url)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          this.setState({
-            list: result
-          });
-        }
-      )
+    let urlb = Constants.APP_PRAYERS_POSTS;
+    // fetch(proxyUrl + url)
+    //   .then(res => res.json())
+    //   .then(
+    //     (result) => {
+    //       this.setState({
+    //         post: result
+    //       });
+    //     }
+    //   )
+    // url = Constants.APP_PRAYERS_POSTS;
+    // fetch(proxyUrl + url)
+    //   .then(res => res.json())
+    //   .then(
+    //     (result) => {
+    //       this.setState({
+    //         list: result
+    //       });
+    //     }
+    //   )
+    Promise.all([
+      fetch(proxyUrl +url),
+      fetch(proxyUrl + urlb)
+    ])
+    .then(([res1, res2]) => Promise.all([res1.json(), res2.json()]))
+    .then(([data1, data2]) => this.setState({
+      post: data1,
+      list: data2
+    }));
   }
 }
 
