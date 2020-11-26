@@ -70,7 +70,7 @@ export const StyleNovena = styled.div`
       overflow-y: scroll;
       margin-top: 1rem;
       a {
-        min-width: calc(100% - 4em);
+        min-width: 50%;
         display: inline-block;
         font-size: 1rem;
         color: #08B761;
@@ -92,7 +92,7 @@ export const StyleNovena = styled.div`
       margin-bottom: 1em;
     }
     a {
-      min-width: 50%;
+      min-width: 57%;
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
