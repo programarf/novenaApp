@@ -3,6 +3,7 @@ import styled from "styled-components";
 import borderRed from './../../assets/img/border-red.png';
 import chispas from './../../assets/img/chispas.png';
 import dayTop from './../../assets/img/day-top.png';
+import resetasTop from './../../assets/img/receta-top.png';
 import dayBottom from './../../assets/img/day-bottom.png';
 import point from './../../assets/img/point-white.png';
 
@@ -150,18 +151,19 @@ export const DetailsRecipes = styled.div`
     border-width: 10px 10px 10px 10px;
     border-image: url("${borderRed}") 9 9 9 9 repeat repeat;
     border-image-width: 1.2;
-    background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
-    background-position: center, center;
+    background-image: radial-gradient(#FF1A1A, #AE2424 78%);
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 182%, 101%;
+    background-size: 101%;
+    background-clip: padding-box;
     &:before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 4em;
-      background: url("${dayTop}") center bottom/100% no-repeat;
+      height: 5em;
+      background: url("${resetasTop}") center bottom/100% no-repeat;
     }
     &:after {
       content: '';
