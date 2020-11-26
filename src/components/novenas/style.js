@@ -28,7 +28,8 @@ export const StyleNovena = styled.div`
     background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, 101%;
+    background-size: 182%, 100%;
+    background-clip: padding-box;
     &:before {
       content: '';
       position: absolute;
@@ -156,7 +157,8 @@ export const PortadaDay = styled.div`
     background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, 101%;
+    background-size: 182%, 100%;
+    background-clip: padding-box;
     position: relative;
     flex: 1 0 auto;
     &:after {
@@ -302,7 +304,8 @@ export const Oracion = styled.div`
     background: radial-gradient(#F3F2E6, #F3F2E6);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 101%;
+    background-size: 100%;
+    background-clip: padding-box;
     position: relative;
     flex: 1 0 auto;
     &:after {
@@ -342,6 +345,11 @@ export const Oracion = styled.div`
       overflow-x: hidden;
       overflow-y: scroll;
       position: relative;
+      strong {
+        font-family: Museo Slab;
+        font-weight: 700;
+        color: #545454;
+      }
       p {
         color: #545454;
         text-align: left;
@@ -382,7 +390,8 @@ export const MenuOraciones = styled.div`
     background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;
-    background-size: 182%, 101%;
+    background-size: 182%, 100%;
+    background-clip: padding-box;
     &:before {
       content: '';
       position: absolute;
@@ -417,6 +426,7 @@ export const MenuOraciones = styled.div`
       height: calc(40 * var(--vh));
       overflow-x: hidden;
       overflow-y: scroll;
+      margin-bottom: 1rem;
     }
   }
   .menu-oracion a {
@@ -424,6 +434,7 @@ export const MenuOraciones = styled.div`
     display: inline-block;
     font-size: 1rem;
     color: #08B761;
+    font-weight: 500;
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 20px;
@@ -435,6 +446,7 @@ export const MenuOraciones = styled.div`
   .comparte {
     p {
       color: white;
+      font-weight: 500;
       margin-bottom: 1em;
     }
     a {
@@ -442,6 +454,7 @@ export const MenuOraciones = styled.div`
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
+      font-weight: 500;
       text-transform: capitalize;
       text-decoration: none;
       border-radius: 20px;

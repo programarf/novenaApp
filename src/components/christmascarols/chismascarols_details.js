@@ -5,7 +5,7 @@ import Constants from '../../constants/constants';
 import ReactHtmlParser from 'react-html-parser';
 import AudioPlayer from 'react-custom-audio-player';
 import { AudioPlayerStyle } from './styles';
-import { Villancicos } from './styles';
+import { DetailsChismascarols } from './styles';
 
 // import Buy from '../../util/buy.js';
 
@@ -23,8 +23,8 @@ class ChismascarolsDetails extends React.Component {
       console.log(this.state.post);
 
       return (
-        <Villancicos>
-          <div className="novena-detail detail-chismacols">
+        <DetailsChismascarols>
+          <div className="detail-chismacols">
             <div className="menu-oracion">
               <Link to={`/villancicos/`}> Ver villancicos </Link>
             </div>
@@ -40,7 +40,7 @@ class ChismascarolsDetails extends React.Component {
               </div>
             </AudioPlayerStyle>
           </div>
-        </Villancicos>
+        </DetailsChismascarols>
       );
     } else {
       return (

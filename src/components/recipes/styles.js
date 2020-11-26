@@ -69,6 +69,7 @@ export const HomeRecipes = styled.div`
     display: inline-block;
     font-size: 1rem;
     color: #08B761;
+    font-weight: 500;
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 20px;
@@ -87,6 +88,7 @@ export const HomeRecipes = styled.div`
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
+      font-weight: 500;
       text-transform: capitalize;
       text-decoration: none;
       border-radius: 20px;
@@ -172,10 +174,11 @@ export const DetailsRecipes = styled.div`
     .menu-lateral {
       a {
         color: white;
+        font-weight: 300;
+        text-align: right;
         text-decoration: none;
         display: flex;
         justify-content: flex-end;
-        text-align: right;
         padding: 1em 0;
         &:before{
           content: '';
@@ -206,6 +209,7 @@ export const DetailsRecipes = styled.div`
       text-align: left;
       line-height: 1.39;
       strong {
+        font-family: 'Museo Slab';
         font-weight: 700;
         color: #FFE100;
       }

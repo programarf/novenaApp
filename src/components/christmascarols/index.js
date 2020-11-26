@@ -4,7 +4,8 @@ import {
 } from "react-router-dom";
 import Constants from '../../constants/constants';
 import Buy from '../../util/buy.js';
-import { StyleNovena } from './../novenas/style';
+// import { StyleNovena } from './../novenas/style';
+import { HomeCristmascarols } from './styles';
 
 // imagenes
 import cantaVillancicos from "./../../assets/img/canta villancicos.png";
@@ -20,8 +21,8 @@ class Christmascarols extends React.Component {
 
   render() {
     return (
-      <StyleNovena>
-        <div className="day-home-wrap">
+      <HomeCristmascarols>
+        <div className="home-cristmascarols">
           <div className="flex">
             <Link to={`/`} className="close">
               <svg xmlns="http://www.w3.org/2000/svg" width="15.795" height="16.618" viewBox="0 0 15.795 16.618">
@@ -60,7 +61,7 @@ class Christmascarols extends React.Component {
           </div>
           <div className="arrow"></div>
         </div>
-      </StyleNovena>
+      </HomeCristmascarols>
     );
   }
   componentDidMount() {

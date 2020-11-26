@@ -43,9 +43,10 @@ export const AppMain = styled.div`
     border-image: url("${border}") 9 9 9 9 repeat repeat;
     border-image-width: 1.2;
     background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
-    background-position: center, center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 182%, 101%;
+    background-size: 182%, 100%;
+    background-clip: padding-box;
     display: flex;
     flex-direction: column;
   }
