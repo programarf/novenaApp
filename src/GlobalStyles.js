@@ -1,4 +1,16 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import MuseoSans300Otf from './assets/fonts/Museo_sans/MuseoSans-300.otf';
+import MuseoSans300Woff from './assets/fonts/Museo_sans/MuseoSans-300.woff';
+import MuseoSans300Woff2 from './assets/fonts/Museo_sans/MuseoSans-300.woff2';
+import MuseoSans500Otf from './assets/fonts/Museo_sans/MuseoSans_500.otf';
+import MuseoSans500Woff from './assets/fonts/Museo_sans/MuseoSans_500.woff';
+import MuseoSans500Woff2 from './assets/fonts/Museo_sans/MuseoSans_500.woff2';
+import MuseoSlab700Otf from './assets/fonts/Museo_slab/Museo_Slab_700.otf';
+import MuseoSlab700Woff from './assets/fonts/Museo_slab/Museo_Slab_700.woff';
+import MuseoSlab700Woff2 from './assets/fonts/Museo_slab/Museo_Slab_700.woff2';
+import MuseoSlab900Otf from './assets/fonts/Museo_slab/Museo_Slab_900.otf';
+import MuseoSlab900Woff from './assets/fonts/Museo_slab/Museo_Slab_900.woff';
+import MuseoSlab900Woff2 from './assets/fonts/Museo_slab/Museo_Slab_900.woff2';
 
 export const LiItem = styled.li`
   //background-color:  ${props => props.theme.fg};;
@@ -19,7 +31,44 @@ window.addEventListener('resize', () => {
 });
 // document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
 export const GlobalStyle = createGlobalStyle`
-  @import url('./assets/css/style-fonts.css');
+  @font-face {
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("https://use.typekit.net/af/620bf8/00000000000000000000e7fe/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),
+    url('${MuseoSans300Otf}') format("opentype"),
+    url('${MuseoSans300Woff}') format('woff'),
+    url('${MuseoSans300Woff2}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("https://use.typekit.net/af/a28b50/00000000000000000000e803/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3") format("woff2"),
+    url('${MuseoSans500Otf}') format("opentype"),
+    url('${MuseoSans500Woff}') format('woff'),
+    url('${MuseoSans500Woff2}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Museo Slab';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('${MuseoSlab700Otf}') format("opentype"),
+    url('${MuseoSlab700Woff}') format('woff'),
+    url('${MuseoSlab700Woff2}') format('woff2');
+  }
+  @font-face {
+    font-family: 'Museo Slab';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url('${MuseoSlab900Otf}') format("opentype"),
+    url('${MuseoSlab900Woff}') format('woff'),
+    url('${MuseoSlab900Woff2}') format('woff2');
+  }
   html {
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

@@ -29,7 +29,7 @@ class RecipesDetails extends React.Component {
             </div>
             <div className="overflow">
               <div className="img-title">
-                <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title}/>
+                <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title} alt="" title=""/>
               </div>
               <div className="video">
                 <Modal>
@@ -40,7 +40,7 @@ class RecipesDetails extends React.Component {
                 </Modal>
               </div>
               <div className="img-ingredien">
-                <img src={IngredientesTitle} alt=""/>
+                <img src={IngredientesTitle} alt="" title=""/>
               </div>
               <div className="content-body">
                 {ReactHtmlParser(this.state.post[0].body)}

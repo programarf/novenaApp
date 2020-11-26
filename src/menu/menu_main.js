@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { MenuContext } from "react-flexible-sliding-menu";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Link } from "react-router-dom";
 import {Collapse } from './style';
 import Menu from './index';
 

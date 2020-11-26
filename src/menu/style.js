@@ -121,6 +121,7 @@ export const Collapse = styled.div`
       left: 50%;
       font-size: 0.9rem;
       color: #FF1A1A;
+      font-weight: 500;
       text-align: center;
       white-space: nowrap;
       border-radius: 20px;

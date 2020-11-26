@@ -68,24 +68,26 @@ export const StyleNovena = styled.div`
       overflow-x: hidden;
       overflow-y: scroll;
       margin-top: 1rem;
+      a {
+        min-width: calc(100% - 4em);
+        display: inline-block;
+        font-size: 1rem;
+        color: #08B761;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: .5em 1.5em;
+        margin-bottom: 7%;
+        background: #fff;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
+      }
     }
-  }
-  .list-novena a {
-    min-width: calc(100% - 4em);
-    display: inline-block;
-    font-size: 1rem;
-    color: #08B761;
-    text-transform: capitalize;
-    text-decoration: none;
-    border-radius: 20px;
-    padding: .5em 1.5em;
-    margin-bottom: 7%;
-    background: #fff;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }
   .comparte {
     p {
       color: white;
+      font-weight: 500;
       margin-bottom: 1em;
     }
     a {
@@ -93,6 +95,7 @@ export const StyleNovena = styled.div`
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
+      font-weight: 500;
       text-transform: capitalize;
       text-decoration: none;
       border-radius: 20px;
@@ -183,12 +186,10 @@ export const PortadaDay = styled.div`
       height: calc(22 * var(--vh));
       margin-bottom: 1em;
     }
-    // .papas img {
-    //   object-fit: cover;
-    // }
   }
   h2 {
-    font-size: 2.7em;
+    font-family: Museo Slab;
+    font-size: 2.4em;
     color: white;
     font-weight: 900;
     text-shadow: 0 2px rgb(0 0 0 / 51%);
@@ -198,6 +199,7 @@ export const PortadaDay = styled.div`
     display: inline-block;
     font-size: 1rem;
     color: #08B761;
+    font-weight: 500;
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 20px;
@@ -219,13 +221,50 @@ export const Tabs = styled.div`
   a {
     flex: 0 0 50%;
     display: block;
+    position relative;
+    font-size: .9rem;
     color: #fff;
-    font-size: .8rem;
+    font-weight: 300;
+    text-align: left;
     text-decoration: none;
     text-transform: capitalize;
-    padding: .5em 1em;
+    padding: .5em 2em;
+    &:first-child::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-bottom: 3px solid #fff;
+      border-left: 3px solid #fff;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-50%) rotate(45deg);
+      z-index: 2;
+      cursor: pointer;
+    }
+    &:last-child::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      border: 0;
+      border-bottom: 3px solid #fff;
+      border-right: 3px solid #fff;
+      border-radius: 3px;
+      position: absolute;
+      top: 50%;
+      left: unset;
+      right: 5%;
+      transform: translateY(-50%) rotate(-45deg);
+      z-index: 2;
+      cursor: pointer;
+    }
     &[href^="#"] {
       pointer-events: none;
+      &::before {
+        content: none;
+      }
     }
   }
   a:last-child {
@@ -279,10 +318,11 @@ export const Oracion = styled.div`
     }
     .menu-oracion a {
       color: #AE2424;
+      font-weight: 300;
+      text-align: right;
       text-decoration: none;
       display: flex;
       justify-content: flex-end;
-      text-align: right;
       padding: 1em 0;
       &:after {
         content: '';
@@ -305,6 +345,7 @@ export const Oracion = styled.div`
       p {
         color: #545454;
         text-align: left;
+        font-weight: 300;
         line-height: 1.5;
         padding: 0 1em;
       }
@@ -381,12 +422,12 @@ export const MenuOraciones = styled.div`
   .menu-oracion a {
     min-width: calc(100% - 3em);
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #08B761;
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 20px;
-    padding: .5em 2.5em;
+    padding: .5em 1.5em;
     margin-bottom: 7%;
     background: #fff;
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
@@ -399,12 +440,12 @@ export const MenuOraciones = styled.div`
     a {
       min-width: 50%;
       display: inline-block;
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: #08B761;
       text-transform: capitalize;
       text-decoration: none;
       border-radius: 20px;
-      padding: .5em 1.5em;
+      padding: .5em 2.5em;
       margin-bottom: 7%;
       background: #fff;
       box-shadow: 0 3px 3px rgb(0 0 0 / 14%);

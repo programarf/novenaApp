@@ -12,9 +12,6 @@ export const AppContent = styled.div`
   // margin: 0 auto;
   // max-width: 500px;
 `;
-
-
-
 export const AppMain = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;
@@ -73,7 +70,6 @@ export const AppMain = styled.div`
     overflow: hidden;
     ul {
       height: calc(100 * var(--vh) - 67vh);
-
       overflow-x: hidden;
       overflow-y: scroll;
       a {
@@ -81,6 +77,7 @@ export const AppMain = styled.div`
         display: inline-block;
         font-size: 1rem;
         color: #08B761;
+        font-weight: 500;
         text-transform: capitalize;
         text-decoration: none;
         border-radius: 20px;

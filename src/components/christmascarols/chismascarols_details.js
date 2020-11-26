@@ -29,7 +29,7 @@ class ChismascarolsDetails extends React.Component {
               <Link to={`/villancicos/`}> Ver villancicos </Link>
             </div>
             <div className="conte-text ">
-              <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title} />
+              <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title} alt="" title=""/>
               {ReactHtmlParser(this.state.post[0].body)}
             </div>
             <AudioPlayerStyle>
