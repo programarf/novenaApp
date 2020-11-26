@@ -62,21 +62,22 @@ export const HomeRecipes = styled.div`
       height: calc(100 * var(--vh) - 26em);
       overflow-x: hidden;
       overflow-y: scroll;
+      a {
+        width: 100%;
+        max-width: 85%;
+        display: inline-block;
+        font-size: .9rem;
+        color: #08B761;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+        border-radius: 20px;
+        padding: .7em 1.5em;
+        margin-bottom: 1.3em;
+        background: #fff;
+        box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
+      }
     }
-  }
-  .list-novena a {
-    min-width: calc(100% - 4em);
-    display: inline-block;
-    font-size: 1rem;
-    color: #08B761;
-    font-weight: 500;
-    text-transform: capitalize;
-    text-decoration: none;
-    border-radius: 20px;
-    padding: .5em 2.5em;
-    margin-bottom: 7%;
-    background: #fff;
-    box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }
   .comparte {
     p {
