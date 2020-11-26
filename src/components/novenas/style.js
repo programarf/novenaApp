@@ -310,12 +310,12 @@ export const Oracion = styled.div`
     flex: 1 0 auto;
     &:after {
       content: '';
-      width: 117%;
+      width: 124%;
       position: absolute;
       left: 50%;
       bottom: 0;
-      height: 7.4em;
-      background: url("${oracionbottom}") center top/115% no-repeat;
+      height: 6.3em;
+      background: url("${oracionbottom}") center top/100% no-repeat;
       transform: translateX(-50%);
       z-index: 1;
     }
