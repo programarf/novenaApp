@@ -24,18 +24,14 @@ class DayNovena extends React.Component {
       return (
         <PortadaDay>
           <div className="portada-day">
-            {/* <div className="box"> */}
-              <div className="title-day">
-                <img src={PortadaHome} alt="novena de aguinaldos" title="novena de aguinaldos" />
-              </div>
-              <h2>{this.state.post[0].title}</h2>
-              <div className="papas">
-                <img src={Constants.APP_DOMAIN + this.state.post[0].field_imagen_portada} height="50" width="220" />
-              </div>
-              <div>
-                <Buy url={this.state.post[0].field_link_compra}></Buy>
-              </div>
-            {/* </div> */}
+            <div className="title-day">
+              <img src={PortadaHome} alt="novena de aguinaldos" title="novena de aguinaldos" />
+            </div>
+            <h2>{this.state.post[0].title}</h2>
+            <div className="papas" style={{backgroundImage: `url(${Constants.APP_DOMAIN + this.state.post[0].field_imagen_portada})`}}></div>
+            <div>
+              <Buy url={this.state.post[0].field_link_compra}></Buy>
+            </div>
           </div>
           <Tabs>
             <Link

@@ -127,7 +127,6 @@ export const Wrapper = styled.div`
 
   section.route-section {
     position: absolute;
-    // background-color: #b4f2c7;
     width: 100%;
     top: 0;
     left: 0;

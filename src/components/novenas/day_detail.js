@@ -41,7 +41,7 @@ class DayDetail extends React.Component {
     }
     return (
       <Oracion>
-        <div className="novena-detail">
+        <div className="day-detail">
           <div className="menu-oracion">
           {console.log(next)}
             {console.log(prev)}
@@ -60,11 +60,13 @@ class DayDetail extends React.Component {
               </Link>
           </div>
           {/* <h2>Consideración</h2> */}
-          <div className="img-oraci">
-            {console.log(render)}
-            <img src={render.field_image_title} alt="" />
+          <div className="conte-text">
+            <div className="img-oraci">
+              {console.log(render)}
+              <img src={render.field_image_title} alt="" />
+            </div>
+            {ReactHtmlParser(render.body)}
           </div>
-          <div className="conte-text">{ReactHtmlParser(render.body)}</div>
         </div>
         <Tabs>
           <Link to={{
@@ -92,9 +94,9 @@ class DayDetail extends React.Component {
                 consideration: this.state.consideration
               },
             }}
-            className={(next > this.state.list.length ? 'hidden' : '')}
+            className={(next > this.state.list.length ? '' : '')}
           >
-            {(next == null) ? "Consideración" : ((next <= this.state.list.length) ? next_title.title : "#")}
+            {(next == null) ? "Consideración" : ((next <= this.state.list.length) ? next_title.title : "")}
           </Link>
         </Tabs>
       </Oracion>
