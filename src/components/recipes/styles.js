@@ -209,6 +209,9 @@ export const DetailsRecipes = styled.div`
       color: #fff;
       text-align: left;
       line-height: 1.39;
+      p {
+        margin-bottom: 1rem;
+      }
       strong {
         font-family: 'Museo Slab';
         font-weight: 700;

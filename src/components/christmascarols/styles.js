@@ -177,7 +177,8 @@ export const DetailsChismascarols = styled.div`
         line-height: 1.5;
         font-weight: 300;
         padding: 0 1em;
-        strong{
+        margin-bottom: 1rem;
+        strong {
           display: block;
           font-family: 'Museo Slab';
           font-weight: 700;

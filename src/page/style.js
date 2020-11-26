@@ -87,7 +87,7 @@ export const AppMain = styled.div`
         margin-bottom: 1em;
         background: #fff;
         box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
-        &[href^="/descarga-farolito"] {
+        &.btn-download {
           background: #EC020B;
           color: white;
           font-size: 0.8rem;
