@@ -23,11 +23,19 @@ export const ListMenu = styled.div`
   }
 `;
 export const Icon = styled.div`
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 38%;
-  right: 5%;
+  padding: 0em 1.5em;
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    z-index: 2;
+    cursor: pointer;
+  }
 `;
 
 export const Collapse = styled.div`
@@ -51,40 +59,42 @@ export const Collapse = styled.div`
     height: 100vh;
     overflow: auto;
     a {
-      display: block;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
       color: white;
-      font-size: 1rem
+      font-size: 1rem;
       text-align: left;
       font-weight: 500;;
       text-decoration: none;
       text-transform: capitalize;
+      padding: .5em 0 .5em 2.5em;
       margin-bottom: 1.5em;
-      position: relative;
+      box-shadow: 0 0 0 2px red inset;
     }
     .active {
-      .icono {/* reviews */
-        border: 0;
-        top: 14%;
-        border-bottom: 3px solid white;
-        border-right: 3px solid white;
-        border-radius: 3px;
-        transform: translateY(-50%) rotate(223deg);
-        z-index: 2;
-        cursor: pointer;
+      .icono {
+        &:after {
+          transform: rotate(225deg);
+        }
       }
     }
-    .no-active {
-      .icono {/* reviews */
-        border: 0;
-        border-bottom: 3px solid white;
-        border-right: 3px solid white;
-        border-radius: 3px;
-        transform: translateY(-50%) rotate(45deg);
-        z-index: 2;
-        cursor: pointer;
-      }
-    }
+    // .no-active {
+    //   .icono {/* reviews */
+    //     // border: 0;
+    //     // border-bottom: 3px solid white;
+    //     // border-right: 3px solid white;
+    //     // border-radius: 3px;
+    //     // transform: translateY(-50%) rotate(45deg);
+    //     // z-index: 2;
+    //     // cursor: pointer;
+    //     // position: relative;
+    //   }
+    // }
     li {
+      > div {
+        position: relative;
+      }
       > div > a:before {
         content: '';
         height: 25px;
@@ -94,7 +104,9 @@ export const Collapse = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         margin-right: .8em;
-        transform: translateY(5px);
+        position: absolute;
+        top: 4px;
+        left: 0;
       }
       &:nth-child(1) > div > a:before{
         background-image: url("${home}");

@@ -185,8 +185,9 @@ export const PortadaDay = styled.div`
       background-size: 85%;
       background-repeat: no-repeat;
       background-position: center 39%;
-      height: calc(22 * var(--vh));
+      height: calc(30 * var(--vh));
       margin-bottom: 1em;
+      margin-top: 1em;
     }
   }
   h2 {
@@ -356,6 +357,7 @@ export const Oracion = styled.div`
         font-weight: 300;
         line-height: 1.5;
         padding: 0 1em;
+        margin-bottom: 1em;
       }
     }
   }

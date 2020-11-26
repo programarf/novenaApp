@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import RoutePage from './route_page';
 import { AppMain, BtnMain } from './style';
 import { MenuContext } from "react-flexible-sliding-menu";
@@ -9,6 +9,7 @@ import Menu from '../menu/index';
 import logo from "../assets/img/comparte-navidad.png";
 import superRicas from "../assets/img/super-ricas.png";
 import todoRico from "../assets/img/todo-rico.png";
+
 
 function Home(){
   const { toggleMenu } = useContext(MenuContext);
