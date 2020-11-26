@@ -70,7 +70,7 @@ class DayDetail extends React.Component {
         </div>
         <Tabs>
           <Link to={{
-            pathname: `${(next == 3) ? this.state.day + "/oraciones/consideracion" : this.state.day + prev_title.enlace}`,
+            pathname: `${(next == 3) ? this.state.day + "/oraciones/consideracion" : this.state.day + prev_title.enlace.replace('/api', '')}`,
             state: {
               IdPost: this.state.postId,
               day: this.state.day,
@@ -85,7 +85,7 @@ class DayDetail extends React.Component {
           </Link>
           <Link
             to={{
-              pathname: `${(next == null) ? this.state.day + "/oraciones/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace : "#")}`,
+              pathname: `${(next == null) ? this.state.day + "/oraciones/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace.replace('/api','') : "#")}`,
               state: {
                 IdPost: this.state.postId,
                 day: this.state.day,

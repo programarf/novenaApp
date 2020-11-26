@@ -40,7 +40,7 @@ class Recipes extends React.Component {
                 <li key={Recipe.id}>
                   <Link
                     to={{
-                      pathname: `${Recipe.enlace}`,
+                      pathname: `${Recipe.enlace.replace('/api', '')}`,
                       state: {
                         IdPost: Recipe.id
                       }
