@@ -62,10 +62,13 @@ class DayDetail extends React.Component {
           {/* <h2>Consideración</h2> */}
           <div className="conte-text">
             <div className="img-oraci">
-              {console.log(render)}
+              {console.log(render.field_image, 'hello tio..')}
               <img src={render.field_image_title} alt="" />
             </div>
             {ReactHtmlParser(render.body)}
+          </div>
+          <div className="img-secons">
+            <img src={render.field_image_title} alt="" />
           </div>
         </div>
         <Tabs>

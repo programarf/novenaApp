@@ -70,7 +70,7 @@ export const Collapse = styled.div`
       width: 100%;
       position: relative;
       color: white;
-      font-size: 1rem;
+      font-size: 1.2rem;
       text-align: left;
       font-weight: 500;;
       text-decoration: none;
@@ -88,8 +88,8 @@ export const Collapse = styled.div`
       margin-bottom: 1.5em;
       > div > a:before {
         content: '';
-        height: 25px;
-        width: 25px;
+        height: 24px;
+        width: 24px;
         display: inline-block;
         background-size: cover;
         background-position: center;
