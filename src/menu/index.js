@@ -96,7 +96,7 @@ class Menu extends React.Component {
                   </DropDown>
                 </div>
                 : <div><Link
-                  to={`${item.url_base}`}
+                  to={`${item.url_base.replace('/api', '')}`}
                   className={(item.destacado) ? "btn-download" : "item"}
                   onClick={this.closeMenu}>
                   {item.nombre}
