@@ -116,6 +116,8 @@ export const Villancicos = styled.div`
   padding: 1em 1.1em;
   z-index: 2;
   position: relative;
+  min-height: calc(100 * var(--vh));
+  max-height: calc(100 * var(--vh));
   .detail-chismacols {
     height: calc(100 * var(--vh) - 2em);
     padding: 13% 0 0;
@@ -123,6 +125,7 @@ export const Villancicos = styled.div`
     border-style: solid;
     border-width: 10px 10px 10px 10px;
     border-image: url("${borderRed}") 9 9 9 9 repeat repeat;
+    border-image-width: 1.2;
     background: radial-gradient(#FF1A1A,#AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;

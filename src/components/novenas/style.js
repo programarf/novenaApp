@@ -24,6 +24,7 @@ export const StyleNovena = styled.div`
     border-style: solid;
     border-width: 10px 10px 10px 10px;
     border-image: url("${borderRed}") 9 9 9 9 repeat repeat;
+    border-image-width: 1.2;
     background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;
@@ -66,25 +67,40 @@ export const StyleNovena = styled.div`
       max-height: calc(34 * var(--vh));
       overflow-x: hidden;
       overflow-y: scroll;
+      margin-top: 1rem;
     }
   }
-  .comparte a,
   .list-novena a {
-    min-width: calc(100% - 8em);
+    min-width: calc(100% - 4em);
     display: inline-block;
     font-size: 1rem;
     color: #08B761;
     text-transform: capitalize;
     text-decoration: none;
     border-radius: 20px;
-    padding: .5em 2.5em;
+    padding: .5em 1.5em;
     margin-bottom: 7%;
     background: #fff;
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }
-  .comparte p {
-    color: white;
-    margin-bottom: 1em;
+  .comparte {
+    p {
+      color: white;
+      margin-bottom: 1em;
+    }
+    a {
+      min-width: 50%;
+      display: inline-block;
+      font-size: 1rem;
+      color: #08B761;
+      text-transform: capitalize;
+      text-decoration: none;
+      border-radius: 20px;
+      padding: .5em 2.5em;
+      margin-bottom: 7%;
+      background: #fff;
+      box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
+    }
   }
   .arrow {
     position: absolute;
@@ -133,6 +149,7 @@ export const PortadaDay = styled.div`
     border-style: solid;
     border-width: 10px 10px 0px 10px;
     border-image: url("${borderGreen}") 9 9 9 9 repeat repeat;
+    border-image-width: 1.2;
     background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
     background-position: center, center;
     background-repeat: no-repeat;
@@ -241,6 +258,7 @@ export const Oracion = styled.div`
     text-align: center;
     border-style: solid;
     border-width: 10px 10px 0px 10px;
+    border-image-width: 1.2;
     border-image: url("${borderYellow}") 9 9 9 9 repeat repeat;
     background: radial-gradient(#F3F2E6, #F3F2E6);
     background-position: center, center;
@@ -319,6 +337,7 @@ export const MenuOraciones = styled.div`
     border-style: solid;
     border-width: 10px 10px 10px 10px;
     border-image: url("${borderRed}") 9 9 9 9 repeat repeat;
+    border-image-width: 1.2;
     background-image: url("${chispas}"), radial-gradient(#FF1A1A, #AE2424 78%);
     background-position: center, center;
     background-repeat: no-repeat;
