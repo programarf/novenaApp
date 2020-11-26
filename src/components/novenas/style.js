@@ -344,7 +344,7 @@ export const Oracion = styled.div`
       margin-bottom: 1em
     }
     .conte-text {
-      height: calc(100 * var(--vh) - 7.4em - 10em);
+      height: calc(100 * var(--vh) - 7.4em - 12em);
       overflow-x: hidden;
       overflow-y: scroll;
       position: relative;
@@ -360,6 +360,26 @@ export const Oracion = styled.div`
         line-height: 1.5;
         padding: 0 1em;
         margin-bottom: 1em;
+      }
+    }
+    .gradient {
+      width: 100%;
+      height: 4em;
+      background: linear-gradient(0deg,#F3F2E6,#0000);
+      transform: translateY(-4em);
+    }
+    .img-secons {
+      width: 37%;
+      height: 23%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }

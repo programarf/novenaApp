@@ -67,8 +67,9 @@ class DayDetail extends React.Component {
             </div>
             {ReactHtmlParser(render.body)}
           </div>
+          <div className="gradient"></div>
           <div className="img-secons">
-            <img src={render.field_image_title} alt="" />
+            <img src={ 'https://test-navidadsr.tbwacolombia.com'+ render.field_image} alt="" />
           </div>
         </div>
         <Tabs>
