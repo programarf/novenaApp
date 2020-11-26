@@ -223,6 +223,7 @@ export const Tabs = styled.div`
   align-items: center;
   a {
     flex: 0 0 50%;
+    min-height: 4.1em;
     display: block;
     position relative;
     font-size: .9rem;

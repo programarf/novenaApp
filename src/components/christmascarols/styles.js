@@ -172,7 +172,7 @@ export const DetailsChismascarols = styled.div`
       position: relative;
       p {
         color: #FFFFFF;
-        font-size: .9rem;
+        font-size: 1rem;
         text-align: center;
         line-height: 1.5;
         font-weight: 300;
