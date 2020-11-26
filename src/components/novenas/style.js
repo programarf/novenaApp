@@ -111,42 +111,57 @@ export const StyleNovena = styled.div`
 `;
 export const PortadaDay = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
-  padding: 1em 1.1em;
+  padding: 1em 1.1em 0;
+  max-height: calc(100 * var(--vh));
+  min-height: calc(100 * var(--vh));
   z-index: 2;
-  position: relative;
-  @media (max-width: 768px){
-    min-height: 100vh
-  }
-  .portada-day {
-    height: calc(100vh - 2em - 0.5em - 1.5em);
-    padding: 22% 0;
-    text-align: center;
-    border-style: solid;
-    border-width: 10px 10px 10px 10px;
-    border-image: url("${borderGreen}") 9 9 9 9 repeat repeat;
-    background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
-    background-position: center, center;
-    background-repeat: no-repeat;
-    background-size: 182%, 101%;
-  }
-  .portada-day:before {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 4em;
-    // background: url("${novenaTop}") center bottom/100% no-repeat;
     background: url("${novenaTop}") center 88%/96% no-repeat;
+    z-index: 1;
   }
-  .portada-day:after {
-    content: '';
-    position: absolute;
-    bottom: calc(2.5em + 1.9em);
-    left: 0;
-    width: 100%;
-    height: 7.4em;
-    background: url("${novenaBottom}") center top/100% no-repeat;
+  .portada-day {
+    text-align: center;
+    border-style: solid;
+    border-width: 10px 10px 0px 10px;
+    border-image: url("${borderGreen}") 9 9 9 9 repeat repeat;
+    background: url("${chispas}"), radial-gradient(#08B761, #08B761, #048938, #027334 78%);
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: 182%, 101%;
+    position: relative;
+    flex: 1 0 auto;
+    &:after {
+      content: '';
+      width: 117%;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      height: 7.4em;
+      background: url("${novenaBottom}") center top/100% no-repeat;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    .box {
+      margin: 22% 0;
+    }
+    .title-day {
+      margin-top: 22%;
+      img {
+        width: 100%;
+      }
+    }
+    .papas img {
+      object-fit: cover;
+    }
   }
   h2 {
     font-size: 2.7em;
@@ -154,8 +169,7 @@ export const PortadaDay = styled.div`
     font-weight: 900;
     text-shadow: 0 2px rgb(0 0 0 / 51%);
   }
-  .btn-buy,
-  .list-novena a {
+  .btn-buy {
     min-width: calc(100% - 8em);
     display: inline-block;
     font-size: 1rem;
@@ -164,8 +178,8 @@ export const PortadaDay = styled.div`
     text-decoration: none;
     border-radius: 20px;
     padding: .5em 2.5em;
-    margin-top: 1em;
-    margin-bottom: 7%;
+    // margin-top: 1em;
+    // margin-bottom: 7%;
     background: #fff;
     box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
   }
@@ -174,9 +188,10 @@ export const Tabs = styled.div`
   background: #AE2424;
   padding: 0.5em;
   margin: 0 -1.1em;
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-end;
-  box-shadow: 0 0 0 5px #AE2424;
+  align-items: center;
   a {
     flex: 0 0 50%;
     text-decoration: none;
