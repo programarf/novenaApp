@@ -25,7 +25,7 @@ class RecipesDetails extends React.Component {
         <DetailsRecipes>
           <div className="detail-recipes">
             <div className="menu-lateral">
-              <Link to={`/recetas/`}> Ver resetas </Link>
+              <Link to={`/recetas/`}> Ver recetas </Link>
             </div>
             <div className="overflow">
               <div className="img-title">

@@ -91,12 +91,14 @@ class Menu extends React.Component {
                     </SubMenu>
                   </DropDown>
                 </div>
-                : <div><Link
-                  to={`${item.url_base.replace('/api', '')}`}
+                : <div>{(item.link) ?
+                  <a href={item.link} target="blank">{item.nombre}</a>
+                  :<Link to={`${(item.archivo_descarga) ? item.archivo_descarga : item.url_base.replace('/api', '')}`}
                   className={(item.destacado == 1) ? "btn-download" : "item"}
-                  onClick={this.closeMenu}>
+                  onClick={this.closeMenu}
+                  target={(item.destacado == 1) ? '_blank' : ''} download>
                   {item.nombre}
-                </Link></div>
+                </Link>}</div>
               )}
             </LiItem>
           ))}
