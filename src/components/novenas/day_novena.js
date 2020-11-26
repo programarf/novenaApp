@@ -36,7 +36,7 @@ class DayNovena extends React.Component {
           <Tabs>
             <Link
               to={{
-                pathname: `${this.state.day+this.state.list[0].enlace}`,
+                pathname: `${this.state.day+(this.state.list[0].enlace.replace('/api', ''))}`,
                 state: {
                   IdPost: this.state.post[0].id,
                   day: this.state.day,

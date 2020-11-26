@@ -61,7 +61,7 @@ class DayHome extends React.Component {
                       Consideración
                     </Link>
                     <Link to={{
-                      pathname: `${this.state.dayUrl+prayer.enlace}`,
+                        pathname: `${this.state.dayUrl + (prayer.enlace.replace('/api', ''))}`,
                       state: {
                         IdPost: this.state.post[0].id,
                         day: this.state.dayUrl,
@@ -76,7 +76,7 @@ class DayHome extends React.Component {
                     :
                     <Link
                       to={{
-                        pathname: `${this.state.dayUrl+prayer.enlace}`,
+                        pathname: `${this.state.dayUrl + (prayer.enlace.replace('/api', ''))}`,
                         state: {
                           IdPost: this.state.post[0].id,
                           day: this.state.dayUrl,

@@ -1,4 +1,4 @@
-const APP_DOMAIN = 'https://dev-navidad.pantheonsite.io';
+const APP_DOMAIN = 'https://test-navidadsr.tbwacolombia.com/api';
 
 const Constants = {
   APP_DOMAIN : APP_DOMAIN,

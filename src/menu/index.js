@@ -50,7 +50,7 @@ class Menu extends React.Component {
             {this.state.items.map(item => (
               // <button onClick={toggleMenu} >
                 <LiItem key={item.id_mp} >
-                  <Link to={`${item.url_base}`}>
+                  <Link to={`${item.url_base.replace('/api', '')}`}>
                     {item.nombre}
                   </Link>
                 </LiItem>

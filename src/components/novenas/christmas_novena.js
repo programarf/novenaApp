@@ -42,10 +42,10 @@ class ChristmasNovena extends React.Component {
                   {console.log(post)}
                   <Link
                     to={{
-                      pathname: `${post.enlace}`,
+                      pathname: `${post.enlace.replace('/api', '')}`,
                       state: {
                         IdPost: post.id,
-                        day:  post.enlace
+                        day:  post.enlace.replace('/api', '')
                       }
                     }}>
                     {post.title}

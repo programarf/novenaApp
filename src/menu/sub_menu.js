@@ -32,10 +32,10 @@ class SubMenu extends React.Component {
           <LiItem key={item.id} >
             <Link
               to={{
-                pathname: `${item.enlace}`,
+                pathname: `${item.enlace.replace('/api', '')}`,
                 state: {
                   IdPost: item.id,
-                  day: item.enlace
+                  day: item.enlace.replace('/api', '')
                 }
               }}
               onClick={this.closeMenu}

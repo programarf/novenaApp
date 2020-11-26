@@ -43,7 +43,7 @@ class Christmascarols extends React.Component {
                 <li key={christmascarol.id}>
                   <Link
                     to={{
-                      pathname: `${christmascarol.enlace}`,
+                      pathname: `${christmascarol.enlace.replace('/api', '')}`,
                       state: {
                         IdPost: christmascarol.id
                       }
