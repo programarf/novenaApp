@@ -58,11 +58,12 @@ export const AppMain = styled.div`
   }
   .columns {
     display flex;
-    margin: 1.5em auto 0;
+    margin-top: 1.5em;
+    margin-bottom: .5em;
     .columns-items {
       flex: 0 0 50%;
       img {
-        width: 70%;
+        width: 75%;
       }
     }
   }
