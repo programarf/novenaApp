@@ -76,7 +76,7 @@ class Menu extends React.Component {
               key={item.id_mp}
               className={(this.state.isToggleOn && item.submenu) ? 'active' : 'no-active'}
              >
-              {(item.submenu ?
+              {(item.submenu == "1" ?
                 <div>
                   <Link
                     to={`${item.url_base.replace('/api', '')}`}
@@ -97,7 +97,7 @@ class Menu extends React.Component {
                 </div>
                 : <div><Link
                   to={`${item.url_base.replace('/api', '')}`}
-                  className={(item.destacado) ? "btn-download" : "item"}
+                  className={(item.destacado == 1) ? "btn-download" : "item"}
                   onClick={this.closeMenu}>
                   {item.nombre}
                 </Link></div>

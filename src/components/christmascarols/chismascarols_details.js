@@ -20,8 +20,6 @@ class ChismascarolsDetails extends React.Component {
   render() {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
-      console.log(this.state.post);
-
       return (
         <DetailsChismascarols>
           <div className="detail-chismacols">

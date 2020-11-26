@@ -39,7 +39,6 @@ class ChristmasNovena extends React.Component {
             <ul>
               {this.state.posts.map(post => (
                 <li key={post.id}>
-                  {console.log(post)}
                   <Link
                     to={{
                       pathname: `${post.enlace.replace('/api', '')}`,
