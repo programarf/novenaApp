@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import MenuProvider from "react-flexible-sliding-menu";
 import MenuMain from './menu/menu_main';
 import { BrowserRouter as Router } from "react-router-dom";
-import {AppContent, Title } from './page/style';
+import {AppContent} from './page/style';
 
 
 

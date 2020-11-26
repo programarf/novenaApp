@@ -52,7 +52,7 @@ class DayNovena extends React.Component {
       );
     } else {
       return (
-        <div className="loading">
+        <div className="loading-car">
           <p>Cargando...</p>
         </div>
       )

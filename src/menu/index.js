@@ -1,5 +1,5 @@
-import React, { useContext } from 'react';
-import { MenuContext } from "react-flexible-sliding-menu";
+import React from 'react';
+// import { MenuContext } from "react-flexible-sliding-menu";
 import { BrowserRouter as Route, Link } from "react-router-dom";
 import { LiItem } from '../GlobalStyles';
 import { DropDown, Icon } from './style';

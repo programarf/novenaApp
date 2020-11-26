@@ -116,11 +116,8 @@ export const Villancicos = styled.div`
   padding: 1em 1.1em;
   z-index: 2;
   position: relative;
-  @media (max-width: 768px){
-    min-height: 100vh
-  }
-  .novena-detail {
-    height: calc(100vh - 2em);
+  .detail-chismacols {
+    height: calc(100 * var(--vh) - 2em);
     padding: 13% 0 0;
     text-align: center;
     border-style: solid;
@@ -139,44 +136,43 @@ export const Villancicos = styled.div`
       height: 4em;
       background: url("${novenaTop}") center bottom/100% no-repeat;
     }
-  }
-  .menu-oracion a {
-    color: #FFFFFF;
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
-    text-align: right;
-    padding: 1em 0;
-    &:after {
-      content: '';
-      display: block;
-      width: 17px;
-      height: 18px;
-      background: url("${point}") center left/100% no-repeat;
-      margin-left: 10px;
+    .menu-oracion a {
+      color: #FFFFFF;
+      text-decoration: none;
+      display: flex;
+      justify-content: flex-end;
+      text-align: right;
+      padding: 1em 0;
+      &:after {
+        content: '';
+        display: block;
+        width: 17px;
+        height: 18px;
+        background: url("${point}") center left/100% no-repeat;
+        margin-left: 10px;
+      }
+    }
+    img {
+      width: 90%;
+      margin-bottom: 1em
+    }
+    .conte-text {
+      height: calc(100 * var(--vh) - 18em);
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: relative;
+      p {
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 1.5;
+        padding: 0 1em;
+        strong{
+          display: block;
+          font-family: 'Museo Slab';
+          font-weight: 700;
+          color: #FFE100;
+        }
+      }
     }
   }
-  .img-oraci img{
-    width: 90%;
-    margin-bottom: 1em
-  }
-  .conte-text {
-    height: 60%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    position: relative;
-  }
-  .conte-text p {
-    color: #FFFFFF;
-    text-align: center;
-    line-height: 1.5;
-    padding: 0 1em;
-    strong{
-      display: block;
-      font-family: 'Museo Slab';
-      font-weight: 700;
-      color: #FFE100;
-    }
-  }
-
 `;

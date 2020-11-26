@@ -13,8 +13,10 @@ export const LiItem = styled.li`
   }
 `;
 
-
 document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
+window.addEventListener('resize', () => {
+  document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
+});
 // document.querySelector(':root').style.setProperty('--vh', window.innerHeight/100 + 'px');
 export const GlobalStyle = createGlobalStyle`
   @import url('./assets/css/style-fonts.css');
@@ -141,7 +143,7 @@ export const GlobalStyle = createGlobalStyle`
     transform: rotate(-45deg);
     bottom: 0;
   }
-  .loading {
+  .loading-car{
     width: 100%;
     height: calc(100 * var(--vh));
     background: white;

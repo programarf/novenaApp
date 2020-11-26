@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import RoutePage from './route_page';
-import { AppMain, BtnMain, Title } from './style';
+import { AppMain, BtnMain } from './style';
 import { MenuContext } from "react-flexible-sliding-menu";
 import Menu from '../menu/index';
 

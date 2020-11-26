@@ -7,7 +7,7 @@ import AudioPlayer from 'react-custom-audio-player';
 import { AudioPlayerStyle } from './styles';
 import { Villancicos } from './styles';
 
-import Buy from '../../util/buy.js';
+// import Buy from '../../util/buy.js';
 
 class ChismascarolsDetails extends React.Component {
   constructor(props) {
@@ -24,14 +24,12 @@ class ChismascarolsDetails extends React.Component {
 
       return (
         <Villancicos>
-          <div className="novena-detail">
+          <div className="novena-detail detail-chismacols">
             <div className="menu-oracion">
-              <Link to={`/villancicos/`}>
-                Ver villancicos
-              </Link>
+              <Link to={`/villancicos/`}> Ver villancicos </Link>
             </div>
-            <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title} />
             <div className="conte-text ">
+              <img src={Constants.APP_DOMAIN + this.state.post[0].field_image_title} />
               {ReactHtmlParser(this.state.post[0].body)}
             </div>
             <AudioPlayerStyle>
@@ -46,7 +44,7 @@ class ChismascarolsDetails extends React.Component {
       );
     } else {
       return (
-        <div className="loading">
+        <div className="loading-car">
           <p>Cargando...</p>
         </div>
       )

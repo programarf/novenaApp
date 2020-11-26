@@ -13,6 +13,8 @@ export const AppContent = styled.div`
   // max-width: 500px;
 `;
 
+
+
 export const AppMain = styled.div`
   background: url("${mascara}") center/cover no-repeat #AE2424;
   padding: 1em 1.1em;
@@ -37,7 +39,7 @@ export const AppMain = styled.div`
   }
   .wrapper {
     height: calc(100 * var(--vh) - 2em);
-    padding: 13% 0;
+    padding: 13% 0 0;
     text-align: center;
     border-style: solid;
     border-width: 10px 10px 10px 10px;
@@ -46,7 +48,8 @@ export const AppMain = styled.div`
     background-position: center, center;
     background-repeat: no-repeat;
     background-size: 182%, 101%;
-
+    display: flex;
+    flex-direction: column;
   }
   .picture {
     margin-top: 2em;
@@ -68,7 +71,8 @@ export const AppMain = styled.div`
     padding-top: .5em;
     overflow: hidden;
     ul {
-      height: calc(20 * var(--vh));
+      height: calc(100 * var(--vh) - 67vh);
+
       overflow-x: hidden;
       overflow-y: scroll;
       a {

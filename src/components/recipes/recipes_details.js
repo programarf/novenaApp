@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Constants from '../../constants/constants';
 import ReactHtmlParser from 'react-html-parser';
 import ReactPlayer from 'react-player';
-import Buy from '../../util/buy.js';
+// import Buy from '../../util/buy.js';
 import { DetailsRecipes, Modal } from './styles';
 
 // imagenes
@@ -51,7 +51,7 @@ class RecipesDetails extends React.Component {
       );
     } else {
       return (
-        <div className="loading">
+        <div className="loading-car">
           <p>Cargando...</p>
         </div>
       )
