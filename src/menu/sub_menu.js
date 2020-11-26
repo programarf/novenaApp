@@ -11,6 +11,7 @@ class SubMenu extends React.Component {
       ...props
     };
     this.closeMenu = this.closeMenu.bind(this);
+
   }
 
   async componentDidMount() {
@@ -32,7 +33,7 @@ class SubMenu extends React.Component {
           <LiItem key={item.id} >
             <Link
               to={{
-                pathname: `${item.enlace.replace('/api', '')}`,
+                pathname: item.enlace.replace('/api', ''),
                 state: {
                   IdPost: item.id,
                   day: item.enlace.replace('/api', '')

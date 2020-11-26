@@ -79,7 +79,7 @@ class Menu extends React.Component {
               {(item.submenu ?
                 <div>
                   <Link
-                    to={`${item.url_base}`}
+                    to={`${item.url_base.replace('/api', '')}`}
                     onClick={this.closeMenu}>
                     {item.nombre}
                   </Link>
