@@ -23,7 +23,8 @@ export const ListMenu = styled.div`
   }
 `;
 export const Icon = styled.div`
-  padding: 0em 1.5em;
+  padding: .5em 1.5em 0;
+  flex: 0 0 30%;
   &:after {
     content: "";
     display: inline-block;
@@ -41,6 +42,7 @@ export const Icon = styled.div`
 export const Collapse = styled.div`
   background: #781C1C;
   height: calc(100 * var(--vh));
+  overflow: hidden;
   padding: 1em;
   position: relative;
   button.tclodes {
@@ -55,12 +57,17 @@ export const Collapse = styled.div`
   .button-menu {
     clear: both;
     padding: 1em 0;
-    max-height: calc(100vh - 7em);
+    max-height: calc(80 * var(--vh));
     height: 100vh;
     overflow: auto;
-    a {
+    .nav-icons {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    a {
+      display: block;
+      flex: 0 0 70%;
+      width: 100%;
       position: relative;
       color: white;
       font-size: 1rem;
@@ -68,9 +75,7 @@ export const Collapse = styled.div`
       font-weight: 500;;
       text-decoration: none;
       text-transform: capitalize;
-      padding: .5em 0 .5em 2.5em;
-      margin-bottom: 1.5em;
-      box-shadow: 0 0 0 2px red inset;
+      // box-shadow: 0 0 0 2px red inset;
     }
     .active {
       .icono {
@@ -79,22 +84,8 @@ export const Collapse = styled.div`
         }
       }
     }
-    // .no-active {
-    //   .icono {/* reviews */
-    //     // border: 0;
-    //     // border-bottom: 3px solid white;
-    //     // border-right: 3px solid white;
-    //     // border-radius: 3px;
-    //     // transform: translateY(-50%) rotate(45deg);
-    //     // z-index: 2;
-    //     // cursor: pointer;
-    //     // position: relative;
-    //   }
-    // }
     li {
-      > div {
-        position: relative;
-      }
+      margin-bottom: 1.5em;
       > div > a:before {
         content: '';
         height: 25px;
@@ -104,18 +95,12 @@ export const Collapse = styled.div`
         background-position: center;
         background-repeat: no-repeat;
         margin-right: .8em;
-        position: absolute;
-        top: 4px;
-        left: 0;
       }
       &:nth-child(1) > div > a:before{
         background-image: url("${home}");
       }
-      &:nth-child(2) > div {
-        position: relative;
-      > a:before{
-          background-image: url("${openBook}");
-        }
+      &:nth-child(2) > div > a:before {
+        background-image: url("${openBook}");
       }
       &:nth-child(3) > div > a:before{
         background-image: url("${musicalNotes}");
@@ -128,6 +113,8 @@ export const Collapse = styled.div`
       }
     }
     .btn-download {
+      width: auto;
+      display: inline-block;
       position: absolute;
       bottom: 0;
       left: 50%;
@@ -139,6 +126,7 @@ export const Collapse = styled.div`
       border-radius: 20px;
       background: #fff;
       padding: .5em 1.2em;
+      margin-bottom: 1.5rem;
       transform: translateX(-50%);
       &:before {
         content: none;
@@ -174,6 +162,8 @@ export const DropDown = styled.div`
     animation: ${rotate} .3s linear;
     animation-iteration-count:1;
     height: auto;
+    flex: 0 0 100%;
+    margin-top: 1.5em;
     a {
       text-align: center;
     }
