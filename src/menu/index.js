@@ -44,16 +44,20 @@ class Menu extends React.Component {
     var activeIndex = this.state.activeIndex;
     // const { closeMenu } = useContext(MenuContext);
     if (this.state.type === "1") {
+      {console.log("items_home",this.state.items)}
       return (
         <div className='button-menu'>
           <ul>
             {this.state.items.map(item => (
               // <button onClick={toggleMenu} >
+              (item.home ==1) ?
                 <LiItem key={item.id_mp} >
-                  <Link to={`${item.url_base.replace('/api', '')}`}>
+                  <Link to={`${(item.link) ? item.link : ((item.archivo_descarga) ? item.archivo_descarga : item.url_base.replace('/api', ''))}`} className={(item.destacado == 1) ? "btn-download" : ""} target={(item.destacado == 1) ? '_blank' : ''} download>
                     {item.nombre}
                   </Link>
                 </LiItem>
+              :
+              ''
               // </button>
             ))}
           </ul>
