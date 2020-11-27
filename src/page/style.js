@@ -22,7 +22,7 @@ export const AppMain = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 4em;
+    height: 5em;
     background: url("${Ballstop}") center bottom/100% no-repeat;
   }
   :after {

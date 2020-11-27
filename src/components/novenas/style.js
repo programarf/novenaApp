@@ -36,7 +36,7 @@ export const StyleNovena = styled.div`
       top: 0;
       left: 0;
       width: 100%;
-      height: 4em;
+      height: 5em;
       background: url("${dayTop}") center bottom/100% no-repeat;
     }
     &:after {
@@ -144,8 +144,8 @@ export const PortadaDay = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 4em;
-    background: url("${novenaTop}") center 88%/96% no-repeat;
+    height: 14%;
+    background: url("${novenaTop}") center bottom/100% no-repeat;
     z-index: 1;
   }
   .portada-day {
@@ -294,12 +294,12 @@ export const Oracion = styled.div`
     left: 0;
     width: 100%;
     height: 4.8em;
+    height: 14%;
     background-image: url("${novenaTop}") ;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: center bottom;
     background-size: 100%;
     background-repeat: no-repeat;
-    z-index: 2;
+    z-index: 1;
   }
   .day-detail {
     // height: calc(100vh - 4em);
@@ -422,7 +422,7 @@ export const MenuOraciones = styled.div`
       top: 0;
       left: 0;
       width: 100%;
-      height: 4em;
+      height: 5em;
       background: url("${dayTop}") center bottom/100% no-repeat;
     }
     &:after {
