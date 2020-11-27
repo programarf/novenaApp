@@ -49,7 +49,7 @@ class DayHome extends React.Component {
                   {(prayer.field_orden == 2) ?
                   <div className="secondary">
                     <Link to={{
-                        pathname: `${this.state.dayUrl}/oraciones/consideracion`,
+                        pathname: `${this.state.dayUrl}/oraciones/consideracion-${this.state.post[0].id}`,
                       state: {
                         IdPost: this.state.post[0].id,
                         day: this.state.day,
@@ -63,7 +63,7 @@ class DayHome extends React.Component {
                     <Link to={{
                         pathname: `${this.state.dayUrl + (prayer.enlace.replace('/api', ''))}`,
                       state: {
-                        IdPost: this.state.post[0].id,
+                        IdPost: prayer.field_orden,
                         day: this.state.dayUrl,
                         weight: prayer.field_orden,
                         list: this.state.prayers,

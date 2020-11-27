@@ -27,12 +27,12 @@ function RoutePage({ props }) {
             render={(props) => <DayNovena {...props} />}
           />
           <Route
-            path="/novenas/:dia/oraciones/:Name"
-            render={(props) => <DayDetail {...props} />}
+            exact path="/novenas/oraciones"
+            render={(props) => <DayHome {...props} />}
           />
           <Route
-            exact path="/novenas/:dia/oraciones"
-            render={(props) => <DayHome {...props} />}
+            path="/novenas/oraciones/:Name"
+            render={(props) => <DayDetail {...props} />}
           />
         {/*   <Route
             exact path="/novena/oracion/:Name"
