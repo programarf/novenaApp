@@ -366,7 +366,7 @@ export const Oracion = styled.div`
       width: 100%;
       height: 4em;
       background: linear-gradient(0deg,#F3F2E6,#0000);
-      transform: translateY(-4em);
+      transform: translateY(-3.9em);
     }
     .img-secons {
       width: 37%;
