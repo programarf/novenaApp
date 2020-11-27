@@ -365,6 +365,8 @@ export const Oracion = styled.div`
     .gradient {
       width: 100%;
       height: 4em;
+      background: -webkit-gradient(linear,left bottom, left top,from(#F3F2E6),to(#0000));
+      background: -o-linear-gradient(bottom,#F3F2E6,#0000);
       background: linear-gradient(0deg,#F3F2E6,#0000);
       transform: translateY(-3.9em);
     }

@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player';
 import { DetailsRecipes, Modal } from './styles';
 
 // imagenes
-import IngredientesTitle from "./../../assets/img/ingredientes-title.png";
+import IngredientesTitle from "./../../assets/img/ingredientes-title3.png";
 
 class RecipesDetails extends React.Component {
   constructor(props) {
