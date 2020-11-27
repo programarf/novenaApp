@@ -33,10 +33,17 @@ class RecipesDetails extends React.Component {
               </div>
               <div className="video">
                 <Modal>
-                  <ReactPlayer
-                    url={this.state.post[0].field_link_video}
-                    width="300"
-                  />
+                  <div>
+                    <iframe
+                      width="300"
+                      heigth="360"
+                      src={this.state.post[0].field_link_video}
+                      frameborder="0"
+                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      id="widget2"
+                      allowfullscreen>
+                    </iframe>
+                  </div>
                 </Modal>
               </div>
               <div className="img-ingredien">
