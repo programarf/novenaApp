@@ -41,6 +41,7 @@ class DayDetail extends React.Component {
     }
     return (
       <Oracion>
+        <div className="before-cus"></div>
         <div className="day-detail">
           <div className="menu-oracion">
             {console.log(next)}

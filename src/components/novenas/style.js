@@ -12,6 +12,9 @@ import dayBottom from './../../assets/img/day-bottom.png';
 import oracionbottom from './../../assets/img/oracion-bottom.png';
 import point from './../../assets/img/point.png';
 
+import unoLeft from './../../assets/img/illustracion-left.png';
+import unoRinght from './../../assets/img/illustracion-right.png';
+
 export const StyleNovena = styled.div`
   background: #027334;
   padding: 1em 1.1em;
@@ -138,15 +141,37 @@ export const PortadaDay = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  &:before {
-    content: '';
+  .before-cus {
+    height: 50px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 14%;
-    background: url("${novenaTop}") center bottom/100% no-repeat;
-    z-index: 1;
+    z-index: 2;
+    &:before {
+      content: '';
+      display: block;
+      width: 102px;
+      height: 63px;
+      float: left;
+      background-size: cover;
+      background-position: -13px -22px;
+      background-repeat: no-repeat;
+      background-image: url("${unoLeft}")
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 114px;
+      height: 82px;
+      float: right;
+      background-size: 114%;
+      background-position: 5px -60px;
+      background-repeat: no-repeat;
+      background-image: url("${unoRinght}");
+
+
+    }
   }
   .portada-day {
     text-align: center;
@@ -287,19 +312,35 @@ export const Oracion = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   z-index: 3;
-  &:before {
-    content: '';
+  .before-cus {
+    height: 50px;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 4.8em;
-    height: 14%;
-    background-image: url("${novenaTop}") ;
-    background-position: center bottom;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    z-index: 1;
+    z-index: 2;
+    &:before {
+      content: '';
+      display: block;
+      width: 102px;
+      height: 63px;
+      float: left;
+      background-size: cover;
+      background-position: -13px -22px;
+      background-repeat: no-repeat;
+      background-image: url("${unoLeft}")
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 114px;
+      height: 82px;
+      float: right;
+      background-size: 114%;
+      background-position: 5px -60px;
+      background-repeat: no-repeat;
+      background-image: url("${unoRinght}");
+    }
   }
   .day-detail {
     // height: calc(100vh - 4em);

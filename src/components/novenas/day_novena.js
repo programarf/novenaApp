@@ -29,6 +29,7 @@ class DayNovena extends React.Component {
       console.log(this.state.post);
       return (
         <PortadaDay>
+          <div className="before-cus"></div>
           <div className="portada-day">
             <div className="title-day">
               <img src={PortadaHome} alt="novena de aguinaldos" title="novena de aguinaldos" />
