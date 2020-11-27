@@ -57,7 +57,7 @@ class DayDetail extends React.Component {
                   consideration: this.state.consideration,
                 }
               }}>
-              Ver oraciones del día this
+              Ver oraciones del día
             </Link>
           </div>
           {/* <h2>Consideración</h2> */}
