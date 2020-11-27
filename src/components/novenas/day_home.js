@@ -18,6 +18,7 @@ class DayHome extends React.Component {
   };
 
   render() {
+    console.log("home day ", this.state);
     if (this.state.prayers !== undefined) {
       return (
         <MenuOraciones>
@@ -52,7 +53,7 @@ class DayHome extends React.Component {
                         pathname: `${this.state.dayUrl}/oraciones/consideracion-${this.state.post[0].id}`,
                       state: {
                         IdPost: this.state.post[0].id,
-                        day: this.state.day,
+                        day: this.state.dayUrl,
                         weight: null,
                         list: this.state.prayers,
                         consideration: this.state.post[0]

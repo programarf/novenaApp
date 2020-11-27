@@ -24,7 +24,7 @@ class DayDetail extends React.Component {
     let next_title;
     let prev;
     let prev_title;
-    { console.log(this.state.weight)}
+    { console.log(this.state.weight) }
 
     if (this.state.weight !== null) {
       render = this.state.list[parseInt(this.state.weight) - 1];
@@ -43,8 +43,9 @@ class DayDetail extends React.Component {
       <Oracion>
         <div className="day-detail">
           <div className="menu-oracion">
-          {console.log(next)}
+            {console.log(next)}
             {console.log(prev)}
+            {console.log("this.state.day", this.state.day)}
             <Link
               to={{
                 pathname: `${this.state.day}/oraciones`,
@@ -56,8 +57,8 @@ class DayDetail extends React.Component {
                   consideration: this.state.consideration,
                 }
               }}>
-              Ver oraciones del día
-              </Link>
+              Ver oraciones del día this
+            </Link>
           </div>
           {/* <h2>Consideración</h2> */}
           <div className="conte-text">
@@ -86,7 +87,7 @@ class DayDetail extends React.Component {
           </Link>
           <Link
             to={{
-              pathname: `${(next == null) ? this.state.day + "/oraciones/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace.replace('/api','') : "#")}`,
+              pathname: `${(next == null) ? this.state.day + "/oraciones/consideracion" : ((next <= this.state.list.length) ? this.state.day + next_title.enlace.replace('/api', '') : "#")}`,
               state: {
                 IdPost: this.state.postId,
                 day: this.state.day,
@@ -101,7 +102,7 @@ class DayDetail extends React.Component {
           </Link>
         </Tabs>
         <div className="img-secons">
-          { (render.field_image) ? <img src={Constants.APP_PRAYER_POSTS + render.field_image} alt="" />:' ' }
+          {(render.field_image) ? <img src={'https://test-navidadsr.tbwacolombia.com' + render.field_image} alt="" /> : ' '}
         </div>
       </Oracion>
     );

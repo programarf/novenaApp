@@ -23,12 +23,12 @@ function RoutePage({ props }) {
             render={(props) =><ChristmasNovena />}
           />
           <Route
-            exact path="/novenas/:Name"
-            render={(props) => <DayNovena {...props} />}
-          />
-          <Route
             exact path="/novenas/oraciones"
             render={(props) => <DayHome {...props} />}
+          />
+          <Route
+            exact path="/novenas/:Name"
+            render={(props) => <DayNovena {...props} />}
           />
           <Route
             path="/novenas/oraciones/:Name"
