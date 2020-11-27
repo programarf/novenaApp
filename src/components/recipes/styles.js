@@ -128,7 +128,7 @@ export const Modal = styled.div`
   // background-color: red;
   position: relative;
   padding-top: 54%;
-  > div {
+  iframe {
     position: absolute;
     top: 0;
     left: 0;
