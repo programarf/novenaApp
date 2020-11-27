@@ -5,7 +5,7 @@ import borderRed from './../../assets/img/border-red.png';
 import borderYellow from './../../assets/img/border-yellow.png';
 import chispas from './../../assets/img/chispas.png';
 import mascara from './../../assets/img/mascara.png';
-import novenaTop from './../../assets/img/novena-top2.png';
+import novenaTop from './../../assets/img/novena-top3.png';
 import novenaBottom from './../../assets/img/novena-bottom.svg';
 import dayTop from './../../assets/img/day-top.png';
 import dayBottom from './../../assets/img/day-bottom.png';
@@ -293,8 +293,12 @@ export const Oracion = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 4em;
-    background: url("${novenaTop}") center 88%/96% no-repeat;
+    height: 4.8em;
+    background-image: url("${novenaTop}") ;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
     z-index: 2;
   }
   .day-detail {
@@ -368,9 +372,7 @@ export const Oracion = styled.div`
     .gradient {
       width: 100%;
       height: 4em;
-      background: -webkit-gradient(linear,left bottom, left top,from(#F3F2E6),to(#0000));
-      background: -o-linear-gradient(bottom,#F3F2E6,#0000);
-      background: linear-gradient(0deg,#F3F2E6,#0000);
+      background: linear-gradient(0deg, #F3F2E6, #F3F2E6,rgb(243 242 230 / 0%));
       transform: translateY(-3.9em);
     }
   }
