@@ -221,6 +221,7 @@ export const Tabs = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  z-index: 9;
   a {
     flex: 0 0 50%;
     min-height: 4.1em;
@@ -370,20 +371,20 @@ export const Oracion = styled.div`
       background: linear-gradient(0deg,#F3F2E6,#0000);
       transform: translateY(-3.9em);
     }
-    .img-secons {
-      width: 49%;
-      height: 30%;
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      overflow: hidden;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-      }
+  }
+  .img-secons {
+    width: 49%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
     }
   }
   // .conte-text:after {

@@ -68,9 +68,6 @@ class DayDetail extends React.Component {
             {ReactHtmlParser(render.body)}
           </div>
           <div className="gradient"></div>
-          <div className="img-secons">
-            { (render.field_image) ? <img src={Constants.APP_DOMAIN + render.field_image} alt="" />:' ' }
-          </div>
         </div>
         <Tabs>
           <Link to={{
@@ -103,6 +100,9 @@ class DayDetail extends React.Component {
             {(next == null) ? "Consideración" : ((next <= this.state.list.length) ? next_title.title : "")}
           </Link>
         </Tabs>
+        <div className="img-secons">
+          { (render.field_image) ? <img src={'https://test-navidadsr.tbwacolombia.com' + render.field_image} alt="" />:' ' }
+        </div>
       </Oracion>
     );
 
