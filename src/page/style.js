@@ -79,7 +79,7 @@ export const AppMain = styled.div`
         display: inline-block;
         font-size: 1rem;
         color: #08B761;
-        font-weight: 500;
+        font-weight: 600;
         text-transform: capitalize;
         text-decoration: none;
         border-radius: 20px;
@@ -91,6 +91,7 @@ export const AppMain = styled.div`
           background: #EC020B;
           color: white;
           font-size: 0.8rem;
+          font-weight: 600;
           padding: .7em 2.5em;
           &:hover {
             background: white;

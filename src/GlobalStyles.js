@@ -56,6 +56,33 @@ export const GlobalStyle = createGlobalStyle`
     url('${MuseoSans500Woff2}') format('woff2');
   }
   @font-face {
+    font-family: 'Museo Sans';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 700;
+    src:url("https://use.typekit.net/af/e3ca36/00000000000000000000e805/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),
+    url("https://use.typekit.net/af/e3ca36/00000000000000000000e805/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),
+    url("https://use.typekit.net/af/e3ca36/00000000000000000000e805/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  }
+  @font-face {
+    font-family: 'Museo Sans';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 400;
+    src:url("https://use.typekit.net/af/2f6e0d/00000000000000003b9ad11f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),
+    url("https://use.typekit.net/af/2f6e0d/00000000000000003b9ad11f/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),
+    url("https://use.typekit.net/af/2f6e0d/00000000000000003b9ad11f/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  }
+  @font-face {
+    font-family: 'Museo Sans';
+    font-display: swap;
+    font-style: normal;
+    font-weight: 800;
+    src: url("https://use.typekit.net/af/b4d456/00000000000000003b9ad11e/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff2"),
+    url("https://use.typekit.net/af/b4d456/00000000000000003b9ad11e/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("woff"),
+    url("https://use.typekit.net/af/b4d456/00000000000000003b9ad11e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3") format("opentype");
+  }
+  @font-face {
     font-family: 'Museo Slab';
     font-style: normal;
     font-weight: 700;

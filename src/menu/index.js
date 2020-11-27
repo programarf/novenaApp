@@ -82,7 +82,7 @@ class Menu extends React.Component {
               >
               {(item.submenu == "1" ?
                 <div className="nav-icons">
-                  <Link to={`${item.url_base.replace('/api', '')}`} onClick={this.closeMenu}> {item.nombre} </Link>
+                  <Link to={`${item.url_base.replace('/api', '')}`} onClick={this.closeMenu}>{item.nombre}</Link>
                   <Icon onClick={this.handleClick} className="icono" > </Icon>
                   <DropDown className={this.state.isToggleOn ? 'true' : ''}>
                     <SubMenu

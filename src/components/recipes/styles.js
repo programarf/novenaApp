@@ -70,11 +70,10 @@ export const HomeRecipes = styled.div`
         display: inline-block;
         font-size: .9rem;
         color: #08B761;
-        font-weight: 500;
-        text-transform: capitalize;
+        font-weight: 600;
         text-decoration: none;
         border-radius: 20px;
-        padding: .7em 1.5em;
+        padding: .7em 1em;
         margin-bottom: 1.3em;
         background: #fff;
         box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
@@ -91,8 +90,7 @@ export const HomeRecipes = styled.div`
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
-      font-weight: 500;
-      text-transform: capitalize;
+      font-weight: 600;
       text-decoration: none;
       border-radius: 20px;
       padding: .5em 2.5em;
@@ -226,7 +224,7 @@ export const DetailsRecipes = styled.div`
         text-align: center;
         font-size: 1rem;
         color: #08B761;
-        text-transform: capitalize;
+        font-weight: 600;
         text-decoration: none;
         border-radius: 20px;
         padding: .4em 2.5em;

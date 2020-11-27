@@ -250,12 +250,11 @@ export const HomeCristmascarols = styled.div`
         display: inline-block;
         font-size: 1rem;
         color: #08B761;
-        font-weight: 500;
-        text-transform: capitalize;
+        font-weight: 600;
         text-align: left;
         text-decoration: none;
         border-radius: 20px;
-        padding: .5em 1.5em;
+        padding: .5em 1.2em;
         margin-bottom: 7%;
         background: #fff;
         box-shadow: 0 3px 3px rgb(0 0 0 / 14%);
@@ -272,6 +271,7 @@ export const HomeCristmascarols = styled.div`
     }
   }
   .comparte {
+    margin-top: .5rem;
     p {
       color: white;
       font-weight: 500;
@@ -282,7 +282,7 @@ export const HomeCristmascarols = styled.div`
       display: inline-block;
       font-size: 1rem;
       color: #08B761;
-      font-weight: 500;
+      font-weight: 600;
       text-transform: capitalize;
       text-decoration: none;
       border-radius: 20px;
