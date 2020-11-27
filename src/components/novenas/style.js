@@ -340,8 +340,8 @@ export const Oracion = styled.div`
       }
     }
     .img-oraci img{
-      width: 90%;
-      margin-bottom: 1em
+      width: 80%;
+      margin-bottom: 1rem;
     }
     .conte-text {
       height: calc(100 * var(--vh) - 7.4em - 12em);
@@ -369,8 +369,8 @@ export const Oracion = styled.div`
       transform: translateY(-3.9em);
     }
     .img-secons {
-      width: 37%;
-      height: 23%;
+      width: 49%;
+      height: 30%;
       position: absolute;
       bottom: 0;
       left: 50%;
