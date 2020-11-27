@@ -35,7 +35,7 @@ class SubMenu extends React.Component {
               to={{
                 pathname: item.enlace.replace('/api', ''),
                 state: {
-                  IdPost: item.id,
+                  IdPost: item.dia,
                   day: item.enlace.replace('/api', '')
                 }
               }}

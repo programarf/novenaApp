@@ -43,7 +43,7 @@ class ChristmasNovena extends React.Component {
                     to={{
                       pathname: `${post.enlace.replace('/api', '')}`,
                       state: {
-                        IdPost: post.id,
+                        IdPost: post.dia,
                         day: '/novenas'
                       }
                     }}>

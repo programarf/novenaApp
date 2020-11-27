@@ -17,6 +17,12 @@ class DayNovena extends React.Component {
     };
   };
 
+  componentDidUpdate(nextProps) {
+    if (nextProps.location.pathname !== this.props.location.pathname) {
+      window.location.reload();
+    }
+  }
+
   render() {
     //let userId = this.state.user.uid;
     if (this.state.post !== undefined) {
