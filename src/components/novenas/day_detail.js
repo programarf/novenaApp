@@ -101,7 +101,7 @@ class DayDetail extends React.Component {
           </Link>
         </Tabs>
         <div className="img-secons">
-          { (render.field_image) ? <img src={'https://test-navidadsr.tbwacolombia.com' + render.field_image} alt="" />:' ' }
+          { (render.field_image) ? <img src={Constants.APP_PRAYER_POSTS + render.field_image} alt="" />:' ' }
         </div>
       </Oracion>
     );

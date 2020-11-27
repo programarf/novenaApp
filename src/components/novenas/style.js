@@ -318,8 +318,8 @@ export const Oracion = styled.div`
       position: absolute;
       left: 50%;
       bottom: 0;
-      height: 6.3em;
-      background: url("${oracionbottom}") center top/100% no-repeat;
+      height: 8.3em;
+      background: url("${oracionbottom}") center bottom/100% no-repeat;
       transform: translateX(-50%);
       z-index: 1;
     }
@@ -349,15 +349,17 @@ export const Oracion = styled.div`
       overflow-x: hidden;
       overflow-y: scroll;
       position: relative;
+      padding-bottom: 3rem;
       strong {
         font-family: Museo Slab;
         font-weight: 700;
         color: #545454;
       }
       p {
+        font-size: 1rem;
         color: #545454;
-        text-align: left;
         font-weight: 300;
+        text-align: left;
         line-height: 1.5;
         padding: 0 1em;
         margin-bottom: 1em;
@@ -373,8 +375,9 @@ export const Oracion = styled.div`
     }
   }
   .img-secons {
-    width: 49%;
-    height: 30%;
+    max-width: min(59%,170vw);
+    width: 100%;
+    height: 16em;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -383,19 +386,10 @@ export const Oracion = styled.div`
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: top;
     }
   }
-  // .conte-text:after {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 20px;
-  //   background-image: linear-gradient(0deg,#f3f2e6d1 3%,#F3F2E6,#0000);
-  // }
 `;
 export const MenuOraciones = styled.div`
   min-height: calc(100 * var(--vh));
