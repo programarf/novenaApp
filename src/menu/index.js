@@ -44,16 +44,20 @@ class Menu extends React.Component {
     var activeIndex = this.state.activeIndex;
     // const { closeMenu } = useContext(MenuContext);
     if (this.state.type === "1") {
+      {console.log("items_home",this.state.items)}
       return (
         <div className='button-menu'>
           <ul>
             {this.state.items.map(item => (
               // <button onClick={toggleMenu} >
+              (item.home ==1) ?
                 <LiItem key={item.id_mp} >
-                  <Link to={`${item.url_base.replace('/api', '')}`}>
+                  <Link to={`${(item.link) ? item.link : ((item.archivo_descarga) ? item.archivo_descarga : item.url_base.replace('/api', ''))}`} className={(item.destacado == 1) ? "btn-download" : ""} target={(item.destacado == 1) ? '_blank' : ''} download>
                     {item.nombre}
                   </Link>
                 </LiItem>
+              :
+              ''
               // </button>
             ))}
           </ul>
@@ -75,19 +79,11 @@ class Menu extends React.Component {
             <LiItem
               key={item.id_mp}
               className={(this.state.isToggleOn && item.submenu) ? 'active' : 'no-active'}
-             >
+              >
               {(item.submenu == "1" ?
-                <div>
-                  <Link
-                    to={`${item.url_base.replace('/api', '')}`}
-                    onClick={this.closeMenu}>
-                      {item.nombre}
-                  </Link>
-                  <Icon
-                    onClick={this.handleClick}
-                    className="icono"
-                    >
-                  </Icon>
+                <div className="nav-icons">
+                  <Link to={`${item.url_base.replace('/api', '')}`} onClick={this.closeMenu}> {item.nombre} </Link>
+                  <Icon onClick={this.handleClick} className="icono" > </Icon>
                   <DropDown className={this.state.isToggleOn ? 'true' : ''}>
                     <SubMenu
                       url={Constants.APP_DOMAIN_POSTS}
@@ -95,12 +91,14 @@ class Menu extends React.Component {
                     </SubMenu>
                   </DropDown>
                 </div>
-                : <div><Link
-                  to={`${item.url_base.replace('/api', '')}`}
-                  className={(item.destacado == 1) ? "btn-download" : "item"}
-                  onClick={this.closeMenu}>
-                  {item.nombre}
-                </Link></div>
+                : <div>{(item.link) ?
+                  <a href={item.link} target="blank">{item.nombre}</a>
+                  : <Link to={`${(item.archivo_descarga) ? item.archivo_descarga : item.url_base.replace('/api', '')}`}
+                    className={(item.destacado == 1) ? "btn-download" : "item"}
+                    onClick={this.closeMenu}
+                    target={(item.destacado == 1) ? '_blank' : ''} download>
+                    {item.nombre}
+                  </Link>}</div>
               )}
             </LiItem>
           ))}
