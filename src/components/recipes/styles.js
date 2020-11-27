@@ -4,6 +4,7 @@ import borderRed from './../../assets/img/border-red.png';
 import chispas from './../../assets/img/chispas.png';
 import dayTop from './../../assets/img/day-top.png';
 import resetasTop from './../../assets/img/receta-top.png';
+import resetasBottom from './../../assets/img/receta-bottom.png';
 import dayBottom from './../../assets/img/day-bottom.png';
 import point from './../../assets/img/point-white.png';
 
@@ -172,7 +173,7 @@ export const DetailsRecipes = styled.div`
       left: 0;
       width: 100%;
       height: 4.4em;
-      background: url("${dayBottom}") center top/119% no-repeat;
+      background: url("${resetasBottom}") center top/119% no-repeat;
     }
     .menu-lateral {
       a {
